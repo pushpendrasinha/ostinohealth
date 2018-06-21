@@ -1,0 +1,74 @@
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #800000;
+  color: white;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+
+.footer p,a{
+  color:white;
+  text-decoration: none;
+}
+.footer_column{
+  width: 49%;
+  float: left;
+  display:inline;}
+
+.footer_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .footer{
+    position: static;
+    line-height: 10px;
+    overflow: hidden;
+  }
+  .footer_column{
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 900px) {
+  .footer{
+    position: static;
+    line-height: 10px;
+    overflow: hidden;
+  }
+  .footer_column{
+    font-size: 12px;
+    width: 100%;
+  }
+}

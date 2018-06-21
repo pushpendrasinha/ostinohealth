@@ -1,0 +1,32 @@
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.content{
+  height: 100%;
+  background-color:#bbb;
+  overflow: hidden;
+  font-size: 20px;
+  padding-left: 20px;
+
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .content{
+    padding-left: 10px;
+    height: auto;
+    font-size: 15px;
+  }
+}
+
+
+
+@media screen and (max-width: 900px) {
+}
