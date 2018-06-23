@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { HeaderComponent } from './static-content/header/header.component';
 import { HomeComponent } from './static-content/home/home.component';
 
 import { Dataservice } from '../services/dataservice';
+import { RemoteApiService } from "../services/remoteapi.service";
 
 @NgModule({
   declarations: [
@@ -46,9 +48,10 @@ import { Dataservice } from '../services/dataservice';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [Dataservice],
+  providers: [Dataservice, RemoteApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
