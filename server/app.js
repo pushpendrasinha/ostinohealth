@@ -22,16 +22,16 @@ var app = express();
 
 //app.use(cors(corsOptions));
 //console.log(path.join(__dirname, 'static_ostino'));
-console.log("resolve is "  + path.resolve('../dist'));
+//console.log("resolve is "  + path.resolve('../client/dist'));
 app.use(logger('dev'));
 //app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.json({limit: '200mb'}));
-app.use(express.static(path.resolve('../dist')));
+app.use(express.static(path.resolve('../client/dist')));
 //app.use('/static',express.static('../static_ostino'));
 
-app.use(express.static(path.resolve('../dist')));
+//app.use(express.static(path.resolve('../dist')));
 //app.use('/', index);
 //app.use('/users', users);
 app.use('*', express.static(path.resolve('../dist')));

@@ -25,6 +25,8 @@ import { HomeComponent } from './static-content/home/home.component';
 
 import { Dataservice } from '../services/dataservice';
 import { RemoteApiService } from "../services/remoteapi.service";
+import { LoginComponent } from './others/login/login.component';
+import { SignupComponent } from './others/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { RemoteApiService } from "../services/remoteapi.service";
     CorporateResponsibilityComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
