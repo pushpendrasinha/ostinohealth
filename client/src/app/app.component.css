@@ -1,0 +1,12 @@
+.content{
+  height: 100%;
+  background-color:#bbb;
+  overflow: hidden;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 100px;
+  display: block;
+}
+
+

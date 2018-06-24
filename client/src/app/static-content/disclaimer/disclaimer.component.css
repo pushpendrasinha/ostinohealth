@@ -6,20 +6,20 @@
 }
 
 .content{
-  padding: 20px 30px 30px;
+  padding: 20px 30px 40px;
   font-size: 20px;
 }
 
-
-
-
-
-
-
-
-@media screen and (max-width: 600px) {
-
+a{
+  text-decoration: none;
 }
+
+
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
   .content{
@@ -32,15 +32,10 @@
 
 
 @media screen and (max-width: 900px) {
-
-}
-
-@media screen and (max-width: 900px) {
   .content{
     font-size: 15px;
     padding: 0px 10px 10px;
     overflow: hidden;
     height: auto;
-    padding-bottom: 30px;
-  }
+}
 }

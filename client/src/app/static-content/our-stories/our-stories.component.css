@@ -1,5 +1,14 @@
 
+.container{
+  height: 100%;
+}
 
+
+.accord{
+  background-color: #bbb;
+  height: 100%;
+  overflow: hidden;
+}
 
 /* Style the element that is used to open and close the accordion class */
 p.accordion {
@@ -12,10 +21,9 @@ p.accordion {
   border: none;
   outline: none;
   transition: 0.4s;
-  margin-bottom:10px;
   border-radius: 10px;
   margin-left: 180px;
-  margin-top: 30px;
+  margin-top: 50px;
   font-size: 20px;
 }
 
@@ -67,39 +75,18 @@ div.panel.show {
   border:2px solid #800000;
 }
 
-.column{
-  margin:35px;
-  float: left;
-  width: 27.33%;
-  text-align: left;
-  height: inherit; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
 
 
 
 
 @media screen and (max-width: 600px) {
 
-}
 
-
-
-
-@media screen and (max-width: 600px) {
   p.accordion {
     padding: 2px;
     width: 100%;
     font-size: 15px;
-    margin: 40px 0px 0px 0px;
+    margin: 40px 0px 45px 0px;
     overflow: hidden;
     height: auto;
     line-height: 30px;
@@ -114,15 +101,7 @@ div.panel.show {
     height: auto;
     overflow: hidden;
   }
-  .column{
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    overflow: hidden;
-  }
+
 
 }
 
@@ -130,20 +109,14 @@ div.panel.show {
 
 @media screen and (max-width: 900px) {
 
-}
-
-
-
-
-@media screen and (max-width: 900px) {
   p.accordion {
     padding: 2px;
     width: 100%;
     font-size: 15px;
-    margin: 40px 0px 0px 0px;
+    margin: 40px 0px 45px 0px;
     overflow: hidden;
     height: auto;
-    line-height: 28px;
+    line-height: 30px;
   }
 
 
@@ -163,14 +136,5 @@ div.panel.show {
     overflow: hidden;
   }
 
-  .column{
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    overflow: hidden;
 
-  }
 }

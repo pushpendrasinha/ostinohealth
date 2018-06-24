@@ -64,19 +64,15 @@
   background-color:#001a33;
   text-align: center;
 }
+a{
+  text-decoration: none;
+}
 .terms a{
-
   font-size: 20px;
   line-height: 30px;
   color:white;
 }
 
-
-
-
-@media screen and (max-width: 600px) {
-
-}
 
 @media screen and (max-width: 600px) {
   .content{

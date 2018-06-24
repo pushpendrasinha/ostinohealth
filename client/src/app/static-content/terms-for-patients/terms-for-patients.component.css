@@ -1,12 +1,17 @@
 
-.img{
-  border:2px solid #a22a2a;
+.container{
+  height: 100vh;
+  background-color:#bbb;
+  overflow: hidden;
+  padding-bottom: 160px;
 }
 
 
 #terms{
   overflow: hidden;
   background-color:#bbb;
+  height: 100%;
+  padding-bottom: 160px;
 }
 
 #terms h2,h1,h3{
@@ -25,9 +30,7 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
 
-}
 
 @media screen and (max-width: 600px) {
 
@@ -65,10 +68,6 @@
 
 
 
-
-@media screen and (max-width: 900px) {
-}
-
 @media screen and (max-width: 900px) {
 
   *{
@@ -79,6 +78,14 @@
     width: 30%;
     height: auto;
   }
+.container{
+  height: auto;
+  padding-bottom: 0;
+}
+#terms{
+  height: auto;
+  padding-bottom: 0;
+}
 
   #terms p{
     margin-top:0;

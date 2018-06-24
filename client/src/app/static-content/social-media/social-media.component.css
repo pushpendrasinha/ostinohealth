@@ -16,14 +16,14 @@
   clear: both;
 }
 
-
-
-
-
-
-@media screen and (max-width: 600px) {
+.social-plugins{
+  background-color: #bbb;
+  height:100vh;
+  overflow: hidden;
 
 }
+
+
 
 
 
@@ -35,30 +35,37 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
     overflow: hidden;
   }
+  .social-plugins{
+    height:auto;
+    overflow: hidden;
+
+  }
+
+
 
 }
 
 
 
-@media screen and (max-width: 900px) {
-
-}
-
 
 
 
 @media screen and (max-width: 900px) {
+
   .column{
     width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .social-plugins{
+    height:auto;
     overflow: hidden;
 
   }
+
 }

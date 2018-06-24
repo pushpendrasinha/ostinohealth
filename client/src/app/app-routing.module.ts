@@ -13,6 +13,7 @@ import {OurStoriesComponent} from './static-content/our-stories/our-stories.comp
 import {QueriesComponent} from './static-content/queries/queries.component';
 import {TermsconditionsComponent} from './static-content/termsconditions/termsconditions.component';
 import {DisclaimerComponent} from './static-content/disclaimer/disclaimer.component';
+import { TermsForPatientsComponent } from './static-content/terms-for-patients/terms-for-patients.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,8 @@ const routes: Routes = [
   {path: 'queries', component: QueriesComponent },
   {path: 'terms-and-conditions', component: ForDoctorsComponent },
   {path: 'disclaimer', component: DisclaimerComponent },
+  {path: 'terms-for-patients', component: TermsForPatientsComponent },
+  {path: 'terms-for-doctors', component: TermsconditionsComponent }
 
 
 ];

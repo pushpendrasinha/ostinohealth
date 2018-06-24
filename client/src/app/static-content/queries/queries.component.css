@@ -1,6 +1,7 @@
 .content{
   background-color: #bbb;
   overflow: hidden;
+  height: 100vh;
 }
 
 .content p{
@@ -9,6 +10,7 @@
 .content a{
   color:#511515;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .content h1,p{
@@ -25,9 +27,6 @@ p strong{
 
 
 
-@media screen and (max-width: 600px) {
-
-}
 
 @media screen and (max-width: 600px) {
   .content h1{
@@ -63,9 +62,6 @@ p strong{
 
 
 
-@media screen and (max-width: 900px) {
-
-}
 
 @media screen and (max-width: 900px) {
   .content h1{

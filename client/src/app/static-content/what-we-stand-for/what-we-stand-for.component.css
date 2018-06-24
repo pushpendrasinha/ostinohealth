@@ -1,21 +1,20 @@
 
+.container{
+  height: 100vh;
+  background-color: #bbb;
+
+}
+
+
+
 .content{
   height: 100%;
-  background-color:#bbb;
   overflow: hidden;
   font-size: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 20px;
-}
-
-
-* {
-  box-sizing: border-box;
-}
-
-.img{
-  border:2px solid #a22a2a;
+  padding-bottom: 110px;
+  background-color: #bbb;
 }
 
 
@@ -23,9 +22,8 @@
 
 
 
-@media screen and (max-width: 600px) {
 
-}
+
 
 @media screen and (max-width: 600px) {
 
@@ -35,17 +33,15 @@
     padding-left: 10px;
     height:auto;
     font-size: 15px;
+    padding-bottom: 0;
   }
-
-
-  .img{
-    width: 30%;
-    height: auto;
-  }
+.container{
+  height: auto;
 }
 
-@media screen and (max-width: 900px) {
+
 }
+
 
 @media screen and (max-width: 900px) {
 
@@ -54,10 +50,11 @@
     padding-left: 10px;
     height:auto;
     font-size: 15px;
+    padding-bottom: 0;
+  }
+  .container{
+    height: auto;
+
   }
 
-  .img{
-    width: 30%;
-    height: auto;
-  }
 }
