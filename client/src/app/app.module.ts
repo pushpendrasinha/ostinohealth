@@ -23,6 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './static-content/header/header.component';
 import { HomeComponent } from './static-content/home/home.component';
 
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 import { Dataservice } from '../services/dataservice';
 import { RemoteApiService } from "../services/remoteapi.service";
 import { LoginComponent } from './others/login/login.component';
@@ -53,7 +55,9 @@ import { SignupComponent } from './others/signup/signup.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [Dataservice, RemoteApiService],
   bootstrap: [AppComponent]

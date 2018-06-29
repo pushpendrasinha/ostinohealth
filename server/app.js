@@ -10,6 +10,15 @@ var index = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+    next();
+}
+
+app.use(allowCrossDomain);
 
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
@@ -32,7 +41,7 @@ app.use(express.static(path.resolve('../client/dist')));
 //app.use('/static',express.static('../static_ostino'));
 
 //app.use(express.static(path.resolve('../dist')));
-//app.use('/', index);
+app.use('/api', index);
 //app.use('/users', users);
 app.use('*', express.static(path.resolve('../dist')));
 

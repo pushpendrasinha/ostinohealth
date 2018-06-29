@@ -12,7 +12,7 @@ export class RemoteApiService {
   }
 
   register(registrationData) {
-    return this.http.post(environment.serverUrl + '/login', registrationData);
+    return this.http.post(environment.serverUrl + '/register', registrationData);
   }
 
 }

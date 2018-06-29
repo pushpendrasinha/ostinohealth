@@ -300,3 +300,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 body{
   height: 100%;
 }
+
+.error {
+  color: red;
+}

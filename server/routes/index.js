@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+var commonController = require('../controllers/commonController');
 /* GET home page. */
 router.get('/', function(req, res, next) {
  // res.render('index', { title: 'Express' });
@@ -8,5 +9,8 @@ router.get('/', function(req, res, next) {
   console.log("static route called");
   res.sendFile(path.resolve('../dist/index.html'));
 });
+
+router.post('/login', commonController.login);
+router.post('/register', commonController.register);
 
 module.exports = router;

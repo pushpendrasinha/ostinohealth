@@ -1,3 +1,33 @@
-<p>
-  login works!
-</p>
+
+
+
+<!--Login section-->
+<div class="wrapper">
+  <form (ngSubmit)="LoginForm.valid && login()" novalidate [formGroup]="LoginForm">
+
+    <div class="container">
+      <h1> Login </h1>
+
+      <label for="email"><b>Email</b></label>
+      <input type="email" name="email" placeholder="Enter your email" formControlName="email">
+      <p *ngIf="LoginForm.controls.email.invalid && !LoginForm.controls.email.pristine" class="error">Enter email</p>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" name="password" placeholder="Enter your password" formControlName="password">
+      <p *ngIf="LoginForm.controls.password.invalid && !LoginForm.controls.password.pristine" class="error">Enter password</p>
+      <span class="psw"> <a href="#" style="color:dodgerblue;float: right;">Forgot Password?</a></span>
+
+      <button type="submit" class="login">Login</button>
+
+      <p style="text-align: center;">New to Ostino Health</p>
+      <hr>
+      <button type="button" class="create-acc" onclick="window.location.href='signup'">Create your account</button>
+
+
+    </div>
+
+  </form>
+</div>
+<!--Login section ends-->
+
+
