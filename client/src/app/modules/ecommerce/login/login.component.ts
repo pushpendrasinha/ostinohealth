@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import { RemoteApiService } from "../../../services/remoteapi.service";
+import { RemoteApiService } from "../../../../services/remoteapi.service";
 
 @Component({
   selector: 'app-login',

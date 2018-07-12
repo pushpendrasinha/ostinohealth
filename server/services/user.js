@@ -3,7 +3,7 @@ const {ObjectId} = require('mongodb');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 var config = require('../config/config');
-var collection = 'User';
+var collection = 'users';
 // var secret = "med%ostino?R";
 
 module.exports = {
@@ -31,5 +31,26 @@ module.exports = {
         data.password = bcrypt.hashSync(data.password, 8);
         var result = await mongoUtil.createRecord('User', data);
         return({msg : "success"});
-}
+},
+    changePassword: async (userId, data) => {
+       var user = await mongoUtil.findOne(collection, {_id: userId});
+        var passwordIsValid = bcrypt.compareSync(data.oldpassword, result.password);
+        if(passwordIsValid) {
+            var password = bcrypt.hashSync(data.newPassword, 8);
+            var query = {_id: userId};
+            var values = {$set: {password: password}};
+           var result = await mongoUtil.updateRecord(collection, query, values);
+           return {msg: "password changed successfully"};
+        } else {
+            return {msg: "current password is invalid"}
+        }
+
+    },
+    editProfile: async (userId, data) => {
+
+            var query = {_id: userId};
+            var values = {$set: data};
+            var result = await mongoUtil.updateRecord(collection, query, values);
+            return {msg: "updated successfully"};
+            }
 }

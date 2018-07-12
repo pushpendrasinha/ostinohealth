@@ -6,8 +6,9 @@ var logger = require('morgan');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var usersRouter = require('./routes/users');
+var product = require('./routes/product');
+var order = require('./routes/order');
+var user = require('./routes/user');
 
 var app = express();
 var allowCrossDomain = function(req, res, next) {
@@ -38,12 +39,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.json({limit: '200mb'}));
 app.use(express.static(path.resolve('../client/dist')));
-//app.use('/static',express.static('../static_ostino'));
 
-//app.use(express.static(path.resolve('../dist')));
-app.use('/api', index);
-//app.use('/users', users);
-app.use('*', express.static(path.resolve('../dist')));
+app.use('/api/user', user);
+app.use('/api/product', product);
+//app.use('/api/order', order);
+
+app.use('*', express.static(path.resolve('../client/dist')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

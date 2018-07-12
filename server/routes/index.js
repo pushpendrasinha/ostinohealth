@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
-var commonController = require('../controllers/commonController');
+var commonController = require('../controllers/user');
 /* GET home page. */
 router.get('/', function(req, res, next) {
  // res.render('index', { title: 'Express' });

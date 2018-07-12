@@ -15,9 +15,6 @@ import {TermsconditionsComponent} from './static-content/termsconditions/termsco
 import {DisclaimerComponent} from './static-content/disclaimer/disclaimer.component';
 import { TermsForPatientsComponent } from './static-content/terms-for-patients/terms-for-patients.component';
 
-import { LoginComponent} from "./others/login/login.component";
-import { SignupComponent} from "./others/signup/signup.component";
-
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
@@ -35,8 +32,9 @@ const routes: Routes = [
   {path: 'disclaimer', component: DisclaimerComponent },
   {path: 'terms-for-patients', component: TermsForPatientsComponent },
   {path: 'terms-for-doctors', component: TermsconditionsComponent },
-  {path: 'login', component: LoginComponent },
-  {path: 'signup', component: SignupComponent }
+  {path: 'ecom', loadChildren: 'app/modules/ecommerce/ecommerce.module#EcommerceModule' }
+
+
 
 
 ];

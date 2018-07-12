@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
-import { RemoteApiService} from "../../../services/remoteapi.service";
-import { PasswordValidation } from "../../../util/passwordvalidator";
+import { RemoteApiService} from "../../../../services/remoteapi.service";
+import { PasswordValidation } from "../../../../util/passwordvalidator";
 
 @Component({
   selector: 'app-signup',

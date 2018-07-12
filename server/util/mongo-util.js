@@ -112,6 +112,24 @@ module.exports = {
             });
         });
     },
+    findOne : (collection,query)=>{
+        return new Promise((resolve, reject) => {
+            mongoClient.connect(url, function(error, db) {
+                if (error){
+                    reject(error);
+                }else{
+                    db.collection(collection).findOne(query).toArray(function(err, res) {
+                        if (err){
+                            reject(err);
+                        } else{
+                            db.close();
+                            resolve(res);
+                        }
+                    });
+                }
+            });
+        });
+    },
     deleteRecord : (collection,query)=>{
         return new Promise((resolve, reject) => {
             mongoClient.connect(url, function(error, db) {

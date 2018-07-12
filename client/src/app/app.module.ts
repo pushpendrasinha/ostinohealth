@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+/*import { EcommerceModule } from './modules/ecommerce/ecommerce.module';*/
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
 import { AppComponent } from './app.component';
@@ -22,13 +24,9 @@ import { FooterComponent } from './static-content/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './static-content/header/header.component';
 import { HomeComponent } from './static-content/home/home.component';
-
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-
 import { Dataservice } from '../services/dataservice';
 import { RemoteApiService } from "../services/remoteapi.service";
-import { LoginComponent } from './others/login/login.component';
-import { SignupComponent } from './others/signup/signup.component';
+import { CartService } from "../services/cartservice";
 
 @NgModule({
   declarations: [
@@ -48,18 +46,16 @@ import { SignupComponent } from './others/signup/signup.component';
     CorporateResponsibilityComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent,
-    LoginComponent,
-    SignupComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [Dataservice, RemoteApiService],
+  providers: [Dataservice, RemoteApiService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

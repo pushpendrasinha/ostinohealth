@@ -43,6 +43,39 @@
         <a href="/queries">Queries</a>
       </div>
     </div>
+    <div class="dropdown">
+      <button class="dropbtn"  onclick="window.location.href='index.html'">Username
+      </button>
+      <div class="dropdown-content">
+        <a href="#"><span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-1x icon-background1"></i>
+          <i class="fa fa-user fa-stack-1x"></i>
+        </span>
+          My Profile</a>
+        <a href="#"><span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-1x icon-background1"></i>
+          <i class="fa fa-folder fa-stack-1x"></i>
+        </span>
+          My Orders</a>
+        <a href="#"><span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-1x icon-background1"></i>
+          <i class="fa fa-power-off fa-stack-1x"></i>
+        </span>
+          Logout</a>
+      </div>
+    </div>
+
+
+
+    <div class="dropdown">
+      <button class="dropbtn">Login & Signup
+      </button>
+    </div>
+
+    <div class="dropdown">
+      <a class="dropbtn" (click)="redirect()"><i class="fa fa-shopping-cart" ></i>  Cart
+      </a>
+    </div>
 
     <a href="javascript:void(0);" style="font-size:20px;color:black;" class="icon" (click)="menu()">&#9776;</a>
   </div>

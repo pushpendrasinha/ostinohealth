@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="wrapper">
+
+    <div class="cart-heading">
+
+      <h2>Our Products </h2>
+
+    </div>
+
+    <!--<div class="row">
+
+      <div class="column">
+        <a href="#"><img  class="product-image" src="images/sample3.jpg" >
+          <h4>Moto G6 Play (Indigo Black, 32 GB)  (3 GB RAM)</h4>
+          <h4>Rs:11999</h4>
+          <button class="button"  onclick="window.location.href = 'cart.html'">Add to cart</button>
+        </a>
+      </div>
+      <div class="column">
+        <a href="#"><img  class="product-image"  src="images/sample2.jpg" >
+          <h4>Lenovo HX03F Spectra Smartband  (Black Strap, Size : Regular)</h4>
+          <h4>Rs:3000</h4>
+          <button class="button">Add to cart</button>
+        </a>
+      </div>
+      <div class="column">
+        <a href=""> <img  class="product-image"  src="images/sample1.jpg" >
+          <h4>Blisstone Self Design Men's Round Neck Multicolor T-Shirt  (Pack of 2)</h4>
+          <h4>Rs:559</h4>
+          <button class="button">Add to cart</button>
+        </a>
+      </div>
+
+    </div>-->
+
+    <div class="row">
+
+      <div class="column" *ngFor="let product of productList">
+        <a (click)="addToCart(product)"><img  class="product-image"   src="../../../../images/sample.jpg">
+          <h4>{{product.name}}</h4>
+          <h4>Rs: {{product.price}}</h4>
+          <button class="button" >Add to cart</button>
+        </a>
+      </div>
+     <!-- <div class="column">
+        <a href=""> <img  class="product-image"   src="images/sample1.jpg">
+          <h4>Blisstone Self Design Men's Round Neck Multicolor T-Shirt  (Pack of 2)</h4>
+          <h4>Rs:559</h4>
+          <button class="button">Add to cart</button>
+        </a>
+      </div>
+      <div class="column">
+        <a href="#"><img  class="product-image"  src="images/sample3.jpg">
+          <h4>Moto G6 Play (Indigo Black, 32 GB)  (3 GB RAM)</h4>
+          <h4>Rs:11999</h4>
+          <button class="button">Add to cart</button>
+        </a>
+      </div>-->
+    </div>
+
+ <!--   <div class="row">
+      <div class="column">
+        <a href=""> <img  class="product-image"   src="images/sample1.jpg">
+          <h4>Blisstone Self Design Men's Round Neck Multicolor T-Shirt  (Pack of 2)</h4>
+          <h4>Rs:559</h4>
+          <button class="button">Add to cart</button>
+        </a>
+      </div>
+      <div class="column">
+        <a href="#"><img  class="product-image" src="images/sample3.jpg">
+          <h4>Moto G6 Play (Indigo Black, 32 GB)  (3 GB RAM)</h4>
+          <h4>Rs:11999</h4>
+          <button class="button">Add to cart</button>
+        </a>
+      </div>
+      <div class="column">
+        <a href="#"><img  class="product-image"  src="images/sample2.jpg" >
+          <h4>Lenovo HX03F Spectra Smartband  (Black Strap, Size : Regular)</h4>
+          <h4>Rs:3000</h4>
+          <button class="button">Add to cart</button>
+        </a>
+      </div>
+
+    </div> &lt;!&ndash;row ends&ndash;&gt;-->
+
+
+  </div>
+
+</div><!--container ends-->
+

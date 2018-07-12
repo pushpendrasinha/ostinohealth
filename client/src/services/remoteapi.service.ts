@@ -15,4 +15,8 @@ export class RemoteApiService {
     return this.http.post(environment.serverUrl + '/register', registrationData);
   }
 
+  getProductsList() {
+    return this.http.get(environment.serverUrl + '/product/getProductsList');
+  }
+
 }
