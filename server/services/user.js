@@ -1,9 +1,10 @@
-var mongoUtil = require("../util/mongo-util");
+var mongoUtil = require("../util/mongo");
 const {ObjectId} = require('mongodb');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 var config = require('../config/config');
 var collection = 'users';
+var userModel = require("../models/user");
 // var secret = "med%ostino?R";
 
 module.exports = {
@@ -12,7 +13,7 @@ module.exports = {
         var result = await mongoUtil.findRecord(collection, {email: email});
         console.log("result is " + JSON.stringify(result,null,2));
         if(result.length == 0) {
-            return({error: "You are not authorized"})
+            return({error: `${email} is not registered`})
         } else {
             var passwordIsValid = bcrypt.compareSync(password, result[0].password);
             if(passwordIsValid) {

@@ -21,10 +21,11 @@ LoginForm: FormGroup;
   login() {
    // alert("called " + JSON.stringify(this.LoginForm.value, null, 2));
     this.remoteApiService.login(this.LoginForm.value).subscribe((result: any) => {
+      alert(JSON.stringify(result,null,2));
       if(result.user && result.user.name) {
         alert("welcome " + result.user.name)
       } else {
-        alert("invalid username/password");
+        alert(result.error);
       }
 
     }, (err) => {

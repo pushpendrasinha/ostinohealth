@@ -8,11 +8,11 @@ export class RemoteApiService {
   }
 
   login(credentials) {
-    return this.http.post(environment.serverUrl + '/login', credentials);
+    return this.http.post(environment.serverUrl + '/user/login', credentials);
   }
 
   register(registrationData) {
-    return this.http.post(environment.serverUrl + '/register', registrationData);
+    return this.http.post(environment.serverUrl + '/user/register', registrationData);
   }
 
   getProductsList() {
