@@ -1,0 +1,86 @@
+
+.bgimg{
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: black;
+  font-size: 25px;
+}
+
+
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+#demo{
+  font-size: 30px;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .
+
+
+  .bgimg{
+    background-image: url("../../../images/blur-background-6z.jpg");
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    color: white;
+  }
+
+  .bgimg img{
+    display: none;
+  }
+
+  .middle {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #demo{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+
+
+  .bgimg{
+    background-image: url("../../../images/blur-background-6z.jpg");
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    color: white;
+  }
+
+  .bgimg img{
+    display: none;
+  }
+
+  .middle {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #demo{
+    font-size: 15px;
+  }
+}

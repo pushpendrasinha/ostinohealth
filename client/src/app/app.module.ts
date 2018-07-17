@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-/*import { EcommerceModule } from './modules/ecommerce/ecommerce.module';*/
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
@@ -26,7 +25,23 @@ import { HeaderComponent } from './static-content/header/header.component';
 import { HomeComponent } from './static-content/home/home.component';
 import { Dataservice } from '../services/dataservice';
 import { RemoteApiService } from "../services/remoteapi.service";
-import { CartService } from "../services/cartservice";
+import { GovernmentComponent } from './static-content/government/government.component';
+import { ConsumerComponent } from './static-content/consumer/consumer.component';
+import { TreeComponent } from './static-content/tree/tree.component';
+import { BanyanComponent } from './static-content/tree/banyan/banyan.component';
+import { PeepalComponent } from './static-content/tree/peepal/peepal.component';
+import { NeemComponent } from './static-content/tree/neem/neem.component';
+import { EucalyptusComponent } from './static-content/tree/eucalyptus/eucalyptus.component';
+import { JamunComponent } from './static-content/tree/jamun/jamun.component';
+import { TamarindComponent } from './static-content/tree/tamarind/tamarind.component';
+import { GulmoharComponent } from './static-content/tree/gulmohar/gulmohar.component';
+import { MangoComponent } from './static-content/tree/mango/mango.component';
+import { LycheeComponent } from './static-content/tree/lychee/lychee.component';
+import { AshokaComponent } from './static-content/tree/ashoka/ashoka.component';
+import { SalComponent } from './static-content/tree/sal/sal.component';
+import { SheeshamComponent } from './static-content/tree/sheesham/sheesham.component';
+import { PaginationComponent } from './static-content/tree/pagination/pagination.component';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +61,23 @@ import { CartService } from "../services/cartservice";
     CorporateResponsibilityComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    GovernmentComponent,
+    ConsumerComponent,
+    TreeComponent,
+    BanyanComponent,
+    PeepalComponent,
+    NeemComponent,
+    EucalyptusComponent,
+    JamunComponent,
+    TamarindComponent,
+    GulmoharComponent,
+    MangoComponent,
+    LycheeComponent,
+    AshokaComponent,
+    SalComponent,
+    SheeshamComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +86,7 @@ import { CartService } from "../services/cartservice";
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [Dataservice, RemoteApiService, CartService],
+  providers: [ Dataservice, RemoteApiService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
