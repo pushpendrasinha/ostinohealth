@@ -27,6 +27,7 @@ import { HomeComponent } from './static-content/home/home.component';
 import { Dataservice } from '../services/dataservice';
 import { RemoteApiService } from "../services/remoteapi.service";
 import { CartService } from "../services/cartservice";
+import { TestComponent } from './static-content/test/test.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CartService } from "../services/cartservice";
     CorporateResponsibilityComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
