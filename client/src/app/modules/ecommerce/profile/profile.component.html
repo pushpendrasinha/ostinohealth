@@ -1,7 +1,7 @@
 <div class="container">
 
   <!--left panel-->
-  <div class="left-panel">
+  <!--<div class="left-panel">
 
 
     <div class="left-content1">
@@ -39,7 +39,7 @@
 
     </div>
 
-  </div>
+  </div>-->
   <!--left panel ends-->
 
   <!--right panel-->
@@ -48,13 +48,13 @@
 
     <div class="right-content1">
 
-      <b>Personal Information </b> &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Edit</a>
+      <b>Personal Information </b> &nbsp; &nbsp;<a href="">Edit</a>
       <br><br>
 
       <div class="row">
 
         <div class="column">
-          <input type="text" id="fname" name="firstname" placeholder="Firstname">
+          <input type="text" id="fname" name="firstname" [value] = "userdetails.name" placeholder="Firstname">
           <input type="text" id="lname" name="lastname" placeholder="Lastname">
           <button class="button">SAVE</button>
         </div>

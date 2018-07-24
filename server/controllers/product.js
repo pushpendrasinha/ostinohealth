@@ -1,4 +1,5 @@
 var productService = require("../services/product");
+
 module.exports = {
     getProductsList: async (req, res) => {
     var result = await productService.getProductList();

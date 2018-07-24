@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RemoteApiService } from "../../../../services/remoteapi.service";
 
 @Component({
   selector: 'app-home-ecom',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+userdetails: any;
+  constructor(private remoteApiService: RemoteApiService) {
+    this.userdetails = {};
+  }
 
   ngOnInit() {
+    this.remoteApiService.getUser().subscribe((result: any) => {
+    this.userdetails = result.user;
+    }, (err) => {
+
+    })
   }
 
 }

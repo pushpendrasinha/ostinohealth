@@ -25,6 +25,7 @@ LoginForm: FormGroup;
      // alert(JSON.stringify(result,null,2));
       if(result.user && result.user.name) {
         alert("welcome " + result.user.name);
+        localStorage.setItem('token', result.token);
         this.router.navigateByUrl('/ecom/products');
       } else {
         alert(result.error);

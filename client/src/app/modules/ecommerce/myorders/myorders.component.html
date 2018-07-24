@@ -1,3 +1,46 @@
-<p>
-  myorders works!
-</p>
+<div class="container">
+
+  <div class="wrapper">
+
+
+
+    <div class="title">
+      <b><a href="#"> My Account  </a><i class="fa fa-chevron-right" aria-hidden="true"></i> My Orders</b>
+    </div>
+
+    <div class="orders" *ngFor="let order of myorders">
+
+      <button class="button">Order ID No. {{order.orderID}}</button>
+      <hr>
+
+      <div class="row">
+        <div class="column" >
+          <img  class="product-image" src="images/sample.jpeg">
+
+        </div>
+
+        <div class="column">
+          <a href="#"> <b>Product Name</b> </a>
+          <p>Description</p>
+
+        </div>
+
+        <div class="column">
+          <b>Ordered On {{order.orderedOn}}</b><br><br>
+          <b>Delivered On {{order.deliveredOn}}</b>
+        </div>
+
+        <div class="column">
+          <b>Price: {{order.total}}</b>
+        </div>
+
+      </div> <!--row ends-->
+
+    </div><!--orders ends-->
+
+
+
+
+  </div> <!--wrapper ends-->
+
+</div><!--container ends-->

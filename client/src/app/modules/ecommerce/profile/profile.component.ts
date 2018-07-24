@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RemoteApiService } from "../../../../services/remoteapi.service";
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
+  userdetails: any;
+  constructor(private remoteApiService: RemoteApiService) { }
 
   ngOnInit() {
+    this.remoteApiService.getUser().subscribe((result: any) => {
+      this.userdetails = result.user;
+    }, (err) => {
+
+    })
   }
 
 }

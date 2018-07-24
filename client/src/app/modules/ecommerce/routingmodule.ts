@@ -7,6 +7,7 @@ import { MyordersComponent } from "./myorders/myorders.component";
 import { DeliveryAddressComponent } from "./delivery-address/delivery-address.component";
 import { CartComponent } from "./cart/cart.component";
 import { ProfileComponent } from "./profile/profile.component";
+import { HomeComponent } from "./home/home.component";
 
 
 const routes: Routes = [
@@ -17,7 +18,14 @@ const routes: Routes = [
   {path: 'address', component: DeliveryAddressComponent },
   {path: 'cart', component: CartComponent },
   {path: 'products', component: ProductsListComponent },
-  {path: 'profile', component: ProfileComponent }
+  {path: 'profile', component: ProfileComponent },
+  {path: 'home', component:  HomeComponent,
+    children: [
+      {path: '', redirectTo: 'profile'},
+      {path: 'profile', component: ProfileComponent},
+      {path: 'myorders', component: MyordersComponent},
+      {path: 'address', component: DeliveryAddressComponent },
+    ]}
 
 
   ];

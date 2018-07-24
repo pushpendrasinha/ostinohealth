@@ -1,0 +1,84 @@
+body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;}
+
+body{
+  height: 100%;
+}
+
+.container{
+  /* 	display: flex;
+  /* align-items: center; */
+  /*height: 100vh;*/
+}
+
+.wrapper{
+  display: block;
+  height: 100%;
+  padding-bottom: 6%;
+  overflow: hidden;
+  border: 1px solid #990000;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title{
+  width:95%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 2%;
+}
+.title a{
+  text-decoration: none;
+  color:black;
+}
+.title a:hover{
+  color:#990000;
+}
+.title b{
+  font-size: 22px;
+}
+
+.orders{
+  width: 95%;
+  background-color: white;
+  border:1px solid #990000;
+  margin-right:auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+.button {
+  background-color: #990000;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px 80px 20px;
+  /*  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column a{
+  text-decoration: none;
+  color:black;
+}

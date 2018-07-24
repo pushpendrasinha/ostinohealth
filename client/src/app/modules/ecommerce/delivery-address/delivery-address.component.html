@@ -1,78 +1,5 @@
-
-
-<!--  <script>
-    $(document).ready(function(){
-      $(".flip").click(function(){
-        $(".panel").slideDown(50);
-      });
-    });
-
-    $(document).ready(function(){
-      $(".flip-up").click(function(){
-        $(".panel").slideUp(50);
-      });
-    });
-  </script>
-
-  <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>-->
-
 <div class="container">
-
-  <!--left panel-->
-  <div class="left-panel">
-
-
-    <div class="left-content1">
-
-      <i class="fa fa-user" aria-hidden="true"></i>
-      <span class="text">Hello,<br><b>Username</b></span>
-
-    </div>
-
-    <div class="gap"></div>
-
-    <div class="left-content2">
-
-      <div class="order">
-        <a href="#"><i class="fa fa-folder" aria-hidden="true"></i><b>MY ORDERS</b>           <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-      </div>
-      <hr>
-
-      <div class="account">
-        <i class="fa fa-user" aria-hidden="true"></i><b>ACCOUNT SETTINGS</b>
-      </div>
-
-      <div class="profile">
-        <a  href="#"><h3>Profile Information</h3></a>
-        <a  href="#"><h3>Manage Addresses</h3></a>
-      </div>
-    </div>
-
-    <div class="gap"></div>
-
-    <div class="left-content3">
-      <div class="logout">
-        <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i><b>Logout</b></a>
-      </div>
-
-    </div>
-
-  </div>
-  <!--left panel ends-->
-
-  <!--right panel-->
-
-  <div class="right-panel">
+<div class="right-panel">
 
 
     <div class="title">
@@ -81,18 +8,21 @@
 
     <div class="address-tab">
 
-      <b  class="flip">ADD A NEW ADDRESS</b>
-      <div class="panel">
+      <button class="flip" (click)="newaddress = true" id="addButton" *ngIf="!newaddress">ADD A NEW ADDRESS</button>
+      <b class="flip" *ngIf="newaddress">ADD A NEW ADDRESS</b>
+      <div class="panel" *ngIf="newaddress">
+<form (ngSubmit)="addAddress()" novalidate [formGroup]="AddressForm">
 
-        <input type="text" id="name" name="name" placeholder="Name">
-        <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" maxlength="10">
-        <input type="text" id="pincode" name="pincode" placeholder="Pincode" maxlength="6">
-        <input type="text" id="locality" name="locality" placeholder="Locality">
-        <textarea id="address" rows="4" cols="10" placeholder="Address (Area and Street)"></textarea>
+
+        <input type="text"  formControlName="name" placeholder="Name">
+        <input type="tel" formControlName="phone" name="phone-number" placeholder="Phone Number" maxlength="10">
+        <input type="text"  name="pincode" formControlName="name" placeholder="Pincode" maxlength="6">
+        <input type="text" formControlName="locality" name="locality" placeholder="Locality">
+        <textarea id="address" rows="4" cols="10" formControlName="address" placeholder="Address (Area and Street)"></textarea>
 
         <input type="text" id="city" name="city" placeholder="City/Town/District">
 
-        <select class="states" id="states" name="state" required="">
+        <select class="states" id="states" name="state" formControlName="state">
           <option value="" disabled="">--Select State--</option>
           <option value="Andaman &amp; Nicobar Islands">Andaman &amp; Nicobar Islands</option>
           <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -132,8 +62,8 @@
           <option value="West Bengal">West Bengal</option>
         </select>
 
-        <input type="text" id="landmark" name="landmark"                              placeholder="Landmark (Optional)">
-        <input type="tel" id="alternate-phone-number" name="phone-number" placeholder="Alternate Phone (Optional)" maxlength="10">
+        <input type="text" id="landmark" name="landmark" formControlName="landmark" placeholder="Landmark (Optional)">
+        <input type="tel" id="alternate-phone-number" name="phone-number" placeholder="Alternate Phone (Optional)" maxlength="10" formControlName="altContact">
 
         <p>Address Type</p>
         <label class="address-type">
@@ -147,49 +77,21 @@
 
         <br><br>
 
-        <button class="save-address">SAVE</button>
+        <button class="save-address" type="submit">SAVE</button>
         <button class="flip-up">CANCEL</button>
+</form>
       </div> <!--panel ends-->
 
 
     </div><!--address-tab ends-->
 
 
-    <div class="address-section">
-      <a href="edit-address.html" class="edit">Edit</a> <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>
-      <p><b>Name &nbsp; &nbsp; &nbsp; &nbsp; Contact no. </b></p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. State-<b>820011</b></p>
+    <div class="address-section" *ngFor="let address of Addresses">
+      <a class="edit">Edit</a> <a  onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>
+      <p><b>Name &nbsp;{{address.name}} &nbsp; &nbsp; &nbsp; Contact no. {{address.contact}}</b></p>
+     <p></p>
 
     </div>
-
-    <div class="address-section">
-      <a href="edit-address.html" class="edit">Edit</a> <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>
-      <p><b>Name &nbsp; &nbsp; &nbsp; &nbsp; Contact no. </b></p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. State-<b>820011</b></p>
-
-    </div>
-
-    <div class="address-section">
-      <a href="edit-address.html"  class="edit">Edit</a> <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>
-      <p><b>Name &nbsp; &nbsp; &nbsp; &nbsp; Contact no. </b></p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. State-<b>820011</b></p>
-
-    </div>
-
-    <div class="address-section">
-      <a href="edit-address.html"  class="edit">Edit</a> <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>
-      <p><b>Name &nbsp; &nbsp; &nbsp; &nbsp; Contact no. </b></p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. State-<b>820011</b></p>
-
-    </div>
-
-    <div class="address-section">
-      <a href="edit-address.html"  class="edit">Edit</a> <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>
-      <p><b>Name &nbsp; &nbsp; &nbsp; &nbsp; Contact no. </b></p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. State-<b>820011</b></p>
-
-    </div>
-
   </div> <!--right panel ends-->
 
 
@@ -202,7 +104,7 @@
         <b>Are you sure you want to delete this address?</b>
         <div class="modal-row">
 
-          <button class="modal-button">YES,DELETE</button>
+          <button class="modal-button" (click)="deleteMe()">YES, DELETE</button>
 
           <button class="modal-button" onclick="document.getElementById('id01').style.display='none'">CANCEL</button>
         </div>

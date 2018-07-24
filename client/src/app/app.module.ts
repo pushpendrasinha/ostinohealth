@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-/*import { EcommerceModule } from './modules/ecommerce/ecommerce.module';*/
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
@@ -27,7 +26,9 @@ import { HomeComponent } from './static-content/home/home.component';
 import { Dataservice } from '../services/dataservice';
 import { RemoteApiService } from "../services/remoteapi.service";
 import { CartService } from "../services/cartservice";
-import { TestComponent } from './static-content/test/test.component';
+import { ApiInterceptor } from "../services/interceptor";
+import { AlertHandler } from "../services/alert-handler";
+
 
 @NgModule({
   declarations: [
@@ -47,8 +48,8 @@ import { TestComponent } from './static-content/test/test.component';
     CorporateResponsibilityComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent,
-    TestComponent
+    HomeComponent
+
   ],
   imports: [
     BrowserModule,
@@ -57,7 +58,7 @@ import { TestComponent } from './static-content/test/test.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [Dataservice, RemoteApiService, CartService],
+  providers: [Dataservice, RemoteApiService, CartService,{provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}, AlertHandler],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

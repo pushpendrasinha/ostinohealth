@@ -18,5 +18,12 @@ export class RemoteApiService {
   getProductsList() {
     return this.http.get(environment.serverUrl + '/product/getProductsList');
   }
+  getUser() {
+    return this.http.get(environment.serverUrl + '/user/getuser');
+  }
+
+  getAddresses() {
+    return this.http.get(environment.serverUrl + '/user/getaddresses');
+  }
 
 }
