@@ -41,6 +41,9 @@ import { AshokaComponent } from './static-content/tree/ashoka/ashoka.component';
 import { SalComponent } from './static-content/tree/sal/sal.component';
 import { SheeshamComponent } from './static-content/tree/sheesham/sheesham.component';
 import { PaginationComponent } from './static-content/tree/pagination/pagination.component';
+import { FeedbackComponent } from './static-content/feedback/feedback.component';
+
+
 
 
 @NgModule({
@@ -77,7 +80,9 @@ import { PaginationComponent } from './static-content/tree/pagination/pagination
     AshokaComponent,
     SalComponent,
     SheeshamComponent,
-    PaginationComponent
+    PaginationComponent,
+    FeedbackComponent,
+   
   ],
   imports: [
     BrowserModule,

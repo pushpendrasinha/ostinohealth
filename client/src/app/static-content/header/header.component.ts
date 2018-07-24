@@ -10,6 +10,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+   logo() {
+    console.log("Developed by Pushpendra Sinha");
+  }
   ngOnInit() {
     }
     menu() {
@@ -23,5 +26,8 @@ export class HeaderComponent implements OnInit {
   redirect() {
     this.router.navigateByUrl('/ecom/cart');
   }
+
+
+
 
 }

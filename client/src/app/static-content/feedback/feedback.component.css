@@ -28,6 +28,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 	align-items:  center;
 	height: 100vh;
 	 background: url("../../../images/blur-blurred-dark-1526.jpg") ;
+	 overflow: hidden;
    background-size: cover;
 }
 

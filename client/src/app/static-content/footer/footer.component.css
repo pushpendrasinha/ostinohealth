@@ -44,8 +44,9 @@
 @media screen and (max-width: 600px) {
   .footer{
     position: static;
-    line-height: 10px;
+    line-height: 15px;
     overflow: hidden;
+    padding-bottom: 5px;
   }
   .footer_column{
     font-size: 12px;
@@ -59,8 +60,9 @@
 @media screen and (max-width: 900px) {
   .footer{
     position: static;
-    line-height: 10px;
+    line-height: 15px;
     overflow: hidden;
+    padding-bottom: 5px;
   }
   .footer_column{
     font-size: 12px;

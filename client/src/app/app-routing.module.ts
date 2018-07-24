@@ -29,6 +29,7 @@ import { MangoComponent } from "./static-content/tree/mango/mango.component";
 import { LycheeComponent } from "./static-content/tree/lychee/lychee.component";
 import { EucalyptusComponent } from "./static-content/tree/eucalyptus/eucalyptus.component";
 import {JamunComponent} from "./static-content/tree/jamun/jamun.component";
+import {FeedbackComponent} from "./static-content/feedback/feedback.component";
 
 
 const routes: Routes = [
@@ -62,7 +63,8 @@ const routes: Routes = [
   {path: 'mango', component: MangoComponent },
   {path: 'jamun', component: JamunComponent },
   {path: 'lychee', component: LycheeComponent },
-  {path: '*', component: HomeComponent }
+  {path: '*', component: HomeComponent },
+  {path: 'feedback', component: FeedbackComponent }
   ];
 
 @NgModule({
