@@ -1,5 +1,36 @@
 body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;}
 
+@keyframes loading {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(1turn)}
+}
+.spinner {
+  width: 100%;
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  background-color: rgba(0,0,0,.4);
+  overflow-x: hidden;
+  height: 100%;
+}
+.loading {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  border-top: 5px solid #53777a;
+  border-bottom: 5px solid #c02942;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -80px;
+  animation: loading 1.2s linear infinite;
+  -webkit-animation: loading 1.2s linear infinite;
+}
 /*.feedback-form{
 	display: flex;
     height: 100vh;
@@ -21,70 +52,70 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 } */
 
 button:disabled {
- /* background: transparent;*/
+  /* background: transparent;*/
   cursor: not-allowed;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .container{
-	display: flex;
-	align-items:  center;
-	height: 100vh;
-	 background: url("../../../images/blur-blurred-dark-1526.jpg") ;
-	 overflow: hidden;
-   background-size: cover;
+  display: flex;
+  align-items:  center;
+  height: 100vh;
+  background: url("../../../images/blur-blurred-dark-1526.jpg") ;
+  overflow: hidden;
+  background-size: cover;
 }
 
 .wrapper{
-	margin-right: auto;
-	margin-left: auto;
-	border:1px solid #800000;
+  margin-right: auto;
+  margin-left: auto;
+  border:1px solid #800000;
 
-	overflow: hidden;
+  overflow: hidden;
 }
 .content-box{
-	height: 100%;
-	background-color: #f2f2f2;
-	overflow: hidden;
-	padding: 20px;
-	border-radius: 2px;
+  height: 100%;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 2px;
 }
 
 
 
 label{
-	font-size: 18px;
+  font-size: 18px;
 }
 input{
-	padding: 12px 15px;
-    box-sizing: border-box;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    outline: none;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
 }
 input[type=text],input[type=email]{
-	width: 100%;
-	box-shadow: 0 0 2px rgba(81, 203, 238, 1);
+  width: 100%;
+  box-shadow: 0 0 2px rgba(81, 203, 238, 1);
 }
 input:focus,textarea:focus {
-    background-color: #ffffcc;
+  background-color: #ffffcc;
 }
 textarea{
-	width: 100%;
-	margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 12px 15px;
-    resize: none;
-    outline: none;
-    box-shadow: 0 0 2px rgba(81, 203, 238, 1);
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  resize: none;
+  outline: none;
+  box-shadow: 0 0 2px rgba(81, 203, 238, 1);
 }
 
 /*input[type=radio]{
 	cursor: pointer;
 } */
 .button{
- background-color:  #b30000;
+  background-color:  #b30000;
   border-radius: 7px;
   border: none;
   color: white;
@@ -103,101 +134,101 @@ textarea{
 
 @media screen and (max-width: 600px) {
 
-/*.content-box{
-	width: 88%;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 10px;
-	color: #800000;
-	background-color: white;
-	height: auto;
-} */
-.container{
-	overflow: hidden;
-	min-height: 100vh;
-}
+  /*.content-box{
+      width: 88%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      color: #800000;
+      background-color: white;
+      height: auto;
+  } */
+  .container{
+    overflow: hidden;
+    min-height: 100vh;
+  }
 
-.wrapper{
-	width: 95%;
-	margin-right: auto;
-	margin-left: auto;
-	overflow: hidden;
-}
-.content-box{
-	height:auto;
-	padding: 10px;
+  .wrapper{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+  }
+  .content-box{
+    height:auto;
+    padding: 10px;
 
-}
+  }
 
-label{
-	font-size: 14px;
-}
-input{
-	padding: 5px 10px;
+  label{
+    font-size: 14px;
+  }
+  input{
+    padding: 5px 10px;
     margin-top: 5px;
     margin-bottom: 5px;
 
-}
-textarea{
-	width: 100%;
-	margin-top: 5px;
+  }
+  textarea{
+    width: 100%;
+    margin-top: 5px;
     margin-bottom: 10px;
     padding: 5px 10px;
-}
-.button{
-  padding: 10px 22px;
-  font-size: 14px;
-}
+  }
+  .button{
+    padding: 10px 22px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 900px) {
 
-/*.content-box{
-	width: 88%;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 10px;
-	color: #800000;
-	background-color: white;
-	height: auto;
-} */
-.container{
-	overflow: hidden;
-	height: auto;
-}
+  /*.content-box{
+      width: 88%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      color: #800000;
+      background-color: white;
+      height: auto;
+  } */
+  .container{
+    overflow: hidden;
+    height: auto;
+  }
 
-.wrapper{
-	width: 95%;
-	margin-right: auto;
-	margin-left: auto;
-	overflow: hidden;
-	margin-top:5%;
-	margin-bottom: 5%;
-}
-.content-box{
-	height:auto;
-	padding: 10px;
-}
+  .wrapper{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    margin-top:5%;
+    margin-bottom: 5%;
+  }
+  .content-box{
+    height:auto;
+    padding: 10px;
+  }
 
-label{
-	font-size: 14px;
-}
-input{
-	padding: 5px 10px;
+  label{
+    font-size: 14px;
+  }
+  input{
+    padding: 5px 10px;
     margin-top: 5px;
     margin-bottom: 5px;
 
-}
-textarea{
-	width: 100%;
-	margin-top: 5px;
+  }
+  textarea{
+    width: 100%;
+    margin-top: 5px;
     margin-bottom: 10px;
     padding: 5px 10px;
-}
-.button{
-  padding: 10px 22px;
-  font-size: 14px;
-}
+  }
+  .button{
+    padding: 10px 22px;
+    font-size: 14px;
+  }
 }
 
 

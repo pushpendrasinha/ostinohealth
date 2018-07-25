@@ -43,7 +43,7 @@ import { SheeshamComponent } from './static-content/tree/sheesham/sheesham.compo
 import { PaginationComponent } from './static-content/tree/pagination/pagination.component';
 import { FeedbackComponent } from './static-content/feedback/feedback.component';
 
-
+import { AlertHandler } from "../services/alert-handler";
 
 
 @NgModule({
@@ -82,7 +82,7 @@ import { FeedbackComponent } from './static-content/feedback/feedback.component'
     SheeshamComponent,
     PaginationComponent,
     FeedbackComponent,
-   
+
   ],
   imports: [
     BrowserModule,
@@ -91,7 +91,7 @@ import { FeedbackComponent } from './static-content/feedback/feedback.component'
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ Dataservice, RemoteApiService ],
+  providers: [ Dataservice, RemoteApiService, AlertHandler ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
