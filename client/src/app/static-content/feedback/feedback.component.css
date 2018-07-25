@@ -20,6 +20,10 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 	overflow: hidden;
 } */
 
+button:disabled {
+ /* background: transparent;*/
+  cursor: not-allowed;
+}
 * {
     box-sizing: border-box;
 }
@@ -32,11 +36,11 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
    background-size: cover;
 }
 
-.wrapper{ 
+.wrapper{
 	margin-right: auto;
 	margin-left: auto;
 	border:1px solid #800000;
-	
+
 	overflow: hidden;
 }
 .content-box{
@@ -106,14 +110,14 @@ textarea{
 	padding: 10px;
 	color: #800000;
 	background-color: white;
-	height: auto;  
+	height: auto;
 } */
 .container{
 	overflow: hidden;
 	min-height: 100vh;
 }
 
-.wrapper{ 
+.wrapper{
 	width: 95%;
 	margin-right: auto;
 	margin-left: auto;
@@ -129,10 +133,10 @@ label{
 	font-size: 14px;
 }
 input{
-	padding: 5px 10px;  
+	padding: 5px 10px;
     margin-top: 5px;
     margin-bottom: 5px;
-  
+
 }
 textarea{
 	width: 100%;
@@ -140,7 +144,7 @@ textarea{
     margin-bottom: 10px;
     padding: 5px 10px;
 }
-.button{ 
+.button{
   padding: 10px 22px;
   font-size: 14px;
 }
@@ -155,14 +159,14 @@ textarea{
 	padding: 10px;
 	color: #800000;
 	background-color: white;
-	height: auto;  
+	height: auto;
 } */
 .container{
 	overflow: hidden;
 	height: auto;
 }
 
-.wrapper{ 
+.wrapper{
 	width: 95%;
 	margin-right: auto;
 	margin-left: auto;
@@ -179,10 +183,10 @@ label{
 	font-size: 14px;
 }
 input{
-	padding: 5px 10px;  
+	padding: 5px 10px;
     margin-top: 5px;
     margin-bottom: 5px;
-  
+
 }
 textarea{
 	width: 100%;
@@ -190,7 +194,7 @@ textarea{
     margin-bottom: 10px;
     padding: 5px 10px;
 }
-.button{ 
+.button{
   padding: 10px 22px;
   font-size: 14px;
 }

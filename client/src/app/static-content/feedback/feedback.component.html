@@ -4,31 +4,27 @@
 
 	<div class="wrapper">
 <div class="content-box">
+  <form novalidate [formGroup]="FeedbackForm" (ngSubmit)="FeedbackForm.valid && feedback()">
 	<h1 style="text-align: center;">Feedback</h1>
 
 	<h3>Please provide your feedback below:</h3>
 
-	<label for="name">Name</label><br>
-	<input type="text" name="name" placeholder="Name">
-	
-
-	<label for="email">Email</label><br>
-	<input type="email" name="email" placeholder="Email">
-	
-
-<!--	<label for="ratings">How do you rate your overall experience?</label><br>
-	 <input type="radio" name="ratings" value="good"> Good  
-	 <input type="radio" name="ratings" value="average"> Average
-	 <input type="radio" name="ratings" value="bad" checked> Bad
-	  <br>  -->
+	<label>Name</label><br>
+	<input type="text"  placeholder="Name" formControlName="name">
+    <p class="error" *ngIf="FeedbackForm.controls.name.invalid && !FeedbackForm.controls.name.pristine"> Enter Name</p>
 
 
-	<label for="message">Message</label><br>
-	<textarea rows="4" cols="50" name="message" form="usrform" placeholder="Comments">
+	<label>Email</label><br>
+	<input type="email" name="email" placeholder="Email" formControlName="email">
+    <p class="error" *ngIf="FeedbackForm.controls.email.invalid && !FeedbackForm.controls.email.pristine">Enter valid email</p>
+
+  <label>Message</label><br>
+	<textarea rows="4" cols="50" name="message"  placeholder="Comments" formControlName="message">
 	</textarea>
+    <p class="error" *ngIf="FeedbackForm.controls.message.invalid && !FeedbackForm.controls.message.pristine"> Enter msg</p>
 
-	<a href="mailto:contact@ostinohealth.com"><button class="button">Send</button></a>
-
+	<button class="button" type="submit" [disabled]="!FeedbackForm.valid">Send</button>
+  </form>
 
 </div>
 </div>

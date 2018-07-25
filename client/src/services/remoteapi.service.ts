@@ -19,4 +19,8 @@ export class RemoteApiService {
     return this.http.get(environment.serverUrl + '/product/getProductsList');
   }
 
+  submitFeedback(data) {
+    return this.http.post(environment.serverUrl + '/common/feedback', data);
+  }
+
 }
