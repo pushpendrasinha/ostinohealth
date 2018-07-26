@@ -15,17 +15,17 @@
 
 	<label>Name</label><br>
 	<input type="text"  placeholder="Name" formControlName="name">
-    <p class="error" *ngIf="FeedbackForm.controls.name.invalid && !FeedbackForm.controls.name.pristine"> Enter Name</p>
+    <p class="error" *ngIf="FeedbackForm.controls.name.invalid && !FeedbackForm.controls.name.pristine">Name is required.</p>
 
 
 	<label>Email</label><br>
 	<input type="email" name="email" placeholder="Email" formControlName="email">
-    <p class="error" *ngIf="FeedbackForm.controls.email.invalid && !FeedbackForm.controls.email.pristine">Enter valid email</p>
+    <p class="error" *ngIf="FeedbackForm.controls.email.invalid && !FeedbackForm.controls.email.pristine">Please enter a valid email address.</p>
 
   <label>Message</label><br>
 	<textarea rows="4" cols="50" name="message"  placeholder="Comments" formControlName="message">
 	</textarea>
-    <p class="error" *ngIf="FeedbackForm.controls.message.invalid && !FeedbackForm.controls.message.pristine"> Enter msg</p>
+    <p class="error" *ngIf="FeedbackForm.controls.message.invalid && !FeedbackForm.controls.message.pristine">The Message field is required.</p>
 
 	<button class="button" type="submit" [disabled]="!FeedbackForm.valid">Send</button>
   </form>
