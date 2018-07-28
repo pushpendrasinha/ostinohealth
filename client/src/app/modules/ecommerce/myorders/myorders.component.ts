@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RemoteApiService } from "../../../../services/remoteapi.service";
 
 @Component({
   selector: 'app-myorders',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./myorders.component.css']
 })
 export class MyordersComponent implements OnInit {
-
-  constructor() { }
+myorders: any;
+  constructor(private remoteApiService: RemoteApiService) {
+    this.myorders = [];
+  }
 
   ngOnInit() {
+    this.remoteApiService.myOrders().subscribe((result: any) => {
+      this.myorders = result.orders;
+    })
   }
 
 }

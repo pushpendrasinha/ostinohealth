@@ -1,3 +1,4 @@
+<!--
 <div class="container">
 
   <div class="wrapper">
@@ -8,6 +9,9 @@
       <b><a href="#"> My Account  </a><i class="fa fa-chevron-right" aria-hidden="true"></i> My Orders</b>
     </div>
 
+    <div *ngIf="myorders.length == 0">
+      <p> You have not placed any order yet.</p>
+    </div>
     <div class="orders" *ngFor="let order of myorders">
 
       <button class="button">Order ID No. {{order.orderID}}</button>
@@ -34,13 +38,213 @@
           <b>Price: {{order.total}}</b>
         </div>
 
+      </div> &lt;!&ndash;row ends&ndash;&gt;
+
+    </div>&lt;!&ndash;orders ends&ndash;&gt;
+
+
+
+
+  </div> &lt;!&ndash;wrapper ends&ndash;&gt;
+
+</div>&lt;!&ndash;container ends&ndash;&gt;
+-->
+
+
+<div class="container">
+
+  <div class="wrapper">
+
+
+
+    <div class="title">
+      <b><a href="#"> My Account  </a><i class="fa fa-chevron-right" aria-hidden="true"></i> My Orders</b>
+    </div>
+
+    <div class="orders">
+
+      <button class="button">Order ID No.12345</button>
+      <hr>
+
+      <div class="row">
+        <div class="column" >
+          <img  class="product-image" src="images/sample.jpeg">
+
+        </div>
+
+        <div class="column">
+          <a href="#"> <b>Product Name</b> </a>
+          <p>Description</p>
+
+        </div>
+
+        <div class="column">
+          <b>Ordered On</b><br><br>
+          <b>Delivered On</b>
+        </div>
+
+        <div class="column">
+          <b>Price:123</b>
+        </div>
+
       </div> <!--row ends-->
 
     </div><!--orders ends-->
 
 
+    <div class="orders">
+
+      <button class="button">Order ID No.12345</button>
+      <hr>
+
+      <div class="row">
+        <div class="column" >
+          <img  class="product-image" src="images/sample.jpeg">
+
+        </div>
+
+        <div class="column">
+          <a href="#"> <b>Product Name</b> </a>
+          <p>Description</p>
+
+        </div>
+
+        <div class="column">
+          <b>Ordered On</b><br><br>
+          <b>Delivered On</b>
+        </div>
+
+        <div class="column">
+          <b>Price:123</b>
+        </div>
+
+      </div> <!--row ends-->
+
+    </div><!--orders ends-->
+
+
+    <div class="orders">
+
+      <button class="button">Order ID No.12345</button>
+      <hr>
+
+      <div class="row">
+        <div class="column" >
+          <img  class="product-image" src="images/sample.jpeg">
+
+        </div>
+
+        <div class="column">
+          <a href="#"> <b>Product Name</b> </a>
+          <p>Description</p>
+
+        </div>
+
+        <div class="column">
+          <b>Ordered On</b><br><br>
+          <b>Delivered On</b>
+        </div>
+
+        <div class="column">
+          <b>Price:123</b>
+        </div>
+
+      </div> <!--row ends-->
+
+    </div><!--orders ends-->
+
+    <div class="orders">
+
+      <button class="button">Order ID No.12345</button>
+      <hr>
+
+      <div class="row">
+        <div class="column" >
+          <img  class="product-image" src="images/sample.jpeg">
+
+        </div>
+
+        <div class="column">
+          <a href="#"> <b>Product Name</b> </a>
+          <p>Description</p>
+
+        </div>
+
+        <div class="column">
+          <b>Ordered On</b><br><br>
+          <b>Delivered On</b>
+        </div>
+
+        <div class="column">
+          <b>Price:123</b>
+        </div>
+
+      </div> <!--row ends-->
+
+    </div><!--orders ends-->
+
+    <div class="orders">
+
+      <button class="button">Order ID No.12345</button>
+      <hr>
+
+      <div class="row">
+        <div class="column" >
+          <img  class="product-image" src="images/sample.jpeg">
+
+        </div>
+
+        <div class="column">
+          <a href="#"> <b>Product Name</b> </a>
+          <p>Description</p>
+
+        </div>
+
+        <div class="column">
+          <b>Ordered On</b><br><br>
+          <b>Delivered On</b>
+        </div>
+
+        <div class="column">
+          <b>Price:123</b>
+        </div>
+
+      </div> <!--row ends-->
+
+    </div><!--orders ends-->
+
+    <div class="orders">
+
+      <button class="button">Order ID No.12345</button>
+      <hr>
+
+      <div class="row">
+        <div class="column" >
+          <img  class="product-image" src="images/sample.jpeg">
+
+        </div>
+
+        <div class="column">
+          <a href="#"> <b>Product Name</b> </a>
+          <p>Description</p>
+
+        </div>
+
+        <div class="column">
+          <b>Ordered On</b><br><br>
+          <b>Delivered On</b>
+        </div>
+
+        <div class="column">
+          <b>Price:123</b>
+        </div>
+
+      </div> <!--row ends-->
+
+    </div><!--orders ends-->
 
 
   </div> <!--wrapper ends-->
 
 </div><!--container ends-->
+

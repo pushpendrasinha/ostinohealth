@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { RemoteApiService } from "../../../../services/remoteapi.service";
+import { AlertHandler } from "../../../../services/alert-handler";
 
 @Component({
   selector: 'app-delivery-address',
@@ -11,16 +12,14 @@ export class DeliveryAddressComponent implements OnInit {
   newaddress: boolean;
   AddressForm: FormGroup;
   Addresses: any;
-  constructor(private fb: FormBuilder, private remoteApiService: RemoteApiService) {
+  addressTitle: any;
+  selectedAddress: any;
+  constructor(private fb: FormBuilder, private remoteApiService: RemoteApiService, private alertHandler: AlertHandler) {
     this.newaddress = false;
+    this.selectedAddress = null;
   }
 
-  ngOnInit() {
-    this.remoteApiService.getAddresses().subscribe((result: any) => {
-      this.Addresses = result.address;
-    }, (err) => {
-
-    })
+  resetForm() {
     this.AddressForm = this.fb.group({
       name: ['', Validators.required],
       phone: ['', Validators.required],
@@ -30,15 +29,79 @@ export class DeliveryAddressComponent implements OnInit {
       locality: ['', Validators.required],
       city: ['', Validators.required],
       landmark: [''],
-      altContact: ['']
+      altContact: [''],
+      addressType: ['', Validators.required]
     })
   }
 
-  addAddress() {
-    alert(JSON.stringify(this.AddressForm.value, null, 2));
+  ngOnInit() {
+    this.resetForm();
+    this.getAddresses();
+    }
+
+  addAddress(address) {
+    //alert(JSON.stringify(this.AddressForm.value, null, 2));
+    let addressValue = this.AddressForm.value;
+    if(this.selectedAddress) {
+      addressValue._id = this.selectedAddress;
+    }
+    this.remoteApiService.addAddress(addressValue).subscribe((result: any) => {
+      if(result.success) {
+        this.selectedAddress = null;
+        this.resetForm();
+        this.alertHandler.SuccessAlert(result.msg);
+        this.newaddress = false;
+        this.getAddresses();
+      } else {
+        this.alertHandler.ErrorAlert(result.msg);
+      }
+
+
+    }, (err) => {
+       this.alertHandler.ErrorAlert(err);
+    })
   }
 
-  deleteMe() {
-    alert("you are allowed..");
+  editAddress(address) {
+    this.newaddress = true;
+    this.addressTitle = "Edit Address";
+    this.AddressForm.patchValue(address);
+    this.selectedAddress = address._id;
+   // alert(JSON.stringify(this.AddressForm.value, null, 2));
+    /*this.AddressForm.controls['name'].setValue(address.name);
+    this.AddressForm.controls['phone'].setValue(address.name);
+    this.AddressForm.controls['pincode'].setValue(address.name);
+    this.AddressForm.controls['address'].setValue(address.name);
+    this.AddressForm.controls['locality'].setValue(address.name);
+    this.AddressForm.controls['state'].setValue(address.name);
+    this.AddressForm.controls['state'].setValue(address.name);
+    this.AddressForm.controls['state'].setValue(address.name);*/
+  }
+
+  getAddresses() {
+    this.remoteApiService.getAddresses().subscribe((result: any) => {
+      this.Addresses = result.addresses;
+    }, (err) => {
+
+    })
+  }
+
+  deleteMe(addressId) {
+   this.alertHandler.confirmationAlert().then((result) => {
+     if (result.value) {
+       this.remoteApiService.deleteAddress(addressId).subscribe((result: any) => {
+
+         if(result.success) {
+           this.alertHandler.SuccessAlert(result.msg);
+           this.getAddresses();
+         } else {
+           this.alertHandler.ErrorAlert(result.msg);
+         }
+         }, (err) => {
+         this.alertHandler.ErrorAlert(err);
+       })
+
+       }
+   })
   }
 }

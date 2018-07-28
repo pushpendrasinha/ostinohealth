@@ -8,20 +8,24 @@
 
     <div class="address-tab">
 
-      <button class="flip" (click)="newaddress = true" id="addButton" *ngIf="!newaddress">ADD A NEW ADDRESS</button>
-      <b class="flip" *ngIf="newaddress">ADD A NEW ADDRESS</b>
+      <button class="flip" (click)="newaddress = true; addressTitle='Add a new Address'" id="addButton" *ngIf="!newaddress">ADD A NEW ADDRESS</button>
+      <b class="flip" *ngIf="newaddress">{{addressTitle}}</b>
       <div class="panel" *ngIf="newaddress">
-<form (ngSubmit)="addAddress()" novalidate [formGroup]="AddressForm">
+        <form (ngSubmit)="AddressForm.valid && addAddress()" novalidate [formGroup]="AddressForm">
 
 
         <input type="text"  formControlName="name" placeholder="Name">
+          <p *ngIf="AddressForm.controls.name.invalid && !AddressForm.controls.name.pristine">Enter Name</p>
         <input type="tel" formControlName="phone" name="phone-number" placeholder="Phone Number" maxlength="10">
-        <input type="text"  name="pincode" formControlName="name" placeholder="Pincode" maxlength="6">
+          <p *ngIf="AddressForm.controls.phone.invalid && !AddressForm.controls.phone.pristine">Enter 10 digit mobile number</p>
+        <input type="text"  name="pincode" formControlName="pincode" placeholder="Pincode" maxlength="6">
+          <p *ngIf="AddressForm.controls.pincode.invalid && !AddressForm.controls.pincode.pristine">Enter pincode</p>
         <input type="text" formControlName="locality" name="locality" placeholder="Locality">
+          <p *ngIf="AddressForm.controls.locality.invalid && !AddressForm.controls.locality.pristine">Enter locality</p>
         <textarea id="address" rows="4" cols="10" formControlName="address" placeholder="Address (Area and Street)"></textarea>
-
-        <input type="text" id="city" name="city" placeholder="City/Town/District">
-
+          <p *ngIf="AddressForm.controls.address.invalid && !AddressForm.controls.address.pristine">Enter Address</p>
+        <input type="text" id="city" name="city" placeholder="City/Town/District" formControlName="city">
+          <p *ngIf="AddressForm.controls.city.invalid && !AddressForm.controls.city.pristine">Enter City Name</p>
         <select class="states" id="states" name="state" formControlName="state">
           <option value="" disabled="">--Select State--</option>
           <option value="Andaman &amp; Nicobar Islands">Andaman &amp; Nicobar Islands</option>
@@ -61,24 +65,25 @@
           <option value="Uttar Pradesh">Uttar Pradesh</option>
           <option value="West Bengal">West Bengal</option>
         </select>
-
+          <p *ngIf="AddressForm.controls.state.invalid && !AddressForm.controls.state.pristine">Enter State</p>
         <input type="text" id="landmark" name="landmark" formControlName="landmark" placeholder="Landmark (Optional)">
-        <input type="tel" id="alternate-phone-number" name="phone-number" placeholder="Alternate Phone (Optional)" maxlength="10" formControlName="altContact">
+
+          <input type="tel" id="alternate-phone-number" name="phone-number" placeholder="Alternate Phone (Optional)" maxlength="10" formControlName="altContact">
 
         <p>Address Type</p>
         <label class="address-type">
-          <input type="radio" name="radio">Home
+          <input type="radio"  formControlName="addressType" value="Home">Home
           <span class="checkmark"></span>
         </label>
         <label class="address-type">
-          <input type="radio" name="radio" id="work" >Work
+          <input type="radio"  formControlName="addressType" value="Work">Work
           <span class="checkmark"></span>
         </label>
-
+          <p *ngIf="AddressForm.controls.addressType.invalid && !AddressForm.controls.addressType.pristine">Enter Name</p>
         <br><br>
 
-        <button class="save-address" type="submit">SAVE</button>
-        <button class="flip-up">CANCEL</button>
+        <button class="save-address" type="submit" [disabled]="!AddressForm.valid">SAVE</button>
+        <button class="flip-up" (click)="newaddress = false; resetForm()">CANCEL</button>
 </form>
       </div> <!--panel ends-->
 
@@ -87,15 +92,16 @@
 
 
     <div class="address-section" *ngFor="let address of Addresses">
-      <a class="edit">Edit</a> <a  onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>
-      <p><b>Name &nbsp;{{address.name}} &nbsp; &nbsp; &nbsp; Contact no. {{address.contact}}</b></p>
+    <!--  <a class="edit">Edit</a> <a  onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>-->
+      <a class="edit" (click)="editAddress(address)">Edit</a> <a  (click)="deleteMe(address._id)" class="delete">Delete</a>
+      <p><b>Name &nbsp;{{address.name}} &nbsp; &nbsp; &nbsp; Contact no. {{address.phone}}</b></p>
      <p></p>
 
     </div>
   </div> <!--right panel ends-->
 
 
-  <div id="id01" class="modal">
+ <!-- <div id="id01" class="modal">
 
     <form class="modal-content animate">
 
@@ -109,9 +115,9 @@
           <button class="modal-button" onclick="document.getElementById('id01').style.display='none'">CANCEL</button>
         </div>
 
-      </div><!--container ends-->
+      </div>&lt;!&ndash;container ends&ndash;&gt;
     </form>
-  </div><!--modal ends-->
+  </div>--><!--modal ends-->
 
 </div>
 <!--container ends-->

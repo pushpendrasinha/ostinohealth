@@ -6,7 +6,7 @@ export class AlertHandler {
 
   constructor() { }
 
-  SuccessAlert(title) {  
+  SuccessAlert(title) {
     swal({
       type: 'success',
       title: title,
@@ -31,6 +31,18 @@ export class AlertHandler {
       showConfirmButton: false,
       timer: 2000
     });
+  }
+
+  confirmationAlert() {
+    return swal({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    })
   }
 
 }

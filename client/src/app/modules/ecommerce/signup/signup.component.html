@@ -37,14 +37,24 @@
           <input type="tel" name="mobile-number" placeholder="Enter your mobile number" formControlName="contact">
           <p>Optional but recommended as backup</p>
 
+          <label> <b> Gender</b>  </label> <br> <br>
+          <label class="address-type" style="margin:20px;">
+            <input type="radio"  value="MALE" formControlName="gender">MALE
+            <span class="checkmark"></span>
+          </label>
+          <label class="address-type" style="margin:20px;">
+            <input type="radio"  value="FEMALE" formControlName="gender">FEMALE
+            <span class="checkmark"></span>
+          </label> <br>
+
           <label for="password"><b>Password</b></label>
-          <input type="password" name="password" placeholder="At least 6 characters." formControlName="password">
-          <p *ngIf="SignupForm.controls.password.invalid && !SignupForm.controls.password.pristine"
+          <input type="password" name="password" placeholder="At least 6 characters." formControlName="newPassword">
+          <p *ngIf="SignupForm.controls.newPassword.invalid && !SignupForm.controls.newPassword.pristine"
              class="error">Password should be of minimum 6 characters in length and must contain at least 1 uppercase & 1 numeral</p>
 
           <label for="re-enter-password"><b>Re-enter Password</b></label>
-          <input type="password" name="re-enter-password" placeholder="Confirm password" formControlName="confirmpassword">
-          <p *ngIf="SignupForm.controls.confirmpassword.invalid && !SignupForm.controls.confirmpassword.pristine" class="error">Password do not match</p>
+          <input type="password" name="re-enter-password" placeholder="Confirm password" formControlName="confirmPassword">
+          <p *ngIf="SignupForm.controls.confirmPassword.invalid && !SignupForm.controls.confirmPassword.pristine" class="error">Password do not match</p>
 
           <button type="submit" class="create-account" [disabled]="!SignupForm.valid">Create your account</button>
 

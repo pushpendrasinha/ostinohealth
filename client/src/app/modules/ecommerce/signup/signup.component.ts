@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 import { RemoteApiService} from "../../../../services/remoteapi.service";
 import { PasswordValidation } from "../../../../util/passwordvalidator";
+import { AlertHandler } from "../../../../services/alert-handler";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-signup',
@@ -10,15 +12,16 @@ import { PasswordValidation } from "../../../../util/passwordvalidator";
 })
 export class SignupComponent implements OnInit {
   SignupForm: FormGroup;
-  constructor(private fb: FormBuilder, private remoteApiService: RemoteApiService) { }
+  constructor(private fb: FormBuilder, private remoteApiService: RemoteApiService, private alertHandler: AlertHandler, private router: Router) { }
 
   ngOnInit() {
     this.SignupForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
       contact: ['', Validators.required],
-      password: ['', [Validators.required, Validators.pattern("^(?=.*?[A-Z])(?=.*?[0-9]).{6,}$")]],
-      confirmpassword: ['', [Validators.required]]
+      gender: ['', Validators.required],
+      newPassword: ['', [Validators.required, Validators.pattern("^(?=.*?[A-Z])(?=.*?[0-9]).{6,}$")]],
+      confirmPassword: ['', [Validators.required]]
 
     }, {
       validator: PasswordValidation.MatchPassword
@@ -31,13 +34,19 @@ export class SignupComponent implements OnInit {
       name: this.SignupForm.controls['name'].value,
       email: this.SignupForm.controls['email'].value,
       contact: this.SignupForm.controls['contact'].value,
-      password: this.SignupForm.controls['password'].value
+      password: this.SignupForm.controls['newPassword'].value,
+      gender: this.SignupForm.controls['gender'].value
     }
-    this.remoteApiService.register(obj).subscribe(() => {
-      alert("user registered successfully..")
+    this.remoteApiService.register(obj).subscribe((result: any) => {
+      if(result.success) {
+        this.alertHandler.SuccessAlert(result.msg);
+        this.router.navigateByUrl("/ecom/login");
+      } else {
+        this.alertHandler.ErrorAlert(result.msg);
+      }
     }, (err) => {
       console.log("err is " + JSON.stringify(err,null,2));
-      alert("something went wrong..");
+      this.alertHandler.ErrorAlert(err);
     })
   }
 

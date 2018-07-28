@@ -23,7 +23,26 @@ export class RemoteApiService {
   }
 
   getAddresses() {
-    return this.http.get(environment.serverUrl + '/user/getaddresses');
+    return this.http.get(environment.serverUrl + '/address/getAddresses');
+  }
+  changePassword(credentials) {
+    return this.http.post(environment.serverUrl + '/user/changepassword', credentials);
+  }
+  addAddress(address) {
+    return this.http.post(environment.serverUrl + '/address/addAddress', address);
+}
+  updateAddress(data) {
+    return this.http.post(environment.serverUrl + '/address/updateAddress', data);
+  }
+  deleteAddress(addressId) {
+    return this.http.get(environment.serverUrl + `/address/deleteAddress?addressId=${addressId}`);
+  }
+
+  editProfile(data) {
+    return this.http.post(environment.serverUrl + '/user/edit', data);
+  }
+  myOrders() {
+    return this.http.get(environment.serverUrl + `/orders/myorders`);
   }
 
 }

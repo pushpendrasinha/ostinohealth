@@ -28,6 +28,7 @@ import { RemoteApiService } from "../services/remoteapi.service";
 import { CartService } from "../services/cartservice";
 import { ApiInterceptor } from "../services/interceptor";
 import { AlertHandler } from "../services/alert-handler";
+import { AuthService } from "../services/auth.service";
 
 
 @NgModule({
@@ -58,7 +59,7 @@ import { AlertHandler } from "../services/alert-handler";
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [Dataservice, RemoteApiService, CartService,{provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}, AlertHandler],
+  providers: [Dataservice, RemoteApiService, CartService,{provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}, AlertHandler, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
