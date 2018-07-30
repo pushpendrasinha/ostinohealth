@@ -6,27 +6,23 @@ import { Subject} from "rxjs/Subject";
 @Injectable()
 export class CartService {
  // private CartState: any ;
-   cartSubject = new Subject<any>();
+   cartItems: Subject<any>;
   Products :any;
 
   constructor(private http: HttpClient) {
     this.Products = [];
- // this.CartState = this.cartSubject.asObservable();
+    this.cartItems = new Subject<any>();
   }
 
   addProduct(product) {
-    this.Products.push(product);
-    this.cartSubject.next({loaded: true , products:  this.Products});
-   // this.cartSubject.next({loaded: true, products:  this.Products});
-    alert("product added ");
+    this.Products.unshift(product);
+    this.cartItems.next(this.Products);
   }
-  getProductObservable() {
-    return this.cartSubject.asObservable();
-  }
+
 
   removeProduct(id) {
     this.Products = this.Products.filter((_item) =>  _item.id !== id )
-    this.cartSubject.next({loaded: false , products:  this.Products});
+    this.cartItems.next(this.Products);
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RemoteApiService } from "../../../../services/remoteapi.service";
 import { CartService } from "../../../../services/cartservice";
 
+
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
@@ -19,7 +20,9 @@ productList: Array<any>;
     })
   }
   addToCart(product) {
+    alert("add to cart " + JSON.stringify(product, null, 2));
     this.cartService.addProduct(product);
+
   }
 
 }

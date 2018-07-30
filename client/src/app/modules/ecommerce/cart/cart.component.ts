@@ -16,10 +16,10 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     console.log("in cart component");
-    this.subscription = this._cartService.getProductObservable()
-      .subscribe((state) => {
-        alert("in subscription ");
-        this.cartItems = state.products;
+    this.subscription = this._cartService.cartItems
+      .subscribe((products) => {
+        alert("in cart subscription ");
+        this.cartItems = products;
         console.log("cartItems are "  + JSON.stringify(this.cartItems, null, 2));
       });
    // this._cartService.cartSubject.next("bye");
