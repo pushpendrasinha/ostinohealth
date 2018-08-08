@@ -87,7 +87,7 @@ export class DeliveryAddressComponent implements OnInit {
   }
 
   deleteMe(addressId) {
-   this.alertHandler.confirmationAlert().then((result) => {
+/*   this.alertHandler.confirmationAlert().then((result) => {
      if (result.value) {
        this.remoteApiService.deleteAddress(addressId).subscribe((result: any) => {
 
@@ -102,6 +102,6 @@ export class DeliveryAddressComponent implements OnInit {
        })
 
        }
-   })
+   })*/
   }
 }

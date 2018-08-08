@@ -21,7 +21,7 @@ LoginForm: FormGroup;
               private alertHandler: AlertHandler) { }
 
   ngOnInit() {
-   // this.returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || 'ecom/products';
+    this.returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || 'ecom/products';
   this.LoginForm = this.fb.group({
     email: ['', Validators.required],
     password: ['', Validators.required]
@@ -30,15 +30,18 @@ LoginForm: FormGroup;
 
   login() {
    // alert("called " + JSON.stringify(this.LoginForm.value, null, 2));
+    this.alertHandler.showLoading();
     this.remoteApiService.login(this.LoginForm.value).subscribe((result: any) => {
      // alert(JSON.stringify(result,null,2));
+      this.alertHandler.hideLoading();
       if(result.user && result.user.name) {
        // alert("welcome " + result.user.name);
         this.alertHandler.SuccessAlert(`Welcome ${result.user.name}`);
         localStorage.setItem('token', result.token);
         this.authService.setLoginStatus();
         this.authService.userdetails.next(result.user);
-        this.router.navigateByUrl('/ecom/products');
+       // this.router.navigateByUrl('/ecom/products');
+        this.router.navigateByUrl(this.returnUrl.toString());
       } else {
         alert(result.error);
       }

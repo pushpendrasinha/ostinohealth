@@ -30,6 +30,7 @@ export class SignupComponent implements OnInit {
 
   register() {
   //alert(JSON.stringify(this.SignupForm.value, null, 2));
+    this.alertHandler.showLoading();
     var obj = {
       name: this.SignupForm.controls['name'].value,
       email: this.SignupForm.controls['email'].value,
@@ -38,6 +39,7 @@ export class SignupComponent implements OnInit {
       gender: this.SignupForm.controls['gender'].value
     }
     this.remoteApiService.register(obj).subscribe((result: any) => {
+    this.alertHandler.hideLoading();
       if(result.success) {
         this.alertHandler.SuccessAlert(result.msg);
         this.router.navigateByUrl("/ecom/login");

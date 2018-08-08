@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription} from "rxjs/Subscription";
 import { CartService } from "../../../../services/cartservice";
+import { RemoteApiService } from "../../../../services/remoteapi.service";
+import {AlertHandler} from "../../../../services/alert-handler";
 
 @Component({
   selector: 'app-cart',
@@ -10,22 +12,69 @@ import { CartService } from "../../../../services/cartservice";
 export class CartComponent implements OnInit {
   private subscription : Subscription;
   cartItems: any;
-  constructor(private _cartService: CartService) {
+  total: Number;
+  constructor(private remoteApiService: RemoteApiService,
+              private  cartService: CartService,
+              private alertHandler: AlertHandler) {
     this.cartItems = [];
+    this.total = 0;
   }
 
   ngOnInit() {
     console.log("in cart component");
-    this.subscription = this._cartService.cartItems
-      .subscribe((products) => {
-        alert("in cart subscription ");
-        this.cartItems = products;
-        console.log("cartItems are "  + JSON.stringify(this.cartItems, null, 2));
-      });
-   // this._cartService.cartSubject.next("bye");
+    this.remoteApiService.viewCart().subscribe((result: any) => {
+if(result.success) {
+  this.cartItems = result.items;
+  this.total = result.total;
+  this.cartService.numberOfItems.next(result.totalItems);
+}
+    }, (err)=> {
+      alert("error");
+    })
+  }
+  remove(productId) {
+   // alert(productId);
+    this.remoteApiService.removeProduct(productId).subscribe((result: any) => {
+      if(result.success) {
+        this.cartItems = result.items;
+        this.total = result.total;
+        this.cartService.numberOfItems.next(result.totalItems);
+        }
+    })
+  }
+  update(item, quantity) {
+    this.alertHandler.showLoading();
+    if(quantity == -1) {
+      if(item.quantity > 1) {
+        item.quantity = item.quantity + quantity;
+        this.changeQuantity(item);
+      }
+    } else {
+      item.quantity = item.quantity + quantity;
+      this.changeQuantity(item);
+    }
+
+
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  changeQuantity(item) {
+    this.remoteApiService.changeQuantity(item._id, item.quantity).subscribe((result: any) => {
+      this.alertHandler.hideLoading();
+      if(result.success) {
+        this.cartItems = result.items;
+        this.total = result.total;
+        this.cartService.numberOfItems.next(result.totalItems);
+      }
+    })
+  }
+
+  checkout() {
+    this.remoteApiService.checkout().subscribe((result: any)=> {
+window.open(result);
+    })
   }
 
 }

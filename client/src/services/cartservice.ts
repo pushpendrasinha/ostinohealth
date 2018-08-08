@@ -8,10 +8,12 @@ export class CartService {
  // private CartState: any ;
    cartItems: Subject<any>;
   Products :any;
+  numberOfItems: Subject<Number>;
 
   constructor(private http: HttpClient) {
     this.Products = [];
     this.cartItems = new Subject<any>();
+    this.numberOfItems = new Subject<Number>();
   }
 
   addProduct(product) {

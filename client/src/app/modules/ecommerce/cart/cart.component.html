@@ -19,8 +19,8 @@
         <div class="column2">
           <a href="#" style="font-weight: lighter;"> <b>{{item.name}}</b> </a>
           <br><br><br>
-          <a href="#" style="color:#4d0000"><b> Save for Later</b></a>
-          <a href="#" class="link" style="color:#4d0000"> <b>Delete</b></a>
+          <!--<a href="#" style="color:#4d0000"><b> Save for Later</b></a>-->
+          <a  class="link" style="color:#4d0000" (click)="remove(item._id)"> <b>Delete</b></a>
         </div>
 
         <div class="column3">
@@ -28,114 +28,17 @@
         </div>
 
         <div class="column4">
-          <input type='button' value='-' class='qtyminus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus' field='quantity' />
+          <input type='button' value='-' class='qtyminus' field='quantity' (click)="update(item, -1)"/>
+          <input type='number' name='quantity' [value]="item.quantity" class='qty'  onkeypress="return event.charCode >= 49"/>
+          <input type='button' value='+' class='qtyplus' field='quantity' (click)="update(item, 1)"/>
         </div>
 
-      </div> <!--row ends-->
-
-<!--      <div class="row">
-        <div class="column1" >
-          <a href="#"><img  class="product-image" src="images/sample3.jpg"></a>
-        </div>
-
-        <div class="column2">
-          <a href="#" style="font-weight: lighter;"> <b>Nokia 8 Sirocco (Black, 128 GB)</b> </a>
-          <br><br><br>
-          <a href="#" style="color:#4d0000"><b> Save for Later</b></a>
-          <a href="#" class="link" style="color:#4d0000"> <b>Delete</b></a>
-        </div>
-
-        <div class="column3">
-          <b>Price: 49,999</b>
-        </div>
-
-        <div class="column4">
-          <input type='button' value='-' class='qtyminus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus' field='quantity' />
-        </div>
-
-      </div> &lt;!&ndash;row ends&ndash;&gt;
-
-      <div class="row">
-        <div class="column1" >
-          <a href="#"><img  class="product-image" src="images/sample2.jpg"></a>
-        </div>
-
-        <div class="column2">
-          <a href="#" style="font-weight: lighter;"> <b>Motorola Pulse 2 Wired Headset with Mic</b> </a>
-          <br><br><br>
-          <a href="#" style="color:#4d0000"><b> Save for Later</b></a>
-          <a href="#" class="link" style="color:#4d0000"> <b>Delete</b></a>
-        </div>
-
-        <div class="column3">
-          <b>Price: 799</b>
-        </div>
-
-        <div class="column4">
-          <input type='button' value='-' class='qtyminus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus' field='quantity' />
-        </div>
-
-      </div> &lt;!&ndash;row ends&ndash;&gt;
-
-
-      <div class="row">
-        <div class="column1" >
-          <a href="#"><img  class="product-image" src="images/sample2.jpg"></a>
-        </div>
-
-        <div class="column2">
-          <a href="#" style="font-weight: lighter;"> <b>Motorola Pulse 2 Wired Headset with Mic</b> </a>
-          <br><br><br>
-          <a href="#" style="color:#4d0000"><b> Save for Later</b></a>
-          <a href="#" class="link" style="color:#4d0000"> <b>Delete</b></a>
-        </div>
-
-        <div class="column3">
-          <b>Price: 799</b>
-        </div>
-
-        <div class="column4">
-          <input type='button' value='-' class='qtyminus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus' field='quantity' />
-        </div>
-
-      </div> &lt;!&ndash;row ends&ndash;&gt;
-
-      <div class="row">
-        <div class="column1" >
-          <a href="#"><img  class="product-image" src="images/sample2.jpg"></a>
-        </div>
-
-        <div class="column2">
-          <a href="#" style="font-weight: lighter;"> <b>Motorola Pulse 2 Wired Headset with Mic</b> </a>
-          <br><br><br>
-          <a href="#" style="color:#4d0000"><b> Save for Later</b></a>
-          <a href="#" class="link" style="color:#4d0000"> <b>Delete</b></a>
-        </div>
-
-        <div class="column3">
-          <b>Price: 799</b>
-        </div>
-
-        <div class="column4">
-          <input type='button' value='-' class='qtyminus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus' field='quantity' />
-        </div>
-
-      </div> &lt;!&ndash;row ends&ndash;&gt;-->
+      </div>
 
       <div class="cart-button">
-        <button  onclick="window.location.href='#'"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+        <button  onclick="window.location.href='ecom/products'"><i class="fa fa-chevron-left" aria-hidden="true"></i>
           CONTINUE</button>
-        <button>PLACE ORDER</button>
+        <button (click)="checkout()">PLACE ORDER</button>
       </div>
 
     </div><!--main column1 ends-->
@@ -148,7 +51,7 @@
       <table>
         <tr>
           <td>Price (1 item)</td>
-          <td>999</td>
+          <td> {{total}}</td>
         </tr>
         <tr>
           <td>Delivery Charges</td>
@@ -159,7 +62,7 @@
       <table>
         <tr>
           <td>Amount Payable</td>
-          <td>999</td>
+          <td>{{total}}</td>
         </tr>
       </table>
 

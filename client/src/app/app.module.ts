@@ -29,6 +29,23 @@ import { CartService } from "../services/cartservice";
 import { ApiInterceptor } from "../services/interceptor";
 import { AlertHandler } from "../services/alert-handler";
 import { AuthService } from "../services/auth.service";
+import { GovernmentComponent } from './static-content/government/government.component';
+import { ConsumerComponent } from './static-content/consumer/consumer.component';
+import { TreeComponent } from './static-content/tree/tree.component';
+import { BanyanComponent } from './static-content/tree/banyan/banyan.component';
+import { PeepalComponent } from './static-content/tree/peepal/peepal.component';
+import { NeemComponent } from './static-content/tree/neem/neem.component';
+import { EucalyptusComponent } from './static-content/tree/eucalyptus/eucalyptus.component';
+import { JamunComponent } from './static-content/tree/jamun/jamun.component';
+import { TamarindComponent } from './static-content/tree/tamarind/tamarind.component';
+import { GulmoharComponent } from './static-content/tree/gulmohar/gulmohar.component';
+import { MangoComponent } from './static-content/tree/mango/mango.component';
+import { LycheeComponent } from './static-content/tree/lychee/lychee.component';
+import { AshokaComponent } from './static-content/tree/ashoka/ashoka.component';
+import { SalComponent } from './static-content/tree/sal/sal.component';
+import { SheeshamComponent } from './static-content/tree/sheesham/sheesham.component';
+import { PaginationComponent } from './static-content/tree/pagination/pagination.component';
+import { FeedbackComponent } from './static-content/feedback/feedback.component';
 
 
 @NgModule({
@@ -49,7 +66,24 @@ import { AuthService } from "../services/auth.service";
     CorporateResponsibilityComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    GovernmentComponent,
+    ConsumerComponent,
+    TreeComponent,
+    BanyanComponent,
+    PeepalComponent,
+    NeemComponent,
+    EucalyptusComponent,
+    JamunComponent,
+    TamarindComponent,
+    GulmoharComponent,
+    MangoComponent,
+    LycheeComponent,
+    AshokaComponent,
+    SalComponent,
+    SheeshamComponent,
+    PaginationComponent,
+    FeedbackComponent
 
   ],
   imports: [

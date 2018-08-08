@@ -11,8 +11,9 @@ export class ApiInterceptor implements HttpInterceptor {
   constructor() { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log(request);
+
     let token = localStorage.getItem('token');
+    console.log("token in intercept" + token);
     if (token) {
       request = request.clone({
         setHeaders: {

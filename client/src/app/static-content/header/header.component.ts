@@ -1,6 +1,7 @@
 import {Component, OnInit, Input, OnDestroy} from '@angular/core';
 import { Router} from "@angular/router";
 import { AuthService } from "../../../services/auth.service";
+import { CartService } from "../../../services/cartservice";
 import {Subscription} from "rxjs/Subscription";
 
 @Component({
@@ -15,7 +16,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   loggedInsubscription: Subscription;
   userDetailsSubscription: Subscription;
   userdetails: any;
-  constructor(private router: Router, private authService: AuthService) { }
+  numberOfItemsInCart: Subscription;
+  numberOfItems: any;
+  constructor(private router: Router, private authService: AuthService, private cartService: CartService) {
+    this.numberOfItems = 0;
+  }
 
   ngOnInit() {
     this.userdetails = {};
@@ -32,6 +37,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
       //alert("user subscription called");
       this.userdetails = value;
     })
+
+    this.numberOfItemsInCart = this.cartService.numberOfItems.subscribe((value) => {
+      this.numberOfItems = value;
+    })
+
     }
     menu() {
       const x = document.getElementById('myTopnav');
@@ -51,6 +61,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.loggedInsubscription.unsubscribe();
     this.userDetailsSubscription.unsubscribe();
+    this.numberOfItemsInCart.unsubscribe();
   }
 
 }
