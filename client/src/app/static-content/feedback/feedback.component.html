@@ -1,0 +1,35 @@
+<div class="spinner" *ngIf="showLoader">
+  <div class="loading">
+
+  </div>
+</div>
+
+<div class="container">
+
+	<div class="wrapper">
+<div class="content-box">
+  <form novalidate [formGroup]="FeedbackForm" (ngSubmit)="FeedbackForm.valid && feedback()">
+	<h1 style="text-align: center;">Feedback</h1>
+
+	<h3>Please provide your feedback below:</h3>
+
+	<label>Name</label><br>
+	<input type="text"  placeholder="Name" formControlName="name">
+    <p class="error" *ngIf="FeedbackForm.controls.name.invalid && !FeedbackForm.controls.name.pristine">Name is required.</p>
+
+
+	<label>Email</label><br>
+	<input type="email" name="email" placeholder="Email" formControlName="email">
+    <p class="error" *ngIf="FeedbackForm.controls.email.invalid && !FeedbackForm.controls.email.pristine">Please enter a valid email address.</p>
+
+  <label>Message</label><br>
+	<textarea rows="4" cols="50" name="message"  placeholder="Comments" formControlName="message">
+	</textarea>
+    <p class="error" *ngIf="FeedbackForm.controls.message.invalid && !FeedbackForm.controls.message.pristine">The Message field is required.</p>
+
+	<button class="button" type="submit" [disabled]="!FeedbackForm.valid">Send</button>
+  </form>
+
+</div>
+</div>
+ </div>
