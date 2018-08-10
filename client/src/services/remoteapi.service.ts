@@ -62,7 +62,11 @@ export class RemoteApiService {
   }
 
   checkout() {
-    return this.http.get(environment.serverUrl + '/payment/checkoutpage');
+    return this.http.get(environment.serverUrl + '/payment/checkoutpage', {responseType: "text"});
+  }
+
+  initTransaction(enc, access) {
+    return this.http.post("https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction", enc, access)
   }
 
 }
