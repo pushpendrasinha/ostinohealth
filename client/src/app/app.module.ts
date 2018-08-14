@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -46,7 +46,7 @@ import { SalComponent } from './static-content/tree/sal/sal.component';
 import { SheeshamComponent } from './static-content/tree/sheesham/sheesham.component';
 import { PaginationComponent } from './static-content/tree/pagination/pagination.component';
 import { FeedbackComponent } from './static-content/feedback/feedback.component';
-
+import { ExceptionHandler } from '../services/exception-handler';
 
 @NgModule({
   declarations: [
@@ -93,7 +93,10 @@ import { FeedbackComponent } from './static-content/feedback/feedback.component'
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [Dataservice, RemoteApiService, CartService,{provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}, AlertHandler, AuthService],
+  providers: [Dataservice, RemoteApiService, CartService,
+    {provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true},
+    {provide: ErrorHandler, useClass: ExceptionHandler},
+    AlertHandler, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

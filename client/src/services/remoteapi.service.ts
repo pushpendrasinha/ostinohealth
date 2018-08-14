@@ -62,7 +62,7 @@ export class RemoteApiService {
   }
 
   checkout() {
-    return this.http.get(environment.serverUrl + '/payment/checkoutpage', {responseType: "text"});
+    return this.http.get(environment.serverUrl + '/payment/checkoutpage');
   }
 
   initTransaction(enc, access) {

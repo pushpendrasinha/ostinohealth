@@ -77,7 +77,8 @@ if(result.success) {
 
   checkout() {
     this.remoteApiService.checkout().subscribe((result: any)=> {
-window.location.href = result;
+     // alert(JSON.stringify(result, null, 2));
+window.location.href = result.url;
     })
   }
 

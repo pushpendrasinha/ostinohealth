@@ -24,7 +24,7 @@ export class AuthService implements CanActivate {
       if(state.url.includes('/login')) {
         return true;
       }
-      this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
+      this.router.navigate(['/ecom/login'], { queryParams: { returnUrl: state.url }});
       return false;
     }
   }
