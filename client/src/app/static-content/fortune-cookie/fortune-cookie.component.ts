@@ -20,7 +20,7 @@ export class FortuneCookieComponent implements OnInit {
   }
 
    imageSwap() {
-     (<HTMLImageElement> document.getElementById('myImg')).src = 'images/cookie-open.png';
+     (<HTMLImageElement> document.getElementById('myImg')).src = 'https://s3.ap-south-1.amazonaws.com/ostinohealth/static/cookie-open.png';
   }
 
    change() {
