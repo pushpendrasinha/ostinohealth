@@ -46,7 +46,7 @@ if(this.authService.isUserLoggedIn()) {
   }
 this.alertHandler.confirmationAlert(options).then((result) => {
   if(result.value) {
-    this.router.navigate(['ecom/login'], {queryParams: { returnUrl: '/ecom/cart' }});
+    this.router.navigate(['ecom/login'], {queryParams: { returnUrl: '/ecom/products' }});
   }
 })
 }

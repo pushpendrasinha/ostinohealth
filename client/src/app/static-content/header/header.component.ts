@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.userdetails = {};
     if(localStorage.getItem('token')!=null) {
       this.isLoggedIn = true;
+      this.authService.getUserDetails();
     } else {
       this.isLoggedIn = false;
     }

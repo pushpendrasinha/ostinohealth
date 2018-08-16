@@ -10,7 +10,7 @@
     <div class="row">
 
       <div class="column" *ngFor="let product of productList">
-        <a (click)="addToCart(product)"><img  class="product-image"   src="../../../../images/sample.jpg">
+        <a (click)="addToCart(product)"><img  class="product-image"   src={{product.img}}>
           <h4>{{product.name}}</h4>
           <h4>Rs: {{product.price}}</h4>
           <button class="button">Add to cart</button>

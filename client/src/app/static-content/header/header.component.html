@@ -76,7 +76,7 @@
       </a>
     </div>
 
-    <div class="dropdown" *ngIf="isEcommerce">
+    <div class="dropdown" *ngIf="isEcommerce && isLoggedIn">
       <a class="dropbtn" (click)="redirect()"><i class="fa fa-shopping-cart" ></i>  Cart {{numberOfItems > 0 ? numberOfItems : ''}}
       </a>
     </div>
