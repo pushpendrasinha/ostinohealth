@@ -69,4 +69,8 @@ export class RemoteApiService {
     return this.http.post("https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction", enc, access)
   }
 
+  resetPassword(email) {
+    return this.http.get(environment.serverUrl + `/user/requestresetpassword?email=${email}`);
+  }
+
 }

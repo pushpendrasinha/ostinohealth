@@ -10,6 +10,7 @@ import { DeliveryAddressComponent } from './delivery-address/delivery-address.co
 import { CartComponent } from './cart/cart.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { HomeComponent } from './home/home.component';
+import { AddressFormComponent } from './address-form/address-form.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,9 @@ import { HomeComponent } from './home/home.component';
     DeliveryAddressComponent,
     CartComponent,
     ProductsListComponent,
-    HomeComponent
+    HomeComponent,
+    AddressFormComponent
+
   ]
 })
 export class EcommerceModule { }

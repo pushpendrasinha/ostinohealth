@@ -6,7 +6,8 @@
       <b> Manage Address </b>
     </div>
 
-    <div class="address-tab">
+  <address-form> </address-form>
+    <!--<div class="address-tab">
 
       <button class="flip" (click)="newaddress = true; addressTitle='Add a new Address'" id="addButton" *ngIf="!newaddress">ADD A NEW ADDRESS</button>
       <b class="flip" *ngIf="newaddress">{{addressTitle}}</b>
@@ -27,7 +28,7 @@
         <input type="text" id="city" name="city" placeholder="City/Town/District" formControlName="city">
           <p *ngIf="AddressForm.controls.city.invalid && !AddressForm.controls.city.pristine">Enter City Name</p>
         <select class="states" id="states" name="state" formControlName="state">
-          <option value="" disabled="">--Select State--</option>
+          <option value="" disabled="">&#45;&#45;Select State&#45;&#45;</option>
           <option value="Andaman &amp; Nicobar Islands">Andaman &amp; Nicobar Islands</option>
           <option value="Andhra Pradesh">Andhra Pradesh</option>
           <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -85,10 +86,10 @@
         <button class="save-address" type="submit" [disabled]="!AddressForm.valid">SAVE</button>
         <button class="flip-up" (click)="newaddress = false; resetForm()">CANCEL</button>
 </form>
-      </div> <!--panel ends-->
+      </div> &lt;!&ndash;panel ends&ndash;&gt;
 
 
-    </div><!--address-tab ends-->
+    </div>-->
 
 
     <div class="address-section" *ngFor="let address of Addresses">
@@ -99,25 +100,5 @@
 
     </div>
   </div> <!--right panel ends-->
-
-
- <!-- <div id="id01" class="modal">
-
-    <form class="modal-content animate">
-
-      <div class="modal-container">
-
-        <b>Are you sure you want to delete this address?</b>
-        <div class="modal-row">
-
-          <button class="modal-button" (click)="deleteMe()">YES, DELETE</button>
-
-          <button class="modal-button" onclick="document.getElementById('id01').style.display='none'">CANCEL</button>
-        </div>
-
-      </div>&lt;!&ndash;container ends&ndash;&gt;
-    </form>
-  </div>--><!--modal ends-->
-
 </div>
 <!--container ends-->

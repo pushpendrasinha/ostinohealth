@@ -48,6 +48,7 @@ import { PaginationComponent } from './static-content/tree/pagination/pagination
 import { FeedbackComponent } from './static-content/feedback/feedback.component';
 import { ExceptionHandler } from '../services/exception-handler';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,6 +85,7 @@ import { ExceptionHandler } from '../services/exception-handler';
     SheeshamComponent,
     PaginationComponent,
     FeedbackComponent
+
 
   ],
   imports: [

@@ -15,7 +15,7 @@
       <label for="password"><b>Password</b></label>
       <input type="password" name="password" placeholder="Enter your password" formControlName="password">
       <p *ngIf="LoginForm.controls.password.invalid && !LoginForm.controls.password.pristine" class="error">Enter password</p>
-      <span class="psw"> <a href="#" style="color:dodgerblue;float: right;">Forgot Password?</a></span>
+      <span class="psw"> <a (click)="openModal()" style="color:dodgerblue;float: right;">Forgot Password?</a></span>
 
       <button type="submit" class="login">Login</button>
 

@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
 
   <div class="wrapper">
 
@@ -34,13 +34,67 @@
           <b>Price: {{order.price}}</b>
         </div>
 
-      </div> <!--row ends-->
+      </div> &lt;!&ndash;row ends&ndash;&gt;
 
-    </div><!--orders ends-->
+    </div>&lt;!&ndash;orders ends&ndash;&gt;
 
 
 
-  </div> <!--wrapper ends-->
+  </div> &lt;!&ndash;wrapper ends&ndash;&gt;
 
-</div><!--container ends-->
+</div>&lt;!&ndash;container ends&ndash;&gt;-->
 
+
+<div class="container">
+
+
+
+  <div class="box" *ngFor="let order of myorders">
+
+    <div class="header-bar">
+
+      <div class="row">
+        <div class="column">
+          <p>ORDER PLACED</p>
+          <p>{{order.ordered_on}}</p>
+        </div>
+        <div class="column">
+          <p>TOTAL</p>
+          <p>&#8377; {{order.order_total}}</p>
+        </div>
+        <div class="column">
+          <p>SHIP TO</p>
+          <p>{{order.order_delivered_to.name}}</p>
+        </div>
+        <div class="column-right">
+          <p>ORDER #  {{order.order_id}}</p>
+         <!-- <p> <a href="order-details.html">Order Details</a> </p>-->
+        </div>
+      </div>
+
+    </div> <!-- End of header bar-->
+
+    <div class="details" *ngFor="let item of order.order_items">
+      <h3 *ngIf="order.order_status == 'delivered'">Delivered {{order.delivered_on}} </h3>
+      <h3 *ngIf="order.order_status == 'Pending'"> Not delivered yet </h3>
+    <!--  <p>Package was handed directly to the customer. </p>-->
+      <div class="row">
+
+        <div class="col-25">
+          <a href="product-details.html"><img class="product-img" src={{item.img}}></a>
+        </div>
+        <div class="col-75">
+          <a href="product-details.html">{{item.name}}</a>
+          <p> &#8377; {{item.price}}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div *ngIf="myorders.length == 0">
+    <p>
+      You have not ordered yet.
+    </p>
+  </div>
+
+</div>

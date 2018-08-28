@@ -43,13 +43,36 @@ LoginForm: FormGroup;
        // this.router.navigateByUrl('/ecom/products');
         this.router.navigateByUrl(this.returnUrl.toString());
       } else {
-        alert(result.error);
+         this.alertHandler.ErrorAlert(result.error);
       }
 
     }, (err) => {
       alert("something went wrong..");
     })
 
+  }
+
+  openModal() {
+    var ask = this.alertHandler.askUserForEmail();
+   // ask.then((result) => {
+    /*  if(result.value) {
+       this.alertHandler.closeModal();
+      } else {
+        alert("provide a value");
+      }*/
+   /* })*/
+ /*  this.alertHandler.askUserForEmail().then((result) => {
+     if (result.value) {
+       //alert("reset "  +result.value);
+       this.remoteApiService.resetPassword(result.value).subscribe((response: any) => {
+         if(response.success) {
+           this.alertHandler.SuccessAlert("check your mail for instructions");
+         } else {
+           this.alertHandler.ErrorAlert(response.msg);
+         }
+       })
+     }
+   })*/
   }
 
 }
