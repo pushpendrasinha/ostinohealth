@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="heading">
+      <h2>DELIVERY ADDRESS</h2>
+    </div>
+
+    <div class="address-section" *ngFor="let address of addressComponent.Addresses; let i=index">
+      <div class="row">
+       <!-- <div class="col-10-right">
+          <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>
+        </div>-->
+       <!-- <div class="col-10-right">
+          <a href="edit-address.html" class="edit">Edit</a>
+        </div>-->
+        <div class="col-5">
+          <input type="radio" name="address" [(ngModel)]="selectedAddress" [value]="address._id" checked class="radio">
+        </div>
+        <div class="col-10">
+          <b>{{address.name}}</b>
+        </div>
+        <div class="col-10">
+          <b>{{address.phone}}</b>
+        </div>
+      </div>
+     <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. State-<b>820011</b></p>-->
+      <button class="button" (click)="proceedToCheckout()">DELIVER HERE</button>
+    </div>
+
+
+    <div class="address-tab">
+      <b  class="flip" (click)="newaddress=true">ADD A NEW ADDRESS</b>
+     <!-- <address-form *ngIf="newaddress"></address-form>-->
+      <address-form ></address-form>
+    </div>
+  </div>
+</div>

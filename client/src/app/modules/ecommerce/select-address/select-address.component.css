@@ -1,0 +1,240 @@
+body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;}
+
+.container{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #bbb;
+}
+
+
+.wrapper{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading{
+  background-color: #bbb;
+  padding-left: 5%;
+  margin-bottom: 0;
+}
+
+.address-section{
+  width: 95%;
+  background-color: white;
+  border:1px solid #ffcccc;
+  margin-right:auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.address-section p{
+  padding-right: 20%;
+  padding-left: 5%;
+  color: #333333;
+}
+.address-section b{
+  color:#333333;
+}
+.address-section .edit{
+  text-decoration: none;
+  padding-left: 85%;
+}
+.address-section .delete{
+  text-decoration: none;
+  padding-left: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.col-10{
+  float: left;
+  width:10%;
+  padding-top: 10px;
+}
+.col-5 {
+  float: left;
+  width:5%;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-10-right{
+  float: right;
+  width:10%;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+button {
+  background-color: #990000;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0px 5% 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.radio{
+  cursor: pointer;
+}
+
+.address-tab{
+  width: 95%;
+  background-color: #ffe6e6;
+  border:1px solid #ffcccc;
+  margin-right:auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.address-tab b{
+  padding:20px;
+  cursor: pointer;
+}
+
+.panel {
+  padding: 5px;
+  background-color: #ffe6e6;
+}
+
+.panel {
+  display: none;
+  overflow: hidden;
+  height: 100%;
+}
+
+input[type=text],input[type=tel] {
+  width: 45%;
+  padding: 12px;
+  border: 1px solid #ff6666;
+  border-radius: 2px;
+  resize: vertical;
+  color:black;
+  margin: 20px;
+  margin-right: 0px;
+}
+textarea{
+  width: 92%;
+  padding: 12px;
+  border: 1px solid #ff6666;
+  border-radius: 2px;
+  resize: vertical;
+  color:black;
+  margin: 20px;
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+select{
+  width: 45%;
+  padding: 12px;
+  border: 1px solid #ff6666;
+  border-radius: 2px;
+  resize: vertical;
+  color:black;
+  margin: 20px;
+}
+
+.address-type, #panel p{
+  margin: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .col-10-right{
+    width:45%;
+    text-align: center;
+  }
+  .col-10{
+    width:30%;
+    padding-left: 20px;
+  }
+  .col-5 {
+    width:12%;
+  }
+  .button{
+    width: 90%;
+    font-size: 13px;
+    padding: 10px;
+  }
+  input[type=text],input[type=tel] {
+    width: 94%;
+    margin: 10px;
+  }
+  textarea{
+    width: 94%;
+    margin: 10px;
+  }
+  select{
+    width: 94%;
+    margin: 10px;
+  }
+  button {
+    padding: 10px 25px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0px 5% 10px;
+  }
+  .address-section p{
+    padding-right:5%;
+    padding-left: 5%;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  .col-10-right{
+    width:45%;
+    text-align: center;
+  }
+  .col-10{
+    width:30%;
+    padding-left: 20px;
+  }
+  .col-5 {
+    width:12%;
+  }
+  .button{
+    width: 90%;
+    font-size: 13px;
+    padding: 10px;
+  }
+  input[type=text],input[type=tel] {
+    width: 94%;
+    margin: 10px;
+  }
+  textarea{
+    width: 94%;
+    margin: 10px;
+  }
+  select{
+    width: 94%;
+    margin: 10px;
+  }
+  button {
+    padding: 10px 25px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0px 5% 10px;
+  }
+  .address-section p{
+    padding-right:5%;
+    padding-left: 5%;
+  }
+
+}
