@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { HomeComponent } from './home/home.component';
 import { AddressFormComponent } from './address-form/address-form.component';
+import { SelectAddressComponent } from './select-address/select-address.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { AddressFormComponent } from './address-form/address-form.component';
     CartComponent,
     ProductsListComponent,
     HomeComponent,
-    AddressFormComponent
+    AddressFormComponent,
+    SelectAddressComponent
 
   ]
 })

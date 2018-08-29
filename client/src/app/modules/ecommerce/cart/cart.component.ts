@@ -3,6 +3,7 @@ import { Subscription} from "rxjs/Subscription";
 import { CartService } from "../../../../services/cartservice";
 import { RemoteApiService } from "../../../../services/remoteapi.service";
 import {AlertHandler} from "../../../../services/alert-handler";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-cart',
@@ -17,7 +18,8 @@ export class CartComponent implements OnInit {
   accessCode:any;
   constructor(private remoteApiService: RemoteApiService,
               private  cartService: CartService,
-              private alertHandler: AlertHandler) {
+              private alertHandler: AlertHandler,
+              private router: Router) {
     this.cartItems = [];
     this.total = 0;
   }
@@ -75,10 +77,11 @@ if(result.success) {
   }
 
   checkout() {
-    this.remoteApiService.checkout().subscribe((result: any)=> {
+    this.router.navigateByUrl('/ecom/selectaddress');
+   /* this.remoteApiService.checkout().subscribe((result: any)=> {
      // alert(JSON.stringify(result, null, 2));
 window.location.href = result.url;
-    })
+    })*/
   }
 
   /*initTransaction() {

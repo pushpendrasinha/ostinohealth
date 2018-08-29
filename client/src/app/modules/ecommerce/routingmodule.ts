@@ -9,6 +9,7 @@ import { CartComponent } from "./cart/cart.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { HomeComponent } from "./home/home.component";
 import { AuthService } from "../../../services/auth.service";
+import { SelectAddressComponent } from "./select-address/select-address.component";
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
       {path: 'profile', component: ProfileComponent},
       {path: 'myorders', component: MyordersComponent},
       {path: 'address', component: DeliveryAddressComponent },
-    ]}
+    ]},
+  {path: 'selectaddress', component: SelectAddressComponent, canActivate: [AuthService] },
 
 
   ];

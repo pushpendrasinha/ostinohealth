@@ -61,8 +61,8 @@ export class RemoteApiService {
     return this.http.post(environment.serverUrl + '/cart/update', {productId: productId, quantity: quantity});
   }
 
-  checkout() {
-    return this.http.get(environment.serverUrl + '/payment/checkoutpage');
+  checkout(addressId) {
+    return this.http.get(environment.serverUrl + `/payment/checkoutpage/${addressId}`);
   }
 
   initTransaction(enc, access) {

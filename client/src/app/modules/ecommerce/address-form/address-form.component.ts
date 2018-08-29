@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { RemoteApiService } from "../../../../services/remoteapi.service";
 import { AlertHandler } from "../../../../services/alert-handler";
@@ -11,6 +11,7 @@ import { AlertHandler } from "../../../../services/alert-handler";
 export class AddressFormComponent implements OnInit {
   newaddress: boolean;
   AddressForm: FormGroup;
+ // @Output() addressChange = new EventEmitter();
   Addresses: any;
   addressTitle: any;
   selectedAddress: any;
@@ -79,9 +80,10 @@ export class AddressFormComponent implements OnInit {
     this.AddressForm.controls['state'].setValue(address.name);*/
   }
 
-  getAddresses() {
+  public getAddresses() {
     this.remoteApiService.getAddresses().subscribe((result: any) => {
       this.Addresses = result.addresses;
+     // this.addressChange.emit(this.Addresses);
     }, (err) => {
 
     })
