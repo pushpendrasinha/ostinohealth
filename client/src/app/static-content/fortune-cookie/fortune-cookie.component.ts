@@ -27,4 +27,8 @@ export class FortuneCookieComponent implements OnInit {
      (<HTMLInputElement> document.getElementById('button')).value = 'Open Another One';
   }
 
+  fun(){
+  console.log('Developed By Pushpendra Sinha');
+}
+
 }

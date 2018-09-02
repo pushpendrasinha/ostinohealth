@@ -4,166 +4,21 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 .container {
   background-color: #bbb;
-  display: flex;
+ /* display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  height: 100vh;
+  align-items: center; */
+  min-height: 100vh;
 }
 /*left panel */
 
 *{
   color:#4d4d4d;
 }
-.left-panel {
-  width: 25%;
-  float: left;
-  margin-left: 4%;
-}
+
 .gap{
   height: 35px;
   clear: both;
-}
-
-.left-content1{
-  background-color: white;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #990000;
-  border-radius: 2px;
-}
-
-.left-content1 i.fa-user{
-  border-radius: 100%;
-  background-color: #800000;
-  font-size: 22px;
-  text-align: center;
-  line-height: 40px;
-  width: 40px;
-  color:white;
-  margin-left: 25px;
-}
-
-.left-content1 b{
-  font-size: 20px;
-}
-.left-content1 .text{
-  padding-left: 20px;
-}
-
-.left-content2{
-  background-color: white;
-  height: 100%;
-  padding: 5px 15px 5px 15px;
-  border: 1px solid #990000;
-  border-radius: 2px;
-}
-.left-content2 a{
-  text-decoration: none;
-  color:black;
-}
-
-.order{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.order b{
-  font-size: 22px;
-  padding-left: 20px;
-}
-.order b:hover{
-  color:#990000;
-}
-.order i.fa-folder{
-  border-radius: 100%;
-  background-color: #800000;
-  font-size: 22px;
-  text-align: center;
-  line-height: 40px;
-  width: 40px;
-  color:white;
-  margin-left: 8px;
-}
-.order .fa-chevron-right{
-  font-size: 20px;
-  padding-left:97px;
-  color:#800000;
-
-}
-
-.account{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.account b{
-  font-size: 22px;
-  padding-left: 30px;
-}
-.account .fa-user{
-  color:#800000;
-  font-size: 20px;
-  padding-left: 20px;
-}
-
-.profile {
-  padding-left: 67px;
-}
-.profile h3:hover{
-  color:#990000;
-}
-
-.left-content3{
-  background-color: white;
-  height: 100%;
-  padding: 5px 15px 5px 15px;
-  border: 1px solid #990000;
-  border-radius: 2px;
-}
-.left-content3 a{
-  text-decoration: none;
-  color:black;
-}
-
-.logout{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.logout b{
-  font-size: 22px;
-  padding-left: 30px;
-}
-.logout b:hover{
-  color:#990000;
-}
-.logout .fa-power-off{
-  color:#800000;
-  font-size: 20px;
-  padding-left: 20px;
 }
 
 /*right panel */
@@ -172,6 +27,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   float: left;
   margin-left: 4%;
   margin-right: 4%;
+  margin-top: 5%;
   background-color: white;
   border: 1px solid #990000;
   border-radius: 2px;
@@ -215,6 +71,7 @@ input[type=text] {
   border-radius: 4px;
   resize: vertical;
   color:black;
+ margin-right: 40px;
 }
 .row p{
   font-size: 20px;
@@ -463,60 +320,8 @@ span.psw {
   }
 
   .gap{
-    height: 20px;
+    height:15px;
     clear: both;
-  }
-
-  .left-panel {
-    width: auto;
-    float: none;
-    margin:0;
-    display:block;
-  }
-  .left-content1{
-    height: auto;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 5%;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .left-content1 i.fa-user{
-    font-size: 15px;
-    margin-left: 15px;
-  }
-
-  .left-content1 b{
-    font-size: 17px;
-  }
-
-  hr{
-    display: none;
-  }
-  .order{
-    display: none;
-  }
-  .left-content2{
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .left-content2 i.fa-user{
-    padding-left: 10px;
-  }
-  .left-content2 b{
-    font-size: 17px;
-  }
-  .profile h3{
-    font-size: 15px;
-    padding-left: 0px;
-    padding-top: 10px;
-    margin-top: 0px;
-    line-height: 0px;
-  }
-  .left-content3{
-    display: none;
   }
 
   .right-panel {
@@ -534,6 +339,7 @@ span.psw {
   }
   .right-content1 b{
     font-size: 17px;
+    margin-bottom: 0;
   }
   .right-content1 a{
     font-size: 13px;
@@ -549,8 +355,11 @@ span.psw {
   }
 
   input[type=text] {
-    width: 87%;
-    margin-top: 0px;
+    width: 95%;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
   }
 
   .row p{
@@ -582,7 +391,9 @@ span.psw {
     font-size: 13px;
   }
   #email{
-    width: 87%;
+   width: 95%;
+    margin-right: auto;
+    margin-left: auto;
     padding: 12px;
   }
 
@@ -637,64 +448,8 @@ span.psw {
   }
 
   .gap{
-    height: 20px;
+    height:15px;
     clear: both;
-  }
-
-  .left-panel {
-    width: auto;
-    float: none;
-    margin:0;
-    display:block;
-  }
-  .left-content1{
-    height: auto;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 5%;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .left-content1 i.fa-user{
-    font-size: 15px;
-    margin-left: 15px;
-  }
-
-  .left-content1 b{
-    font-size: 17px;
-  }
-
-  hr{
-    display: none;
-  }
-  .order{
-    display: none;
-  }
-  .left-content2{
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .left-content2 i.fa-user{
-    padding-left: 10px;
-  }
-  .left-content2 b{
-    font-size: 17px;
-  }
-
-  .profile h3{
-    font-size: 15px;
-    padding-left: 0px;
-    padding-top: 10px;
-    margin-top: 0px;
-    line-height: 0px;
-  }
-
-
-
-  .left-content3{
-    display: none;
   }
 
   .right-panel {
@@ -712,6 +467,7 @@ span.psw {
   }
   .right-content1 b{
     font-size: 17px;
+    margin-bottom: 0;
   }
   .right-content1 a{
     font-size: 13px;
@@ -727,8 +483,11 @@ span.psw {
   }
 
   input[type=text] {
-    width: 87%;
-    margin-top: 0px;
+    width: 95%;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
   }
 
   .row p{
@@ -760,7 +519,9 @@ span.psw {
     font-size: 13px;
   }
   #email{
-    width: 87%;
+   width: 95%;
+    margin-right: auto;
+    margin-left: auto;
     padding: 12px;
   }
 
@@ -776,9 +537,6 @@ span.psw {
 
 
   /* modal starts */
-
-
-
   span.psw {
     display: block;
     float: none;
@@ -805,6 +563,5 @@ span.psw {
     margin-bottom: 15px;
   }
   /* modal ends */
-
 
 }

@@ -288,31 +288,31 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 }
 
 .dropdown .dropbtn {
-  font-size: 20px;
-  border: none;
-  outline: none;
-  color: #511515;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-
-  margin-right: 60px;
-  font-weight: bold;
+  font-size: 20px;    
+    border: none;
+    outline: none;
+    color: #511515;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-weight: bold;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   background-color: black;
+  border-radius: 3px;
 }
 
 .dropdown-content a {
   float: none;
   color: white;
-  padding: 12px 16px;
+  padding: 10px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -322,7 +322,8 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 .dropdown:hover .dropbtn {
   background-color:#800000;
   color: white;
-  height: 63px;
+  margin-top: 5px;
+  border-radius: 3px;
 }
 
 .dropdown-content a:hover {
@@ -349,13 +350,14 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   text-align:center;
   min-width: 1em;
 //font-weight:bold;
+  
 }
 
 
 
 .fa-user,.fa-folder,.fa-power-off{
   color: black;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 
@@ -364,7 +366,10 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   margin: 0;
 }
 
-
+.username-dropdown a{
+  padding: 0;
+  margin: 0;
+}
 
 
 

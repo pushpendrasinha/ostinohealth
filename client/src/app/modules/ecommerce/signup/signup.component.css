@@ -1,6 +1,6 @@
 
 .wrapper{
-  height: 100%;
+  min-height: 100vh;
   background-color: #bbb;
   margin: 0;
 }
@@ -75,7 +75,8 @@ input[type=text], input[type=password],input[type=email]{
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin: 5px 0 22px 0;
+  padding-left: 10px;
+  margin: 5px 0 0 0;
   display: inline-block;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
@@ -85,13 +86,16 @@ input[type=tel] {
   width: 79%;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 10px;
   margin: 5px 0 0 0;
   display: inline-block;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
   background: #f1f1f1;
 }
-
+.form-field{
+  margin-bottom: 22px;
+}
 
 .code{
   width:20%;
@@ -149,6 +153,9 @@ a{
   text-decoration: none;
 }
 
+
+
+
 @media screen and (max-width: 600px) {
   .column1 {
     width: 100%;
@@ -193,12 +200,9 @@ a{
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin: 5px 0 22px 0;
+    margin: 5px 0 0px 0;
   }
-  ::placeholder {
-    padding-left: 5px;
-  }
-
+ 
   form .create-account {
     width: 100%;
     font-size: 15px;
@@ -263,12 +267,10 @@ a{
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin: 5px 0 22px 0;
+    margin: 5px 0 0px 0;
   }
 
-  ::placeholder {
-    padding-left: 5px;
-  }
+  
   form .create-account {
     width: 100%;
     font-size: 15px;

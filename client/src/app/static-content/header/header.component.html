@@ -40,17 +40,18 @@
     </div>
 
     <div class="dropdown" *ngIf="!isEcommerce">
-      <button class="dropbtn">Contact
+      <button class="dropbtn" style="margin-right:64px;">Contact
       </button>
       <div class="dropdown-content">
         <a href="/career">Career</a>
         <a href="/queries">Queries</a>
       </div>
     </div>
+
     <div class="dropdown" *ngIf="isEcommerce && isLoggedIn">
       <button class="dropbtn"  onclick="window.location.href='index.html'">{{userdetails.name}}
       </button>
-      <div class="dropdown-content">
+      <div class="dropdown-content username-dropdown">
         <a href="/ecom/home/profile"><span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-1x icon-background1"></i>
           <i class="fa fa-user fa-stack-1x"></i>
@@ -61,7 +62,7 @@
           <i class="fa fa-folder fa-stack-1x"></i>
         </span>
           My Orders</a>
-        <a (click)="logout()"><span class="fa-stack fa-lg">
+        <a  style="cursor: pointer;" (click)="logout()"><span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-1x icon-background1"></i>
           <i class="fa fa-power-off fa-stack-1x"></i>
         </span>
@@ -72,12 +73,13 @@
 
 
     <div class="dropdown" *ngIf="isEcommerce && !isLoggedIn">
-      <a class="dropbtn" href="/ecom/login">Login & Signup
+      <a class="dropbtn" href="/ecom/login" style="margin-right:64px;">Login & Signup
       </a>
     </div>
 
     <div class="dropdown" *ngIf="isEcommerce && isLoggedIn">
-      <a class="dropbtn" (click)="redirect()"><i class="fa fa-shopping-cart" ></i>  Cart {{numberOfItems > 0 ? numberOfItems : ''}}
+      <a class="dropbtn" (click)="redirect()" style="margin-right:64px;cursor:default;"><i class="fa fa-shopping-cart"></i>  Cart 
+        {{numberOfItems > 0 ? numberOfItems : ''}}
       </a>
     </div>
 

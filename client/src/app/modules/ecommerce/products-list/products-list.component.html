@@ -2,13 +2,10 @@
   <div class="wrapper">
 
     <div class="cart-heading">
-
       <h2>Our Products </h2>
-
     </div>
 
     <div class="row">
-
       <div class="column" *ngFor="let product of productList">
         <a (click)="addToCart(product)"><img  class="product-image"   src={{product.img}}>
           <h4>{{product.name}}</h4>
@@ -16,11 +13,7 @@
           <button class="button">Add to cart</button>
         </a>
       </div>
-
     </div>
-
-
-
 
   </div>
 

@@ -1,10 +1,9 @@
 body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;}
 
-
-
 .container{
   background-color: #bbb;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .wrapper{
@@ -76,6 +75,7 @@ div.column:hover {
   margin-top: 5%;
   padding-left: 30px;
   background-color: #ffe6e6;
+  border-radius: 3px;
 }
 .product-image{
   height: 150px;

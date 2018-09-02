@@ -2,7 +2,7 @@
 .container{
   background-color: #bbb;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {

@@ -24,7 +24,7 @@
           <a href="#" style="font-weight: lighter;"> <b>{{item.name}}</b> </a>
           <br><br><br>
           <!--<a href="#" style="color:#4d0000"><b> Save for Later</b></a>-->
-          <a  class="link" style="color:#4d0000" (click)="remove(item._id)"> <b>Delete</b></a>
+          <a  class="link" style="color:#4d0000;cursor: pointer;" (click)="remove(item._id)"> <b>Delete</b></a>
         </div>
 
         <div class="column3">
@@ -54,19 +54,16 @@
 
       <h2>Price Details</h2>
       <hr>
-
       <table>
         <tr>
           <td>Price ({{cartItems.length}} item)</td>
           <td> {{total}}</td>
         </tr>
-        <tr>
+        <tr style="border-bottom: 1px dashed #808080;">
           <td>Delivery Charges</td>
           <td>FREE</td>
+
         </tr>
-      </table>
-      <hr class="style">
-      <table>
         <tr>
           <td>Amount Payable</td>
           <td>{{total}}</td>

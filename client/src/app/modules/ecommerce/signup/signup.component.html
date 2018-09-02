@@ -20,14 +20,18 @@
 
           <h1> Create account </h1>
 
+          <div class="form-field">
           <label for="name"><b> Your Name</b></label>
           <input type="text" name="name" placeholder="Enter your fullname" formControlName="name">
-          <p *ngIf="SignupForm.controls.name.invalid && !SignupForm.controls.name.pristine" class="error"> Enter your name</p>
+          <p *ngIf="SignupForm.controls.name.invalid && !SignupForm.controls.name.pristine" class="error">* Enter your name</p></div>
 
+          <div class="form-field">
           <label for="email"><b>Email (Login Id)</b></label>
           <input type="email" name="email" placeholder="Enter your email" formControlName="email">
-          <p *ngIf="SignupForm.controls.email.invalid && !SignupForm.controls.email.pristine" class="error">Enter valid email id</p>
+          <p *ngIf="SignupForm.controls.email.invalid && !SignupForm.controls.email.pristine" class="error">* Enter valid email address</p>
+        </div>
 
+        <div class="form-field">
           <label for="mobile-number"><b>Mobile Number </b></label><br>
           <!-- country codes (ISO 3166) and Dial codes. -->
           <label for="country"></label>
@@ -36,25 +40,33 @@
           </select>
           <input type="tel" name="mobile-number" placeholder="Enter your mobile number" formControlName="contact">
           <p>Optional but recommended as backup</p>
+        </div>
 
-          <label> <b> Gender</b>  </label> <br> <br>
+        <div class="form-field">
+          <label> <b> Gender</b>  </label> <br><br>
           <label class="address-type" style="margin:20px;">
-            <input type="radio"  value="MALE" formControlName="gender">MALE
+            <input type="radio"  value="MALE" formControlName="gender">Male
             <span class="checkmark"></span>
           </label>
           <label class="address-type" style="margin:20px;">
-            <input type="radio"  value="FEMALE" formControlName="gender">FEMALE
+            <input type="radio"  value="FEMALE" formControlName="gender">Female
             <span class="checkmark"></span>
-          </label> <br>
+          </label></div>
 
+
+          <div class="form-field">
           <label for="password"><b>Password</b></label>
           <input type="password" name="password" placeholder="At least 6 characters." formControlName="newPassword">
           <p *ngIf="SignupForm.controls.newPassword.invalid && !SignupForm.controls.newPassword.pristine"
-             class="error">Password should be of minimum 6 characters in length and must contain at least 1 uppercase & 1 numeral</p>
+             class="error">* Password should be of minimum 6 characters in length and must contain at least 1 uppercase & 1 numeral</p>
+           </div>
 
+
+           <div class="form-field">
           <label for="re-enter-password"><b>Re-enter Password</b></label>
           <input type="password" name="re-enter-password" placeholder="Confirm password" formControlName="confirmPassword">
-          <p *ngIf="SignupForm.controls.confirmPassword.invalid && !SignupForm.controls.confirmPassword.pristine" class="error">Password do not match</p>
+          <p *ngIf="SignupForm.controls.confirmPassword.invalid && !SignupForm.controls.confirmPassword.pristine" class="error">* Password do not match</p>
+        </div>
 
           <button type="submit" class="create-account" [disabled]="!SignupForm.valid">Create your account</button>
 

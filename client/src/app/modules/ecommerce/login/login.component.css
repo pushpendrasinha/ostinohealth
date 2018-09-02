@@ -2,7 +2,7 @@
 
 /* login and signup styling  */
 .wrapper{
-  height: 100vh;
+  min-height: 100vh;
   background-color: #bbb;
   overflow: auto;
 }
@@ -10,28 +10,28 @@
 
 .container{
   box-sizing: border-box;
-  width: 450px;
+  width: 40%;
   height: 100%;
   border: 1px solid #8c8c8c;
-  overflow: auto;
   background-color: white;
-  padding: 0px 30px 0px 30px;
+  padding: 30px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
   margin-bottom:80px;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 label{
   font-size: 20px;
+  display: block;
 }
 
 input[type=email]{
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin: 5px 0 22px 0;
+  width: 96%;
+  padding:15px 10px;
+  margin: 5px auto 0 auto;
   display: inline-block;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
@@ -39,10 +39,9 @@ input[type=email]{
 }
 
 input[type=password]{
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin: 5px 0 0 0;
+  width: 96%;
+  padding:15px 10px;
+  margin: 5px auto 0 auto;
   display: inline-block;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
@@ -105,6 +104,12 @@ form .create-acc:hover {
 span a{
   text-decoration: none;
   margin-bottom: 22px;
+  cursor: pointer;
+}
+
+.error{
+  color: red;
+  margin-top: 0;
 }
 
 /* login and signup styling ends  */
@@ -119,7 +124,7 @@ span a{
     height: auto;
     margin-left: auto;
     margin-right:auto;
-    padding: 0px 15px 0px 15px;
+   padding: 0px 15px 0px 15px;
     margin-bottom:30px;
     margin-top: 50px;
   }
@@ -131,18 +136,15 @@ span a{
   }
 
   input[type=email] {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 5px 0 22px 0;
+    width: 93%;
+    margin: 5px auto 0  auto;
   }
   input[type=password]{
-    margin-bottom: 0;
+   width: 93%;
+    margin: 5px auto 0  auto;
   }
 
-  ::placeholder {
-    padding-left: 5px;
-  }
+  
   form .login {
     width: 100%;
     font-size: 15px;
@@ -166,7 +168,7 @@ span a{
     height: auto;
     margin-left: auto;
     margin-right:auto;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 10px 0 10px;
     margin-bottom:30px;
     margin-top: 50px;
   }
@@ -178,18 +180,15 @@ span a{
   }
 
   input[type=email] {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 5px 0 22px 0;
+    width: 93%;
+    margin: 5px auto 0  auto;
   }
   input[type=password]{
-    margin-bottom: 0;
+    width: 93%;
+    margin: 5px auto 0  auto;
   }
 
-  ::placeholder {
-    padding-left: 5px;
-  }
+  
   form .login {
     width: 100%;
     font-size: 15px;

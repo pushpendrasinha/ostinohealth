@@ -92,6 +92,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 .container{
   background-color: #bbb;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 
@@ -102,7 +103,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 15%;
+  width: 25%;
   padding: 0px 10px;
   /* Should be removed. Only for demonstration */
 }
@@ -121,7 +122,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 }
 
 .header-bar{
-  border:1px solid #990000;
+  border-bottom: 1px solid #990000;
   background-color: #ffe6e6;
   border-radius: 3px;
 }
@@ -136,8 +137,8 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   margin-left: auto;
   margin-right: auto;
   border-radius: 3px;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 7%;
+  margin-bottom: 7%;
 }
 .details{
   padding: 15px;
@@ -147,7 +148,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 }
 .col-25 {
   float: left;
-  width: 8%;
+  width: 25%;
   padding: 0px 10px;
   /* Should be removed. Only for demonstration */
 }
@@ -191,7 +192,9 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
     width: 100%;
     text-align: center;
   }
-
+  .box{
+    margin-top: 0;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -222,4 +225,14 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
     width: 100%;
     text-align: center;
   }
+  .details h3{
+    text-align: center;
+  }
+  .details{
+    padding: 0;
+  }
+  .box{
+    margin-top: 0;
+  }
+
 }

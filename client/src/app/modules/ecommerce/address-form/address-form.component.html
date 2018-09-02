@@ -6,89 +6,94 @@
       <b> Manage Address </b>
     </div>-->
 
+
+
     <div class="address-tab">
 
-      <button class="flip" (click)="newaddress = true; addressTitle='Add a new Address'" id="addButton" *ngIf="!newaddress">ADD A NEW ADDRESS</button>
-      <b class="flip" *ngIf="newaddress">{{addressTitle}}</b>
+          <button class="flip" (click)="newaddress = true; addressTitle='Add a new Address'" id="addButton" *ngIf="!newaddress">ADD A NEW ADDRESS</button>
+          <b class="flip" *ngIf="newaddress">{{addressTitle}}</b>
+      
       <div class="panel" *ngIf="newaddress">
-        <form (ngSubmit)="AddressForm.valid && addAddress()" novalidate [formGroup]="AddressForm">
+          <form (ngSubmit)="AddressForm.valid && addAddress()" novalidate [formGroup]="AddressForm">
 
+              <input type="text"  formControlName="name" placeholder="Name">
+              <p *ngIf="AddressForm.controls.name.invalid && !AddressForm.controls.name.pristine">Enter Name</p>
+              <input type="tel" formControlName="phone" name="phone-number" placeholder="Phone Number" maxlength="10">
+              <p *ngIf="AddressForm.controls.phone.invalid && !AddressForm.controls.phone.pristine">Enter 10 digit mobile number</p>
+              <input type="text"  name="pincode" formControlName="pincode" placeholder="Pincode" maxlength="6">
+              <p *ngIf="AddressForm.controls.pincode.invalid && !AddressForm.controls.pincode.pristine">Enter pincode</p>
+              <input type="text" formControlName="locality" name="locality" placeholder="Locality">
+              <p *ngIf="AddressForm.controls.locality.invalid && !AddressForm.controls.locality.pristine">Enter locality</p>
+              <textarea id="address" rows="4" cols="10" formControlName="address" placeholder="Address (Area and Street)"></textarea>
+              <p *ngIf="AddressForm.controls.address.invalid && !AddressForm.controls.address.pristine">Enter Address</p>
+              <input type="text" id="city" name="city" placeholder="City/Town/District" formControlName="city">
+              <p *ngIf="AddressForm.controls.city.invalid && !AddressForm.controls.city.pristine">Enter City Name</p>
+              <select class="states" id="states" name="state" formControlName="state">
+                <option value="" disabled="">--Select State--</option>
+                <option value="Andaman &amp; Nicobar Islands">Andaman &amp; Nicobar Islands</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadra &amp; Nagar Haveli">Dadra &amp; Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu &amp; Kashmir">Jammu &amp; Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+              <p *ngIf="AddressForm.controls.state.invalid && !AddressForm.controls.state.pristine">Enter State</p>
+              <input type="text" id="landmark" name="landmark" formControlName="landmark" placeholder="Landmark (Optional)">
 
-          <input type="text"  formControlName="name" placeholder="Name">
-          <p *ngIf="AddressForm.controls.name.invalid && !AddressForm.controls.name.pristine">Enter Name</p>
-          <input type="tel" formControlName="phone" name="phone-number" placeholder="Phone Number" maxlength="10">
-          <p *ngIf="AddressForm.controls.phone.invalid && !AddressForm.controls.phone.pristine">Enter 10 digit mobile number</p>
-          <input type="text"  name="pincode" formControlName="pincode" placeholder="Pincode" maxlength="6">
-          <p *ngIf="AddressForm.controls.pincode.invalid && !AddressForm.controls.pincode.pristine">Enter pincode</p>
-          <input type="text" formControlName="locality" name="locality" placeholder="Locality">
-          <p *ngIf="AddressForm.controls.locality.invalid && !AddressForm.controls.locality.pristine">Enter locality</p>
-          <textarea id="address" rows="4" cols="10" formControlName="address" placeholder="Address (Area and Street)"></textarea>
-          <p *ngIf="AddressForm.controls.address.invalid && !AddressForm.controls.address.pristine">Enter Address</p>
-          <input type="text" id="city" name="city" placeholder="City/Town/District" formControlName="city">
-          <p *ngIf="AddressForm.controls.city.invalid && !AddressForm.controls.city.pristine">Enter City Name</p>
-          <select class="states" id="states" name="state" formControlName="state">
-            <option value="" disabled="">--Select State--</option>
-            <option value="Andaman &amp; Nicobar Islands">Andaman &amp; Nicobar Islands</option>
-            <option value="Andhra Pradesh">Andhra Pradesh</option>
-            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-            <option value="Assam">Assam</option>
-            <option value="Bihar">Bihar</option>
-            <option value="Chandigarh">Chandigarh</option>
-            <option value="Chhattisgarh">Chhattisgarh</option>
-            <option value="Dadra &amp; Nagar Haveli">Dadra &amp; Nagar Haveli</option>
-            <option value="Daman and Diu">Daman and Diu</option>
-            <option value="Delhi">Delhi</option>
-            <option value="Goa">Goa</option>
-            <option value="Gujarat">Gujarat</option>
-            <option value="Haryana">Haryana</option>
-            <option value="Himachal Pradesh">Himachal Pradesh</option>
-            <option value="Jammu &amp; Kashmir">Jammu &amp; Kashmir</option>
-            <option value="Jharkhand">Jharkhand</option>
-            <option value="Karnataka">Karnataka</option>
-            <option value="Kerala">Kerala</option>
-            <option value="Lakshadweep">Lakshadweep</option>
-            <option value="Madhya Pradesh">Madhya Pradesh</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="Manipur">Manipur</option>
-            <option value="Meghalaya">Meghalaya</option>
-            <option value="Mizoram">Mizoram</option>
-            <option value="Nagaland">Nagaland</option>
-            <option value="Odisha">Odisha</option>
-            <option value="Puducherry">Puducherry</option>
-            <option value="Punjab">Punjab</option>
-            <option value="Rajasthan">Rajasthan</option>
-            <option value="Sikkim">Sikkim</option>
-            <option value="Tamil Nadu">Tamil Nadu</option>
-            <option value="Telangana">Telangana</option>
-            <option value="Tripura">Tripura</option>
-            <option value="Uttarakhand">Uttarakhand</option>
-            <option value="Uttar Pradesh">Uttar Pradesh</option>
-            <option value="West Bengal">West Bengal</option>
-          </select>
-          <p *ngIf="AddressForm.controls.state.invalid && !AddressForm.controls.state.pristine">Enter State</p>
-          <input type="text" id="landmark" name="landmark" formControlName="landmark" placeholder="Landmark (Optional)">
+              <input type="tel" id="alternate-phone-number" name="phone-number" placeholder="Alternate Phone (Optional)" maxlength="10" formControlName="altContact">
 
-          <input type="tel" id="alternate-phone-number" name="phone-number" placeholder="Alternate Phone (Optional)" maxlength="10" formControlName="altContact">
+              <p style="padding-left: 20px;">Address Type</p>
+              <label class="address-type">
+                <input type="radio"  formControlName="addressType" value="Home">Home
+                <span class="checkmark"></span>
+              </label>
+              <label class="address-type">
+                <input type="radio"  formControlName="addressType" value="Work">Work
+                <span class="checkmark"></span>
+              </label>
+              <p *ngIf="AddressForm.controls.addressType.invalid && !AddressForm.controls.addressType.pristine">Enter Name</p>
+              <br><br>
 
-          <p>Address Type</p>
-          <label class="address-type">
-            <input type="radio"  formControlName="addressType" value="Home">Home
-            <span class="checkmark"></span>
-          </label>
-          <label class="address-type">
-            <input type="radio"  formControlName="addressType" value="Work">Work
-            <span class="checkmark"></span>
-          </label>
-          <p *ngIf="AddressForm.controls.addressType.invalid && !AddressForm.controls.addressType.pristine">Enter Name</p>
-          <br><br>
-
-          <button class="save-address" type="submit" [disabled]="!AddressForm.valid">SAVE</button>
-          <button class="flip-up" (click)="newaddress = false; resetForm()">CANCEL</button>
+              <button class="save-address" type="submit" [disabled]="!AddressForm.valid">SAVE</button>
+              <button class="flip-up" (click)="newaddress = false; resetForm()">CANCEL</button>
         </form>
       </div> <!--panel ends-->
 
 
     </div><!--address-tab ends-->
+
+
+
 
 
 <!--    <div class="address-section" *ngFor="let address of Addresses">
