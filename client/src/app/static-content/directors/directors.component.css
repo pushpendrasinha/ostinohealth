@@ -1,4 +1,10 @@
 
+.container{
+  min-height: 100vh;
+   background-color:#bbb;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -25,8 +31,7 @@
   clear: both;
 }
 .row{
-  height: 100vh;
-  background-color:#bbb;
+  height: 100%;
 }
 .img{
   border:2px solid #a22a2a;
