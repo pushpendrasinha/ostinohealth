@@ -85,17 +85,22 @@ export class AlertHandler {
 
   askUserForEmail() {
     swal({
-      title: 'Submit your Github username',
+      title: 'Enter registered Email ID',
       input: 'text',
       inputAttributes: {
         autocapitalize: 'off'
       },
       showCancelButton: true,
-      confirmButtonText: 'Look up',
+      confirmButtonText: 'Submit',
       showLoaderOnConfirm: true,
       preConfirm: (data) => {
-        return this.remoteApiService.resetPassword(data).subscribe((data) => {
-          alert("data is " + JSON.stringify(data, null, 2));
+        return this.remoteApiService.resetPassword(data).subscribe((data: any) => {
+         // alert("data is " + JSON.stringify(data, null, 2));
+          if(data.success) {
+            this.SuccessAlert(data.msg);
+          } else {
+            this.ErrorAlert(data.msg);
+          }
         }, (err) => {
           alert("error is " + err);
         })
@@ -115,13 +120,13 @@ export class AlertHandler {
       allowOutsideClick: () => !swal.isLoading()
     }).then((result) => {
 
-      alert("result " + JSON.stringify(result,null,2));
-      if (result.value) {
+     // alert("result " + JSON.stringify(result,null,2));
+      /*if (result.value) {
         swal({
           title: `${result.value.login}'s avatar`,
           imageUrl: result.value.avatar_url
         })
-      }
+      }*/
     })
   }
   askUserForEmail2() {
