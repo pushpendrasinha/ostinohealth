@@ -11,7 +11,7 @@ import { AlertHandler } from "../../../../services/alert-handler";
 export class AddressFormComponent implements OnInit {
   newaddress: boolean;
   AddressForm: FormGroup;
- // @Output() addressChange = new EventEmitter();
+  @Output() addressChange = new EventEmitter();
   Addresses: any;
   addressTitle: any;
   selectedAddress: any;
@@ -41,8 +41,9 @@ export class AddressFormComponent implements OnInit {
     this.getAddresses();
   }
 
-  addAddress(address) {
+  addAddress() {
     //alert(JSON.stringify(this.AddressForm.value, null, 2));
+   // alert("called");
     let addressValue = this.AddressForm.value;
     if(this.selectedAddress) {
       addressValue._id = this.selectedAddress;
@@ -70,6 +71,7 @@ export class AddressFormComponent implements OnInit {
     this.AddressForm.patchValue(address);
     this.selectedAddress = address._id;
     // alert(JSON.stringify(this.AddressForm.value, null, 2));
+
     /*this.AddressForm.controls['name'].setValue(address.name);
     this.AddressForm.controls['phone'].setValue(address.name);
     this.AddressForm.controls['pincode'].setValue(address.name);
@@ -83,14 +85,23 @@ export class AddressFormComponent implements OnInit {
   public getAddresses() {
     this.remoteApiService.getAddresses().subscribe((result: any) => {
       this.Addresses = result.addresses;
-     // this.addressChange.emit(this.Addresses);
+      this.addressChange.emit(this.Addresses);
     }, (err) => {
 
     })
   }
 
   deleteMe(addressId) {
-    /*   this.alertHandler.confirmationAlert().then((result) => {
+    var options = {
+      title: "Delete Address",
+      text: "Do You want to delete this address?",
+      type: "Info",
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: "Delete Address"
+    }
+       this.alertHandler.confirmationAlert(options).then((result) => {
          if (result.value) {
            this.remoteApiService.deleteAddress(addressId).subscribe((result: any) => {
 
@@ -105,7 +116,7 @@ export class AddressFormComponent implements OnInit {
            })
 
            }
-       })*/
+       })
   }
 
 }

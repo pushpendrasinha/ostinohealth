@@ -5,7 +5,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   /*  display: flex;
    -webkit-box-align: center;
    -ms-flex-align: center;
-    align-items: center;  
+    align-items: center;
   height: 100vh;
 }*/
 
@@ -504,3 +504,6 @@ button {
 
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
