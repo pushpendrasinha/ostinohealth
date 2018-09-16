@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { RemoteApiService } from "../../../../services/remoteapi.service";
 import { AlertHandler } from "../../../../services/alert-handler";
+import { AddressFormComponent } from "../address-form/address-form.component";
 
 @Component({
   selector: 'app-delivery-address',
@@ -9,6 +10,7 @@ import { AlertHandler } from "../../../../services/alert-handler";
   styleUrls: ['./delivery-address.component.css']
 })
 export class DeliveryAddressComponent implements OnInit {
+  @ViewChild(AddressFormComponent) addressForm: AddressFormComponent;
   newaddress: boolean;
   AddressForm: FormGroup;
   Addresses: any;
@@ -39,69 +41,22 @@ export class DeliveryAddressComponent implements OnInit {
     this.getAddresses();
     }
 
-  addAddress(address) {
+  addAddress() {
     //alert(JSON.stringify(this.AddressForm.value, null, 2));
-    let addressValue = this.AddressForm.value;
-    if(this.selectedAddress) {
-      addressValue._id = this.selectedAddress;
+    this.addressForm.addAddress();
     }
-    this.remoteApiService.addAddress(addressValue).subscribe((result: any) => {
-      if(result.success) {
-        this.selectedAddress = null;
-        this.resetForm();
-        this.alertHandler.SuccessAlert(result.msg);
-        this.newaddress = false;
-        this.getAddresses();
-      } else {
-        this.alertHandler.ErrorAlert(result.msg);
-      }
-
-
-    }, (err) => {
-       this.alertHandler.ErrorAlert(err);
-    })
+  updateAddress(addresses) {
+    this.Addresses = addresses;
   }
-
   editAddress(address) {
-    this.newaddress = true;
-    this.addressTitle = "Edit Address";
-    this.AddressForm.patchValue(address);
-    this.selectedAddress = address._id;
-   // alert(JSON.stringify(this.AddressForm.value, null, 2));
-    /*this.AddressForm.controls['name'].setValue(address.name);
-    this.AddressForm.controls['phone'].setValue(address.name);
-    this.AddressForm.controls['pincode'].setValue(address.name);
-    this.AddressForm.controls['address'].setValue(address.name);
-    this.AddressForm.controls['locality'].setValue(address.name);
-    this.AddressForm.controls['state'].setValue(address.name);
-    this.AddressForm.controls['state'].setValue(address.name);
-    this.AddressForm.controls['state'].setValue(address.name);*/
-  }
+    this.addressForm.editAddress(address);
+    }
 
   getAddresses() {
-    this.remoteApiService.getAddresses().subscribe((result: any) => {
-      this.Addresses = result.addresses;
-    }, (err) => {
-
-    })
-  }
+    this.addressForm.getAddresses();
+    }
 
   deleteMe(addressId) {
-/*   this.alertHandler.confirmationAlert().then((result) => {
-     if (result.value) {
-       this.remoteApiService.deleteAddress(addressId).subscribe((result: any) => {
-
-         if(result.success) {
-           this.alertHandler.SuccessAlert(result.msg);
-           this.getAddresses();
-         } else {
-           this.alertHandler.ErrorAlert(result.msg);
-         }
-         }, (err) => {
-         this.alertHandler.ErrorAlert(err);
-       })
-
-       }
-   })*/
+  this.addressForm.deleteMe(addressId);
   }
 }

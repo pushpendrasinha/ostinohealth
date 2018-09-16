@@ -6,7 +6,7 @@
       <b> Manage Address </b>
     </div>
 
-  <address-form> </address-form>
+  <address-form (addressChange)="updateAddress($event)"> </address-form>
     <!--<div class="address-tab">
 
       <button class="flip" (click)="newaddress = true; addressTitle='Add a new Address'" id="addButton" *ngIf="!newaddress">ADD A NEW ADDRESS</button>

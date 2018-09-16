@@ -31,7 +31,8 @@ productList: Array<any>;
 if(this.authService.isUserLoggedIn()) {
   this.remoteApiService.addProduct(product._id).subscribe((result: any)=> {
     if(result.success) {
-      alert("added to cart");
+     // alert("added to cart");
+      this.alertHandler.SuccessAlert("Added to Cart");
       this.cartService.numberOfItems.next(result.totalItems);
     } else {
       alert("error occured " + result.msg);

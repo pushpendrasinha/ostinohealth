@@ -12,9 +12,9 @@
 
           <button class="flip" (click)="newaddress = true; addressTitle='Add a new Address'" id="addButton" *ngIf="!newaddress">ADD A NEW ADDRESS</button>
           <b class="flip" *ngIf="newaddress">{{addressTitle}}</b>
-      
+
       <div class="panel" *ngIf="newaddress">
-          <form (ngSubmit)="AddressForm.valid && addAddress()" novalidate [formGroup]="AddressForm">
+          <form (ngSubmit)="addAddress()" novalidate [formGroup]="AddressForm">
 
               <input type="text"  formControlName="name" placeholder="Name">
               <p *ngIf="AddressForm.controls.name.invalid && !AddressForm.controls.name.pristine">Enter Name</p>

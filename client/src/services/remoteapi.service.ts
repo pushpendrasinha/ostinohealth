@@ -5,6 +5,7 @@ import { environment } from "../environments/environment";
 @Injectable()
 export class RemoteApiService {
   constructor(private http: HttpClient) {
+    console.log("server url is " + environment.serverUrl);
   }
 
   login(credentials) {
