@@ -1,13 +1,15 @@
 
 .wrapper{
   min-height: 100vh;
-  background-color: #bbb;
+  background-color: white;
   margin: 0;
+  overflow: hidden;
 }
 
 
 * {
   box-sizing: border-box;
+  color:#262626;
 }
 
 /* Create two equal columns that floats next to each other */
@@ -17,6 +19,9 @@
   padding: 10px 20px;
   padding-right: 40px;
   height: 100%; /* Should be removed. Only for demonstration */
+}
+.column1{
+  color: #262626;
 }
 .column2 {
   float: left;
@@ -44,7 +49,7 @@
 }
 .row{
   height: 100%;
-  background-color: #bbb;
+  background-color: white;
 }
 
 .container{
@@ -53,7 +58,7 @@
   height: 100%;
   border: 1px solid #8c8c8c;
   overflow: auto;
-  background-color: white;
+  background-color: #f5f5f5;
   padding: 0px 30px 0px 30px;
   margin-right: auto;
   margin-left: auto;
@@ -68,7 +73,6 @@ label{
 
 button :disabled {
   cursor: not-allowed;
-  background-color: #00B7FF;
 }
 
 input[type=text], input[type=password],input[type=email]{
@@ -80,7 +84,6 @@ input[type=text], input[type=password],input[type=email]{
   display: inline-block;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
-  background: #f1f1f1;
 }
 input[type=tel] {
   width: 79%;
@@ -91,7 +94,6 @@ input[type=tel] {
   display: inline-block;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
-  background: #f1f1f1;
 }
 .form-field{
   margin-bottom: 22px;
@@ -102,7 +104,6 @@ input[type=tel] {
   border: 1px solid #8c8c8c;
   padding:15px;
   border-radius: 5px;
-  background: #f1f1f1;
 }
 
 select {
@@ -128,12 +129,9 @@ p{
   padding-left: 2px;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus ,input[type=tel]:focus,.country-code{
-  background-color: #ddd;
-  outline: none;
-}
+
 form .create-account {
-  background-color:#b30000;
+  background-color:#343a40;
   color: white;
   padding: 10px 20px;
   margin: 8px 0;
@@ -146,7 +144,7 @@ form .create-account {
 }
 
 form .create-account:hover {
-  opacity:3;
+  background-color:#4d0000;
 }
 
 a{

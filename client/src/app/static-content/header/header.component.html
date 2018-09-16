@@ -49,7 +49,7 @@
     </div>
 
     <div class="dropdown" *ngIf="isEcommerce && isLoggedIn">
-      <button class="dropbtn"  onclick="window.location.href='index.html'">{{userdetails.name}}
+      <button class="dropbtn"  onclick="window.location.href='/ecom/home/profile'">{{userdetails.name}}
       </button>
       <div class="dropdown-content username-dropdown">
         <a href="/ecom/home/profile"><span class="fa-stack fa-lg">
@@ -78,8 +78,14 @@
     </div>
 
     <div class="dropdown" *ngIf="isEcommerce && isLoggedIn">
-      <a class="dropbtn" (click)="redirect()" style="margin-right:64px;cursor:default;"><i class="fa fa-shopping-cart"></i>  Cart 
-        {{numberOfItems > 0 ? numberOfItems : ''}}
+      <a class="dropbtn" (click)="redirect()" style="margin-right:64px;cursor:default;">
+      <div id="ex4">
+          <span class="p1 fa-stack fa-2x has-badge">
+            <!--<i class="p2 fa fa-circle fa-stack-2x"></i>--><b class="item-count">{{numberOfItems > 0 ? numberOfItems : ''}}</b>
+            <i class="p3 fa fa-shopping-cart fa-stack-1x xfa-inverse" data-count="4b"></i>
+          </span>Cart 
+      </div>
+      
       </a>
     </div>
 

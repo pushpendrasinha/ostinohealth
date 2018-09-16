@@ -3,23 +3,25 @@
 /* login and signup styling  */
 .wrapper{
   min-height: 100vh;
-  background-color: #bbb;
+  background-color: white;
   overflow: auto;
 }
-
+*{
+  color: #262626;
+}
 
 .container{
   box-sizing: border-box;
   width: 40%;
   height: 100%;
   border: 1px solid #8c8c8c;
-  background-color: white;
+  background-color: #f5f5f5;
   padding: 30px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
   margin-bottom:80px;
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
 }
 
@@ -35,7 +37,7 @@ input[type=email]{
   display: inline-block;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
-  background: #f1f1f1;
+  
 }
 
 input[type=password]{
@@ -45,7 +47,7 @@ input[type=password]{
   display: inline-block;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
-  background: #f1f1f1;
+ 
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -61,14 +63,11 @@ input[type=password]{
   padding-left: 2px;
 }
 
-input[type=text]:focus, input[type=password]:focus,  input[type=email]:focus {
-  background-color: #ddd;
-  outline: none;
-}
+
 
 
 form .login {
-  background-color:#b30000;
+  background-color:#343a40;
   color: white;
   padding: 10px 20px;
   margin: 8px 0;
@@ -81,25 +80,25 @@ form .login {
 }
 
 form .login:hover {
-  opacity:3;
+ background-color:#4d0000;
 }
 
 form .create-acc{
   background-color:white;
-  color: #511515;
+  color: #262626;
   padding: 10px 20px;
   margin: 8px 0;
-  border: 1px solid #b3ffff;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
   font-size: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
-  border: 1px solid #8c8c8c;
+  border: 1px solid #343a40;
 }
 form .create-acc:hover {
   font-weight: bolder;
+  color: black;
 }
 span a{
   text-decoration: none;

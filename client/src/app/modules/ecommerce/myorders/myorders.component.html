@@ -47,20 +47,20 @@
 
 <div class="container">
 
-
+<div class="wrapper">
 
   <div class="box" *ngFor="let order of myorders">
 
     <div class="header-bar">
 
-      <div class="row">
+      <div class="row" style=" background-color: #f5f5f5;">
         <div class="column">
           <p>ORDER PLACED</p>
           <p>{{order.ordered_on}}</p>
         </div>
         <div class="column">
           <p>TOTAL</p>
-          <p>&#8377; {{order.order_total}}</p>
+          <p>&#8377;{{order.order_total}}</p>
         </div>
         <div class="column">
           <p>SHIP TO</p>
@@ -85,7 +85,7 @@
         </div>
         <div class="col-75">
           <a href="product-details.html">{{item.name}}</a>
-          <p> &#8377; {{item.price}}</p>
+          <p> &#8377;{{item.price}}</p>
         </div>
 
       </div>
@@ -96,5 +96,5 @@
       You have not ordered yet.
     </p>
   </div>
-
+</div>
 </div>

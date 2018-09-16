@@ -338,21 +338,34 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 #ex4 .p1[data-count]:after{
   position:absolute;
-  right:0px;
-  top:0px;
+  right:10%;
+  top:8%;
   content: attr(data-count);
-  font-size:70%;
-  padding:2px;
+  font-size:40%;
+  padding:.2em;
   border-radius:50%;
   line-height:1em;
   color: white;
   background:rgba(255,0,0,.85);
   text-align:center;
   min-width: 1em;
-//font-weight:bold;
-  
+  //font-weight:bold;
 }
-
+.item-count{
+  position:absolute;
+  right:10%;
+  top:8%;
+  content: attr(data-count);
+  font-size:40%;
+  padding:.2em;
+  border-radius:50%;
+  line-height:1em;
+  color: white;
+  background:rgba(255,0,0,.85);
+  text-align:center;
+  min-width: 1em;
+  //font-weight:bold;
+}
 
 
 .fa-user,.fa-folder,.fa-power-off{
@@ -362,7 +375,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 
 .icon-background1 {
-  color: #bbb;
+  color: #f5f5f5;
   margin: 0;
 }
 

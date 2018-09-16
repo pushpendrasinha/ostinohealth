@@ -1,7 +1,7 @@
 body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;}
 
 .container{
-  background-color: #bbb;
+  background-color: white;
   overflow: hidden;
   min-height: 100vh;
 }
@@ -20,13 +20,14 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 .column {
   float: left;
   width: 30%;
-  padding: 20px;
+  padding: 15px;
   margin-left:30px;
-  margin-top: 20px;
+  margin-top: 5%;
   height: 100%; /* Should be removed. Only for demonstration */
-  border: 1px solid #ff6666;
+/*  border:1px #ddd solid; */
   text-align: center;
   background-color: white;
+  border-radius: 3px;
 }
 
 /* Clear floats after the columns */
@@ -45,17 +46,20 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 .column a{
   text-decoration: none;
-  color:black;
+  color:#262626;
+  cursor: pointer;
 }
-
+.column .product-name:hover{
+  color: black;
+}
 
 
 div.column:hover {
-  border: 2px solid #4d0000;
+  border: 1px solid #8c8c8c;
 }
 
 .button {
-  background-color: #990000;
+  background-color: #343a40;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -66,22 +70,35 @@ div.column:hover {
   cursor: pointer;
   border-radius: 4px;
 }
+.button:hover{
+ background-color: #4d0000;
+} 
 
 .cart-heading{
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  border:1px solid #990000;
+  border:1px #8c8c8c solid;
   margin-top: 5%;
   padding-left: 30px;
-  background-color: #ffe6e6;
-  border-radius: 3px;
+  background-color: #f5f5f5;
+  color:black;
+  border-radius: 5px;
 }
 .product-image{
   height: 150px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-
+.product-image:hover {
+    transform: scale(1.04); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.product-image-box{
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
 @media only screen and (max-width: 600px) {
 
   .column{
@@ -104,8 +121,9 @@ div.column:hover {
   .product-image{
     height: 100px;
   }
-  .column h4{
+  .column h3{
     margin: 10px;
+    font-size: 17px;
   }
 
   .button {

@@ -8,14 +8,14 @@
 
   <div class="main-row">
 
-    <div class="main-column1">
+    <div class="main-column1" >
 
       <div class="cart-heading">
         <h3>My Cart {{cartItems.length}}</h3>
       </div>
 
 
-      <div class="row" *ngFor="let item of cartItems">
+      <div class="row" style="margin-top: 1%;margin-bottom: 1%" *ngFor="let item of cartItems">
         <div class="column1" >
           <a href="#"><img  class="product-image" src="{{item.img}}"></a>
         </div>
@@ -24,11 +24,11 @@
           <a href="#" style="font-weight: lighter;"> <b>{{item.name}}</b> </a>
           <br><br><br>
           <!--<a href="#" style="color:#4d0000"><b> Save for Later</b></a>-->
-          <a  class="link" style="color:#4d0000;cursor: pointer;" (click)="remove(item._id)"> <b>Delete</b></a>
+          <a  class="link" style="color:#262626;cursor: pointer;" (click)="remove(item._id)"> <b>Delete</b></a>
         </div>
 
         <div class="column3">
-          <b>Price: {{item.price}}</b>
+          <b>&#8377;{{item.price}}</b>
         </div>
 
         <div class="column4">
@@ -39,7 +39,7 @@
 
       </div>
 
-      <div class="cart-button">
+      <div class="cart-button" style="background-color: #f5f5f5;">
 
 
         <button  onclick="window.location.href='ecom/products'"><i class="fa fa-chevron-left" aria-hidden="true"></i>

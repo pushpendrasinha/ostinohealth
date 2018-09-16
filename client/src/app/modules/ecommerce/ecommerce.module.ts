@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AddressFormComponent } from './address-form/address-form.component';
 import { SelectAddressComponent } from './select-address/select-address.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -30,8 +31,8 @@ import { SelectAddressComponent } from './select-address/select-address.componen
     ProductsListComponent,
     HomeComponent,
     AddressFormComponent,
-    SelectAddressComponent
-
+    SelectAddressComponent,
+    
   ]
 })
 export class EcommerceModule { }

@@ -3,7 +3,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 
 .container {
-  background-color: #bbb;
+  background-color: white;
  /* display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -13,7 +13,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 /*left panel */
 
 *{
-  color:#4d4d4d;
+  color:#262626;
 }
 
 .gap{
@@ -29,8 +29,8 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   margin-right: 4%;
   margin-top: 5%;
   background-color: white;
-  border: 1px solid #990000;
-  border-radius: 2px;
+  border: 1px #8c8c8c solid;
+  border-radius: 3px;
 }
 
 .right-content1{
@@ -67,7 +67,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 input[type=text] {
   width: 30%;
   padding: 12px;
-  border: 1px solid #990000;
+  border: 1px #8c8c8c solid;
   border-radius: 4px;
   resize: vertical;
   color:black;
@@ -91,7 +91,7 @@ input[type=text] {
 }
 
 .right-content2 .button{
-  background-color: #990000;
+  background-color: #343a40;
   border: none;
   color: white;
   padding: 12px 32px;
@@ -103,7 +103,9 @@ input[type=text] {
   cursor: pointer;
   border-radius: 4px;
 }
-
+.right-content2 .button:hover{
+  background-color: #4d0000;
+}
 
 .gender {
   position: relative;
@@ -129,9 +131,9 @@ input[type=text] {
   position: absolute;
   top: 0;
   left: 0;
-  height: 18px;
-  width: 18px;
-  background-color: #ff9999;
+  height: 15px;
+  width: 15px;
+  background-color: #ddd;
   border-radius: 50%;
 
 }
@@ -139,12 +141,12 @@ input[type=text] {
 
 /* On mouse-over, add a grey background color */
 .gender:hover input ~ .checkmark {
-  background-color: #e60000;
+  background-color:#343a40;
 }
 
 /* When the radio button is checked, add a blue background */
 .gender input:checked ~ .checkmark {
-  background-color: #990000;
+  background-color: #4d0000;
 }
 
 .right-content2{
@@ -157,12 +159,12 @@ input[type=text] {
 }
 .right-content2 a{
   text-decoration: none;
-  color:#990000;
+
 }
 #email{
   width: 30%;
   padding: 12px;
-  border: 1px solid #990000;
+  border: 1px solid #8c8c8c;
   border-radius: 4px;
   resize: vertical;
   color:black;
@@ -185,24 +187,25 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #990000;
+  border: 1px #ddd solid;
   box-sizing: border-box;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 /* Set a style for all buttons */
 .modal-button {
-  background-color: #990000;
+  background-color: #343a40;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+  border-radius: 4px;
 }
 
 .modal-button:hover {
-  opacity: 0.8;
+   background-color: #4d0000;
 }
 
 /* Extra styles for the cancel button */
@@ -244,7 +247,7 @@ span.psw {
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border: 1px #ddd solid;
   width: 50%; /* Could be more or less, depending on screen size */
   border-radius: 5px;
 }

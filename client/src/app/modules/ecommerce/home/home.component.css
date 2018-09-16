@@ -3,14 +3,14 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 
 .container {
-  background-color: #bbb;
+  background-color:white;
   min-height: 100vh;
   overflow: hidden;
 }
 /*left panel */
 
 *{
-  color:#4d4d4d;
+  color:#262626;
 }
 .left-panel {
   width: 25%;
@@ -25,7 +25,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 }
 
 .left-content1{
-  background-color: white;
+  background-color: #f5f5f5;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,13 +35,13 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid #990000;
-  border-radius: 2px;
+ border: 1px #8c8c8c solid;
+  border-radius: 3px;
 }
 
 .left-content1 i.fa-user{
   border-radius: 100%;
-  background-color: #800000;
+  background-color: #343a40;
   font-size: 22px;
   text-align: center;
   line-height: 40px;
@@ -52,21 +52,22 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 .left-content1 b{
   font-size: 20px;
+  color: #262626;
 }
 .left-content1 .text{
   padding-left: 20px;
+  color: #262626;
 }
 
 .left-content2{
   background-color: white;
   height: 100%;
-  padding: 5px 15px 5px 15px;
-  border: 1px solid #990000;
-  border-radius: 2px;
+  border: 1px solid #8c8c8c;
+  border-radius: 3px;
 }
 .left-content2 a{
   text-decoration: none;
-  color:black;
+  color:#262626;
 }
 
 .order{
@@ -78,17 +79,21 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color:#f5f5f5;
+  padding-left: 20px;
+  border-bottom: 1px solid #8c8c8c;
 }
 .order b{
   font-size: 22px;
   padding-left: 20px;
+  color: #262626;
 }
 .order b:hover{
-  color:#990000;
+  color:black;
 }
 .order i.fa-folder{
   border-radius: 100%;
-  background-color: #800000;
+  background-color: #343a40;
   font-size: 22px;
   text-align: center;
   line-height: 40px;
@@ -99,8 +104,10 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 .order .fa-chevron-right{
   font-size: 20px;
   padding-left:97px;
-  color:#800000;
-
+  color:#262626;
+}
+.order .fa-chevron-right:hover{
+  color:black;
 }
 
 .account{
@@ -112,13 +119,14 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 20px;
 }
 .account b{
   font-size: 22px;
   padding-left: 30px;
 }
 .account .fa-user{
-  color:#800000;
+  color:#343a40;
   font-size: 20px;
   padding-left: 20px;
 }
@@ -127,15 +135,15 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   padding-left: 67px;
 }
 .profile h3:hover{
-  color:#990000;
+  color:black;
 }
 
 .left-content3{
-  background-color: white;
+  background-color: #f5f5f5;
   height: 100%;
   padding: 5px 15px 5px 15px;
-  border: 1px solid #990000;
-  border-radius: 2px;
+  border: 1px solid #8c8c8c;
+  border-radius: 3px;
 }
 .left-content3 a{
   text-decoration: none;
@@ -157,12 +165,15 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   padding-left: 30px;
 }
 .logout b:hover{
-  color:#990000;
+  color:black;
 }
 .logout .fa-power-off{
-  color:#800000;
+  color:#262626;
   font-size: 20px;
   padding-left: 20px;
+}
+.logout .fa-power-off:hover{
+  color:black;
 }
 
 /*right panel */
@@ -172,7 +183,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   margin-left: 4%;
   margin-right: 4%;
   background-color: white;
-  border: 1px solid #990000;
+  border: 1px solid #8c8c8c;
   border-radius: 2px;
 }
 
@@ -801,6 +812,10 @@ span.psw {
     margin-bottom: 15px;
   }
   /* modal ends */
-
-
+ .order{
+  padding-left: 5px;
+ }
+ .account{
+  padding-left: 5px;
+ }
 }

@@ -1,7 +1,7 @@
 body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;}
 
 .container {
-  background-color: #bbb;
+  background-color: white;
   /*  display: flex;
    -webkit-box-align: center;
    -ms-flex-align: center;
@@ -12,7 +12,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 /*left panel */
 
 *{
-  color:#4d4d4d;
+  color:#262626;
 }
 
 /* right panel */
@@ -23,8 +23,8 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   margin-top: 7%;
   margin-bottom: 7%;
   background-color: white;
-  border: 1px solid #990000;
-  border-radius: 2px;
+  border: 1px solid #8c8c8c ;
+  border-radius: 3px;
   
 }
 
@@ -41,8 +41,8 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 .address-tab{
   width: 95%;
-  background-color: #ffe6e6;
-  border:1px solid #ffcccc;
+  background-color: #f5f5f5;
+  border:1px solid #8c8c8c;
   margin-right:auto;
   margin-left: auto;
   margin-top: 20px;
@@ -58,7 +58,8 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 .address-section{
   width: 95%;
   background-color: white;
-  border:1px solid #ffcccc;
+  border:1px solid #8c8c8c;
+  border-radius: 3px;
   margin-right:auto;
   margin-left: auto;
   margin-top: 20px;
@@ -67,10 +68,10 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 .address-section p{
   padding-right: 20%;
   padding-left: 20px;
-  color: #333333;
+  color: #262626;
 }
 .address-section b{
-  color:#333333;
+  color:#262626;
 }
 .address-section .edit{
   text-decoration: none;
@@ -128,7 +129,7 @@ select{
 }
 
 button {
-  background-color: #990000;
+  background-color: #343a40;
   border: none;
   color: white;
   padding: 12px 32px;
