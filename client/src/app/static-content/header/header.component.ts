@@ -3,6 +3,7 @@ import { Router} from "@angular/router";
 import { AuthService } from "../../../services/auth.service";
 import { CartService } from "../../../services/cartservice";
 import {Subscription} from "rxjs/Subscription";
+import { RemoteApiService } from "../../../services/remoteapi.service";
 
 @Component({
   selector: 'app-header',
@@ -18,8 +19,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   userdetails: any;
   numberOfItemsInCart: Subscription;
   numberOfItems: any;
-  constructor(private router: Router, private authService: AuthService, private cartService: CartService) {
-    this.numberOfItems = 0;
+  constructor(private router: Router, private authService: AuthService, private cartService: CartService, private remoteApiService: RemoteApiService) {
+   // this.numberOfItems = 0;
   }
 
   ngOnInit() {
@@ -27,6 +28,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if(localStorage.getItem('token')!=null) {
       this.isLoggedIn = true;
       this.authService.getUserDetails();
+      this.remoteApiService.viewCart().subscribe((result: any) => {
+        this.cartService.numberOfItems.next(result.totalItems);
+      })
     } else {
       this.isLoggedIn = false;
     }
@@ -38,6 +42,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       //alert("user subscription called");
       this.userdetails = value;
     })
+
 
     this.numberOfItemsInCart = this.cartService.numberOfItems.subscribe((value) => {
       this.numberOfItems = value;
