@@ -322,7 +322,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 .dropdown:hover .dropbtn {
   background-color:#800000;
   color: white;
-  margin-top: 5px;
+  margin-top: 6px;
   border-radius: 3px;
 }
 
@@ -335,14 +335,13 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   display: block;
 }
 
-
 #ex4 .p1[data-count]:after{
   position:absolute;
-  right:10%;
-  top:8%;
+  right:0px;
+  top:0px;
   content: attr(data-count);
-  font-size:40%;
-  padding:.2em;
+  font-size:70%;
+  padding:2px;
   border-radius:50%;
   line-height:1em;
   color: white;
@@ -353,10 +352,10 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 }
 .item-count{
   position:absolute;
-  right:10%;
-  top:8%;
+  right:0;
+  top:0;
   content: attr(data-count);
-  font-size:40%;
+  font-size:15px;
   padding:.2em;
   border-radius:50%;
   line-height:1em;
@@ -365,6 +364,9 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   text-align:center;
   min-width: 1em;
   //font-weight:bold;
+}
+.p3{
+  font-size: 25px;
 }
 
 
