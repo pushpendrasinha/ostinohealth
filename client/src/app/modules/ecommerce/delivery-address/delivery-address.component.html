@@ -91,14 +91,30 @@
 
     </div>-->
 
+              <div class="address-section" *ngFor="let address of Addresses">
+        <!--  <a class="edit">Edit</a> <a  onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>-->
+              <div class="row">
+                <div class="col-10-right">
+                    <a  (click)="deleteMe(address._id)" class="delete">Delete</a>
+                </div>
+                 <div class="col-10-right">
+                    <a class="edit" (click)="editAddress(address)">Edit</a> 
+                </div> 
 
-    <div class="address-section" *ngFor="let address of Addresses">
-    <!--  <a class="edit">Edit</a> <a  onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="delete">Delete</a>-->
-      <a class="edit" (click)="editAddress(address)">Edit</a> <a  (click)="deleteMe(address._id)" class="delete">Delete</a>
-      <p><b>{{address.name}} &nbsp; &nbsp; &nbsp; {{address.phone}}</b></p>
-     <p></p>
+                <br>
+                <div class="col-10">
+                  <b>{{address.name}}</b>
+                </div>
+                 <div class="col-10">
+                  {{address.phone}}
+                </div>
+                 <div class="col-10">
+                  {{address.city}},{{address.state}}
+                </div>
+         </div>
+      </div>
 
-    </div>
+
   </div> <!--right panel ends-->
 </div>
 <!--container ends-->

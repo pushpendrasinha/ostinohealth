@@ -1,5 +1,10 @@
 body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;}
 
+
+.alignRight {
+  text-align: right;
+}
+
 .container {
   background-color: white;
   /*  display: flex;
@@ -65,6 +70,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .address-section a{
  cursor: pointer;
   }
@@ -220,10 +226,23 @@ button {
 * {
   box-sizing: border-box;
 }
-
 /*  modal ends */
+.col-10{
+  float: left;
+  width: 15%;
+  padding: 10px;
+}
 
-
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-10-right{
+  float: right;
+  width: 15%;
+  padding-top: 10px;
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -511,6 +530,14 @@ button {
   }
 
   /* modal ends */
-
+ .col-10-right{
+    width:20%;
+    text-align: center;
+    padding-right: 100px;
+  }
+  .col-10{
+    width:50%;
+    padding-left: 15px;
+  }
 }
 

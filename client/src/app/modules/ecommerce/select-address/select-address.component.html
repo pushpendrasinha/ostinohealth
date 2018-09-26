@@ -21,8 +21,9 @@
         <div class="col-10">
           <b>{{address.phone}}</b>
         </div>
+
       </div>
-     <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. State-<b>820011</b></p>-->
+    <p><b>{{address.name}}, {{address.city}}, {{address.state}}</b></p>
       <button class="button" (click)="proceedToCheckout()">DELIVER HERE</button>
     </div>
 
@@ -32,6 +33,6 @@
       <address-form *ngIf="newaddress"></address-form>-->
 
       <address-form ></address-form>
-   
+
   </div>
 </div>
