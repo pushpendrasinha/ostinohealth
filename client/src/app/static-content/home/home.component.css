@@ -338,9 +338,6 @@ list-style:none;
 
 
 
-
-
-
 @media screen and (max-width: 600px) {
  
 .heading{
@@ -426,6 +423,7 @@ i.fa {
 .row3{
   display: none;
 }
+
 
 
 }
@@ -519,6 +517,7 @@ i.fa {
 .row3{
   display: none;
 }
+
 
 
 
