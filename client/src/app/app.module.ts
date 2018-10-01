@@ -47,6 +47,8 @@ import { SheeshamComponent } from './static-content/tree/sheesham/sheesham.compo
 import { PaginationComponent } from './static-content/tree/pagination/pagination.component';
 import { FeedbackComponent } from './static-content/feedback/feedback.component';
 import { ExceptionHandler } from '../services/exception-handler';
+import { SubscribeComponent } from './static-content/subscribe/subscribe.component';
+
 
 
 @NgModule({
@@ -84,7 +86,9 @@ import { ExceptionHandler } from '../services/exception-handler';
     SalComponent,
     SheeshamComponent,
     PaginationComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    SubscribeComponent,
+
 
 
   ],
