@@ -39,11 +39,16 @@ if(result.success) {
   remove(productId) {
    // alert(productId);
     this.remoteApiService.removeProduct(productId).subscribe((result: any) => {
-      if(result.success) {
+     /* if(result.success) {
         this.cartItems = result.items;
         this.total = result.total;
         this.cartService.numberOfItems.next(result.totalItems);
-        }
+        }*/
+      if(result.success) {
+        this.cartItems = result.data.items;
+        this.total = result.data.total;
+        this.cartService.numberOfItems.next(result.data.totalItems);
+      }
     })
   }
   update(item, quantity) {

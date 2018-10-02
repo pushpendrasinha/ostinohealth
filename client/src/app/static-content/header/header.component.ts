@@ -62,6 +62,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
   logout() {
     localStorage.clear();
+    this.isLoggedIn = false;
     this.router.navigateByUrl('/ecom/login');
   }
   ngOnDestroy() {

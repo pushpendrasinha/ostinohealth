@@ -81,9 +81,9 @@
     <div class="dropdown" *ngIf="isEcommerce && isLoggedIn">
 
       <a class="dropbtn" (click)="redirect()" style="margin-right:64px;cursor:default;padding-top: 7px;padding-bottom:6px;">
-      <b id="ex4">    
+      <b id="ex4">
           <span class="p1 fa-stack fa-1x has-badge">
-            <b class="item-count">{{numberOfItems > 0 ? numberOfItems : ''}}</b>
+            <b class="item-count" *ngIf="numberOfItems > 0">{{numberOfItems > 0 ? numberOfItems : ''}}</b>
             <!--<i class="p2 fa fa-circle fa-stack-2x"></i>-->
             <i class="p3 fa fa-shopping-cart " data-count="4b"></i>
           </span>

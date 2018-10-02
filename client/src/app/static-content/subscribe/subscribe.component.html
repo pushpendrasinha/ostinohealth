@@ -5,16 +5,18 @@
 
 		<h2>Subscribe to receive periodic email newsletter from Ostino Health. Your email address will only be used to send newsletter and for communication. It will not be sold, shared or abused.</h2>
 
-		<form >
+		<form (ngSubmit)="SubscriptionForm.valid && subscribe()" novalidate [formGroup]="SubscriptionForm">
 		  <label>Your Name</label><br>
-			<input type="text"  placeholder="Name" >
+			<input type="text"  placeholder="Name" formControlName="name">
+      <p *ngIf="SubscriptionForm.controls.name.invalid && !SubscriptionForm.controls.name.pristine" class="error">* Please enter your name</p>
 		<!--    <p class="error">Name is required.</p> -->
 		  <br><br>
 		  <label>Your Email</label><br>
-			<input type="email" name="email" placeholder="Email" >
+			<input type="email" name="email" placeholder="Email" formControlName="email">
+      <p *ngIf="SubscriptionForm.controls.email.invalid && !SubscriptionForm.controls.email.pristine" class="error">* Please enter valid email address</p>
 		<!--    <p class="error">Please enter a valid email address.</p> -->
 		  <br><br>
-		  <button class="button" type="submit">Send</button>
+		  <button class="button" type="submit" [disabled]="!SubscriptionForm.valid">Send</button>
 		</form>
 
 

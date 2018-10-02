@@ -74,4 +74,8 @@ export class RemoteApiService {
     return this.http.get(environment.serverUrl + `/user/requestresetpassword?email=${email}`);
   }
 
+  subscriptionRequest(data) {
+    return this.http.post(environment.serverUrl + `/user/subscribe`, data);
+  }
+
 }
