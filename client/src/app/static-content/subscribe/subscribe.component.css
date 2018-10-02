@@ -1,0 +1,118 @@
+.container{
+	background-color: #bbb;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.heading{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+
+
+
+label{
+  font-size: 18px;
+}
+input{
+  padding: 12px 15px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+input[type=text],input[type=email]{
+  width: 60%;
+}
+input:focus,textarea:focus {
+  background-color: #ffffcc;
+}
+.button{
+  background-color:  #990000;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #800000;
+  color: white;
+}
+.error{
+  margin-top: 0;
+}
+
+@media screen and (max-width: 600px) {
+  
+  	.heading{
+	  width: 90%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-top: 5%;
+	  margin-bottom: 5%;
+    }
+ 	h1{
+ 		font-size: 24px;
+ 	}
+ 	h2{
+ 		font-size: 20px;
+ 	}
+ 	label{
+	  font-size: 18px;
+	}
+	input{
+	  padding: 10px 12px;
+	  margin-top: 8px;
+	  margin-bottom: 8px;
+	  border-radius: 5px;
+	}
+	input[type=text],input[type=email]{
+	  width: 100%;
+	}
+	.button{
+    padding: 10px 22px;
+    font-size: 14px;
+  	}
+	}
+
+	@media screen and (max-width: 900px) {
+  
+  	.heading{
+	  width: 90%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-top: 5%;
+	  margin-bottom: 5%;
+    }
+ 	h1{
+ 		font-size: 24px;
+ 	}
+ 	h2{
+ 		font-size: 20px;
+ 	}
+ 	label{
+	  font-size: 18px;
+	}
+	input{
+	  padding: 10px 12px;
+	  margin-top: 8px;
+	  margin-bottom: 8px;
+	  border-radius: 5px;
+	}
+	input[type=text],input[type=email]{
+	  width: 100%;
+	}
+	.button{
+    padding: 10px 22px;
+    font-size: 14px;
+  	}
+	}
