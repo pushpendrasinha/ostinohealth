@@ -335,7 +335,30 @@ list-style:none;
   color: white;
 }
 
-
+/* subscribe content */
+.subscribe{
+  font-size: 30px;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  color: #511515;
+  cursor: pointer;
+  text-align: center;
+}
+.subscribe b{
+  font-size: 20px; 
+}
+.subscribe-btn{
+  background-color: #800000;
+  outline: none;
+  border:none;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -421,6 +444,10 @@ i.fa {
 }
 
 .row3{
+  display: none;
+}
+
+.subscribe{
   display: none;
 }
 
@@ -518,6 +545,9 @@ i.fa {
   display: none;
 }
 
+.subscribe{
+  display: none;
+}
 
 
 
