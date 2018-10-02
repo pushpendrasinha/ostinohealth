@@ -42,6 +42,7 @@ import { SalComponent } from './static-content/tree/sal/sal.component';
 import { SheeshamComponent } from './static-content/tree/sheesham/sheesham.component';
 import { PaginationComponent } from './static-content/tree/pagination/pagination.component';
 import { FeedbackComponent } from './static-content/feedback/feedback.component';
+import { SubscribeComponent } from './static-content/subscribe/subscribe.component';
 
 import { AlertHandler } from "../services/alert-handler";
 
@@ -82,6 +83,7 @@ import { AlertHandler } from "../services/alert-handler";
     SheeshamComponent,
     PaginationComponent,
     FeedbackComponent,
+    SubscribeComponent,
 
   ],
   imports: [

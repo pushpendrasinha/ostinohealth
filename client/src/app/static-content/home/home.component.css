@@ -351,13 +351,20 @@ list-style:none;
   font-size: 20px; 
 }
 .subscribe-btn{
-  background-color: #800000;
-  outline: none;
-  border:none;
-  border-radius: 30px;
-  padding: 10px;
-  color: white;
+  background-color: #990000;
+  -webkit-border-radius: 10px;
+  border-radius: 20px;
+  border: none;
+  color: #FFFFFF;
   cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+}
+.subscribe-btn:hover {
+  background-color: #800000;
+  color: white;
 }
 
 
