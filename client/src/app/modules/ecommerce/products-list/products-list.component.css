@@ -78,14 +78,14 @@ div.column:hover {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  border:1px #8c8c8c solid;
+  /*border:1px #8c8c8c solid; */
   margin-top: 5%;
   padding-left: 30px;
-  background-color: #f5f5f5;
+ /* background-color: #f5f5f5; */
   color:black;
   border-radius: 5px;
   text-align: center;
-}
+} 
 .product-image{
   height: 150px;
   margin-top: 40px;
