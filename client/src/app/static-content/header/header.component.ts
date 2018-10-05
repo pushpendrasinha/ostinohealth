@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.userdetails = {};
-    if(localStorage.getItem('token')!=null) {
+    if(!localStorage.getItem('token')) {
       this.isLoggedIn = true;
       this.authService.getUserDetails();
       this.remoteApiService.viewCart().subscribe((result: any) => {
