@@ -12,6 +12,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { HomeComponent } from './home/home.component';
 import { AddressFormComponent } from './address-form/address-form.component';
 import { SelectAddressComponent } from './select-address/select-address.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { SelectAddressComponent } from './select-address/select-address.componen
     HomeComponent,
     AddressFormComponent,
     SelectAddressComponent,
+    ProductDescriptionComponent,
     
   ]
 })

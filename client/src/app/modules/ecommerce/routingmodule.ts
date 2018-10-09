@@ -10,6 +10,8 @@ import { ProfileComponent } from "./profile/profile.component";
 import { HomeComponent } from "./home/home.component";
 import { AuthService } from "../../../services/auth.service";
 import { SelectAddressComponent } from "./select-address/select-address.component";
+import { ProductDescriptionComponent } from './product-description/product-description.component';
+
 
 
 const routes: Routes = [
@@ -29,6 +31,7 @@ const routes: Routes = [
       {path: 'address', component: DeliveryAddressComponent },
     ]},
   {path: 'selectaddress', component: SelectAddressComponent, canActivate: [AuthService] },
+  {path: 'product-description', component: ProductDescriptionComponent },
 
 
   ];
