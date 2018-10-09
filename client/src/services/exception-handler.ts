@@ -13,7 +13,7 @@ export class ExceptionHandler implements ErrorHandler {
     console.log("error in exception handler is " + JSON.stringify(error, null, 2));
     const router = this.injector.get(Router);
 
-    if (error.status === 401 || error.status === 403) {
+    if (error.status === 401) {
       /*const authenticationService = this.injector.get(AuthenticationService);
       authenticationService.logout(false);*/
       this.zone.run(() => router.navigateByUrl('/ecom/login'));
