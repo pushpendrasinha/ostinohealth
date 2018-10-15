@@ -25,7 +25,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.userdetails = {};
-    if(!localStorage.getItem('token')) {
+    if(this.authService.isUserLoggedIn()) {
+     // alert("in header");
       this.isLoggedIn = true;
       this.authService.getUserDetails();
       this.remoteApiService.viewCart().subscribe((result: any) => {
@@ -63,6 +64,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   logout() {
     localStorage.clear();
     this.isLoggedIn = false;
+    this.userdetails = {};
     this.router.navigateByUrl('/ecom/login');
   }
   ngOnDestroy() {

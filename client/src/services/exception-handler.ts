@@ -10,10 +10,11 @@ export class ExceptionHandler implements ErrorHandler {
   constructor(private injector: Injector, private zone: NgZone) { }
 
   handleError(error) {
-    console.log("error in exception handler is " + JSON.stringify(error, null, 2));
+   // console.log("error in exception handler is " + JSON.stringify(error, null, 2));
+    console.log("error in exception handler is " + error);
     const router = this.injector.get(Router);
 
-    if (error.status === 401) {
+    if (error.status === 401 || error.status == 403) {
       /*const authenticationService = this.injector.get(AuthenticationService);
       authenticationService.logout(false);*/
       this.zone.run(() => router.navigateByUrl('/ecom/login'));

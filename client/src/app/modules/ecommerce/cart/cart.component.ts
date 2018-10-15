@@ -11,15 +11,17 @@ import { Router } from "@angular/router";
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  private subscription : Subscription;
   cartItems: any;
   total: Number;
+  cartDetails: any;
+  delivery_charges: Number;
+  amount_payable: Number;
 
-  accessCode:any;
   constructor(private remoteApiService: RemoteApiService,
               private  cartService: CartService,
               private alertHandler: AlertHandler,
               private router: Router) {
+    this.cartDetails = {cartItems: []};
     this.cartItems = [];
     this.total = 0;
   }
@@ -30,6 +32,9 @@ export class CartComponent implements OnInit {
 if(result.success) {
   this.cartItems = result.items;
   this.total = result.total;
+  this.delivery_charges = result.delivery_charges;
+  this.amount_payable = result.amount_payable;
+ // this.cartDetails = result;
   this.cartService.numberOfItems.next(result.totalItems);
 }
     }, (err)=> {
@@ -47,6 +52,9 @@ if(result.success) {
       if(result.success) {
         this.cartItems = result.data.items;
         this.total = result.data.total;
+        this.delivery_charges = result.data.delivery_charges;
+        this.amount_payable = result.data.amount_payable;
+       // this.cartDetails = result;
         this.cartService.numberOfItems.next(result.data.totalItems);
       }
     })
@@ -76,6 +84,9 @@ if(result.success) {
       if(result.success) {
         this.cartItems = result.items;
         this.total = result.total;
+        this.delivery_charges = result.delivery_charges;
+        this.amount_payable = result.amount_payable;
+        //this.cartDetails = result;
         this.cartService.numberOfItems.next(result.totalItems);
       }
     })

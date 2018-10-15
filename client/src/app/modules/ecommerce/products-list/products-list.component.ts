@@ -32,7 +32,8 @@ if(this.authService.isUserLoggedIn()) {
   this.remoteApiService.addProduct(product._id).subscribe((result: any)=> {
     if(result.success) {
      // alert("added to cart");
-      this.alertHandler.SuccessAlert("Added to Cart");
+     // this.alertHandler.SuccessAlert("Added to Cart");
+      this.alertHandler.SuccessAlert(result.msg);
       this.cartService.numberOfItems.next(result.totalItems);
     } else {
       alert("error occured " + result.msg);
