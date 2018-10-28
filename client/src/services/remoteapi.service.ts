@@ -23,4 +23,8 @@ export class RemoteApiService {
     return this.http.post(environment.serverUrl + '/common/feedback', data);
   }
 
+  subscriptionRequest(data) {
+    return this.http.post(environment.serverUrl + `/user/subscribe`, data);
+  }
+
 }

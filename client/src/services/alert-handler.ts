@@ -21,6 +21,33 @@ export class AlertHandler {
       text: "Feedback submitted"
     });
   }
+  SuccessAlert(title) {
+    Swal({
+      type: 'success',
+      title: title,
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
+
+  WarningAlert(title) {
+    Swal({
+      type : 'warning',
+      title: title,
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
+
+  ErrorAlert(title) {
+    Swal({
+      type : 'error',
+      title: title,
+      showConfirmButton: false,
+      timer: 2000
+    })
 
 
+
+}
 }
