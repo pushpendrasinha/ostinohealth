@@ -36,7 +36,7 @@ import { LeadershipComponent } from './static-content/leadership/leadership.comp
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent },
+  {path: '', component: NewHomePageComponent },
   {path: 'career', component: CareerComponent },
   {path: 'what-we-stand-for', component: WhatWeStandForComponent },
   {path: 'directors', component: DirectorsComponent },
