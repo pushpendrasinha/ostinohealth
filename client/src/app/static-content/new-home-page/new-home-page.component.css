@@ -1,0 +1,364 @@
+.btn-column {
+    float: left;
+    width: 33%;
+    padding-top: 10px;
+    text-align: center;
+   /* height: 300px; /* Should be removed. Only for demonstration */
+}
+.btn-column-right{
+  float: right;
+  width: 33%;
+  padding-top: 10px;
+  text-align: center;
+}
+/* Clear floats after the columns */
+.btn-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.btn-glow{
+  background-color: #7a1f1f;
+  -webkit-border-radius: 10px;
+  border-radius: 15px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #7a1f1f; box-shadow: 0 0 3px #7a1f1f; }
+  50% { background-color: #b62f2f; box-shadow: 0 0 20px #b62f2f; }
+  100% { background-color: #7a1f1f; box-shadow: 0 0 3px #7a1f1f; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #7a1f1f; box-shadow: 0 0 3px #7a1f1f; }
+  50% { background-color: #b62f2f; box-shadow: 0 0 20px #b62f2f; }
+  100% { background-color: #7a1f1f; box-shadow: 0 0 3px #7a1f1f; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #7a1f1f; box-shadow: 0 0 3px #7a1f1f; }
+  50% { background-color: #b62f2f; box-shadow: 0 0 20px #b62f2f; }
+  100% { background-color: #7a1f1f; box-shadow: 0 0 3px #7a1f1f; }
+}
+
+@keyframes glowing {
+  0% { background-color: #7a1f1f; box-shadow: 0 0 3px #7a1f1f; }
+  50% { background-color: #b62f2f; box-shadow: 0 0 20px #b62f2f; }
+  100% { background-color: #7a1f1f; box-shadow: 0 0 3px #7a1f1f; }
+}
+.btn-fortune{
+  background-color: #4040bf;
+  -webkit-border-radius: 10px;
+  border-radius: 15px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.btn-fortune:hover {
+  background-color: #004A7F;
+  color: white;
+}
+.btn-blog{
+  background-color: #006699;
+  -webkit-border-radius: 10px;
+  border-radius: 15px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+  text-decoration: none;
+
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.btn-blog:hover {
+  background-color: #004466;
+  color: white;
+}
+.container{
+  min-height: 100vh;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+.left{
+  margin-top: 1%;
+}
+
+.right{
+   margin-top: 5%;
+   text-align: center;
+ }
+ .column-right p{
+  font-size: 20px;
+ }
+ .column-right{
+  padding-bottom: 20px;
+ }
+
+.button {
+    background-color: white;
+    border: 1px solid #027c89;
+    color: #027c89;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button:hover{
+  background-color: #039fb0;
+  color: white;
+}
+.leadership-logo{
+  padding-bottom: 20px;
+}
+.leadership-logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+.leadership-logo p{
+  margin: 0;
+  padding: 0;
+}
+/* bottom menu */
+.row3:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row3{  
+  background-color: #001a33;
+  color: white;
+}
+
+.column3 {
+    float: left;
+    width: 25%;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+   /* Should be removed. Only for demonstration */
+}
+
+.column3 ul{
+list-style:none;
+}
+.column3 ul li a{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+.column3 h2{
+  text-decoration: underline;
+  text-align:left;
+  padding-left: 40px;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .btn-column{
+    width: 100%;
+  }
+  .btn-column-right{
+    width: 100%;
+  }
+  .btn-glow{
+    width: 80%;
+    font-size: 13px;
+    padding: 10px;
+  }
+  .btn-fortune{
+    width: 80%;
+    font-size: 13px;
+    padding: 10px;
+  }
+  .btn-blog{
+    width: 80%;
+    font-size: 13px;
+    padding: 10px 40px;
+  }
+  .column{
+    width: 100%;
+  }
+  .column .banner{
+  height: auto;
+  width: 100%;
+  }
+  .right h1{
+    font-size: 20px;
+  }
+  .right{
+    margin:0;
+  }
+  .column-left{
+    padding: 0;
+  }
+  .column-left img{
+    width: 100%;
+    height: 150px;
+  }
+  .column-right{
+    float: none;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-bottom: 5px;
+  }
+  .column-right h1{
+  font-size: 20px;
+}
+.column-right p{
+  font-size: 18px;
+}
+.leadership-logo img {
+    width: 40%;
+    height: auto;
+    padding: 0;
+}
+.button{
+  padding: 7px 20px;
+  font-size: 15px;
+}
+.column-left .med-logo{
+  width: 60%;
+  height: auto;
+  padding-bottom: 10px;
+}
+.row3{
+  display: none;
+}
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .btn-column{
+    width: 100%;
+  }
+  .btn-column-right{
+    width: 100%;
+  }
+  .btn-glow{
+    width: 80%;
+    font-size: 13px;
+    padding: 10px;
+  }
+  .btn-fortune{
+    width: 80%;
+    font-size: 13px;
+    padding: 10px;
+  }
+  .btn-blog{
+    width: 80%;
+    font-size: 13px;
+    padding: 10px 40px;
+  }
+  .column{
+    width: 100%;
+  }
+  .column .banner{
+  height: auto;
+  width: 100%;
+  }
+  .right h1{
+    font-size: 20px;
+  }
+  .right{
+    margin:0;
+  }
+  .column-left{
+    padding: 0;
+  }
+  .column-left img{
+    width: 100%;
+    height: 150px;
+  }
+  .column-right{
+    float: none;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-bottom: 5px;
+  }
+  .column-right h1{
+  font-size: 20px;
+}
+.column-right p{
+  font-size: 18px;
+}
+.leadership-logo img {
+    width: 40%;
+    height: auto;
+    padding: 0;
+}
+.button{
+  padding: 7px 20px;
+  font-size: 15px;
+}
+.column-left .med-logo{
+  width: 60%;
+  height: auto;
+  padding-bottom: 10px;
+}
+.row3{
+  display: none;
+}
+
+}
