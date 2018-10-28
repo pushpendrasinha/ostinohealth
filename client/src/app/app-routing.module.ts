@@ -66,7 +66,7 @@ const routes: Routes = [
   {path: 'mango', component: MangoComponent },
   {path: 'jamun', component: JamunComponent },
   {path: 'lychee', component: LycheeComponent },
-  {path: '*', component: HomeComponent },
+  {path: 'home', component: HomeComponent },
   {path: 'feedback', component: FeedbackComponent },
   {path: 'subscribe', component: SubscribeComponent },
   {path: 'new-home-page', component: NewHomePageComponent },
