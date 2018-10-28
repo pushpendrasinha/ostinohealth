@@ -45,6 +45,8 @@ import { FeedbackComponent } from './static-content/feedback/feedback.component'
 import { SubscribeComponent } from './static-content/subscribe/subscribe.component';
 
 import { AlertHandler } from "../services/alert-handler";
+import { NewHomePageComponent } from './static-content/new-home-page/new-home-page.component';
+import { LeadershipComponent } from './static-content/leadership/leadership.component';
 
 
 @NgModule({
@@ -84,6 +86,8 @@ import { AlertHandler } from "../services/alert-handler";
     PaginationComponent,
     FeedbackComponent,
     SubscribeComponent,
+    NewHomePageComponent,
+    LeadershipComponent,
 
   ],
   imports: [
