@@ -31,10 +31,12 @@ import { EucalyptusComponent } from "./static-content/tree/eucalyptus/eucalyptus
 import {JamunComponent} from "./static-content/tree/jamun/jamun.component";
 import {FeedbackComponent} from "./static-content/feedback/feedback.component";
 import { SubscribeComponent } from './static-content/subscribe/subscribe.component';
+import {NewHomePageComponent} from "./static-content/new-home-page/new-home-page.component";
+import {LeadershipComponent} from "./static-content/leadership/leadership.component";
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent },
+  {path: '', component: NewHomePageComponent },
   {path: 'career', component: CareerComponent },
   {path: 'what-we-stand-for', component: WhatWeStandForComponent },
   {path: 'directors', component: DirectorsComponent },
@@ -68,6 +70,10 @@ const routes: Routes = [
   {path: 'feedback', component: FeedbackComponent },
   {path: 'ecom', loadChildren: 'app/modules/ecommerce/ecommerce.module#EcommerceModule' },
   {path: 'subscribe', component: SubscribeComponent },
+  {path: 'new-home-page', component: NewHomePageComponent },
+  {path: 'leadership', component: LeadershipComponent },
+  {path: 'home', component: HomeComponent },
+
 
 
 

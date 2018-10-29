@@ -48,7 +48,8 @@ import { PaginationComponent } from './static-content/tree/pagination/pagination
 import { FeedbackComponent } from './static-content/feedback/feedback.component';
 import { ExceptionHandler } from '../services/exception-handler';
 import { SubscribeComponent } from './static-content/subscribe/subscribe.component';
-
+import { NewHomePageComponent } from './static-content/new-home-page/new-home-page.component';
+import { LeadershipComponent } from "./static-content/leadership/leadership.component";
 
 
 @NgModule({
@@ -88,6 +89,8 @@ import { SubscribeComponent } from './static-content/subscribe/subscribe.compone
     PaginationComponent,
     FeedbackComponent,
     SubscribeComponent,
+    NewHomePageComponent,
+    LeadershipComponent
 
 
 

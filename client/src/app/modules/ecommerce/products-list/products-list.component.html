@@ -13,8 +13,9 @@
             <img  class="product-image"   src={{product.img}}>
           </div>
             <h3 class="product-name">{{product.name}}</h3>
-            <h3 style="cursor: text;"> &#8377;{{product.price}}</h3>
-            <p>Love to flower of a woman is eternal and again the softness of a woman’s heart is comparable with a flower. Flower is a symbol of many a hopes in a woman’s heart.</p>
+          <p>{{product.description}}</p>
+            <h3 style="cursor: text;"> &#8377; {{product.price}}</h3>
+            <!--<p>{{product.description}}</p>-->
             <button class="button" (click)="addToCart(product)"><i class="fa fa-shopping-cart fa-lg"></i> &nbsp; &nbsp; Add to cart</button>
         </a>
       </div>
