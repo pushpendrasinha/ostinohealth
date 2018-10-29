@@ -24,7 +24,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
   margin-left:30px;
   margin-top: 5%;
   height: 100%; /* Should be removed. Only for demonstration */
-/*  border:1px #ddd solid; */
+  border:1px  solid white; 
   text-align: center;
   background-color: white;
   border-radius: 3px;
@@ -56,7 +56,7 @@ body {margin:0;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, 
 
 div.column:hover {
   border: 1px solid #8c8c8c;
-}
+} 
 
 .button {
   background-color: #343a40;
@@ -87,9 +87,10 @@ div.column:hover {
   text-align: center;
 } 
 .product-image{
-  height: 150px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  height: 240px;
+  width: 70%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .product-image:hover {
@@ -100,6 +101,10 @@ div.column:hover {
   margin: 0;
   padding: 0;
 }
+.product-image-box p{
+  color: #262626;
+  margin-top: 0;
+  }
 @media only screen and (max-width: 600px) {
 
   .column{
@@ -121,6 +126,7 @@ div.column:hover {
   }
   .product-image{
     height: 100px;
+
   }
   .column h3{
     margin: 10px;
@@ -155,7 +161,8 @@ div.column:hover {
     width: 95%;
   }
   .product-image{
-    height: 100px;
+    height:150px;
+    width: auto;
   }
   .column h4{
     margin: 10px;
