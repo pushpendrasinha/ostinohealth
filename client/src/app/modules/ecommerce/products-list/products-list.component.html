@@ -2,18 +2,18 @@
   <div class="wrapper">
 
    <div class="cart-heading">
-      <h1 style="color:#003300">Welcome to the World's exclusive store where we have gathered exclusive items only for you that are not available elsewhere! </h1>    
-    </div>  
+      <h1 style="color:#003300">Welcome to the World's exclusive store where we have gathered exclusive items only for you that are not available elsewhere! </h1>
+    </div>
 
     <div class="row">
       <div class="column" *ngFor="let product of productList">
-        
+
         <a>
           <div class="product-image-box">
             <img  class="product-image"   src={{product.img}}>
           </div>
             <h3 class="product-name">{{product.name}}</h3>
-            <h3 style="cursor: text;"> &#8377;{{product.price}}</h3>
+            <h3 style="cursor: text;"> &#8377; {{product.price}}</h3>
             <button class="button" (click)="addToCart(product)"><i class="fa fa-shopping-cart fa-lg"></i> &nbsp; &nbsp; Add to cart</button>
         </a>
       </div>

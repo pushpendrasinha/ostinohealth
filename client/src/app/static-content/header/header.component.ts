@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.userdetails = {};
-    if(this.authService.isUserLoggedIn()) {
+    if(localStorage.getItem('token')) {
      // alert("in header");
       this.isLoggedIn = true;
       this.authService.getUserDetails();
