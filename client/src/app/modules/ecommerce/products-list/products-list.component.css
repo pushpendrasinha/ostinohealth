@@ -101,6 +101,10 @@ div.column:hover {
   margin: 0;
   padding: 0;
 }
+.product-image-box p{
+  color: #262626;
+  margin-top: 0;
+  }
 @media only screen and (max-width: 600px) {
 
   .column{
