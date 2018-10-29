@@ -349,7 +349,7 @@ i.fa-user-md{
   text-align: center;
 }
 .subscribe b{
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 /*  modal starts */
@@ -365,13 +365,13 @@ input[type=text]{
 input[type=text], input[type=submit] {
     width: 100%;
     padding: 12px;
-   
+
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
- 
+
 
 /* Set a style for all buttons */
 input[type=submit] {
@@ -453,12 +453,12 @@ input[type=submit]:hover {
 }
 
 @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
+    from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
 }
-    
+
 @keyframes animatezoom {
-    from {transform: scale(0)} 
+    from {transform: scale(0)}
     to {transform: scale(1)}
 }
 
@@ -504,10 +504,21 @@ input[type=submit]:hover {
 .subscribe-btn:hover {
   background-color: #800000;
   color: white;
-} 
+}
 
 
-
+.button {
+  background-color: #b30000;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 
 
@@ -606,7 +617,7 @@ input[type=submit]:hover {
     width: 90%; /* Could be more or less, depending on screen size */
     }
 
-    .close {    
+    .close {
     right:15px;
     top: 0;
     color: #000;
@@ -621,7 +632,7 @@ input[type=submit]:hover {
     width: 90%; /* Could be more or less, depending on screen size */
     }
 
-    .close {    
+    .close {
     right:15px;
     top: 0;
     color: #000;
@@ -641,7 +652,10 @@ input[type=submit]:hover {
   display: none;
 }
 
-
+.button {
+  padding: 10px 25px;
+  font-size: 14px;
+}
 
 
 
@@ -745,7 +759,7 @@ input[type=submit]:hover {
     width: 90%; /* Could be more or less, depending on screen size */
     }
 
-    .close {    
+    .close {
     right:15px;
     top: 0;
     color: #000;
@@ -765,6 +779,10 @@ input[type=submit]:hover {
   display: none;
 }
 
+  .button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
 
 }
 
