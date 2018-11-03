@@ -1,9 +1,9 @@
 .btn-column {
-    float: left;
-    width: 33%;
-    padding-top: 10px;
-    text-align: center;
-   /* height: 300px; /* Should be removed. Only for demonstration */
+  float: left;
+  width: 33%;
+  padding-top: 10px;
+  text-align: center;
+  /* height: 300px; /* Should be removed. Only for demonstration */
 }
 .btn-column-right{
   float: right;
@@ -13,9 +13,9 @@
 }
 /* Clear floats after the columns */
 .btn-row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 .btn-glow{
   background-color: #7a1f1f;
@@ -110,7 +110,7 @@
   min-height: 100vh;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Create two equal columns that floats next to each other */
@@ -118,41 +118,41 @@
 
 /* Clear floats after the columns */
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 .column {
-    float: left;
-    width: 50%;
+  float: left;
+  width: 50%;
 }
 .left{
   margin-top: 1%;
 }
 
 .right{
-   margin-top: 5%;
-   text-align: center;
- }
- .column-right p{
+  margin-top: 5%;
+  text-align: center;
+}
+.column-right p{
   font-size: 20px;
- }
- .column-right{
+}
+.column-right{
   padding-bottom: 20px;
- }
+}
 
 .button {
-    background-color: white;
-    border: 1px solid #027c89;
-    color: #027c89;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: white;
+  border: 1px solid #027c89;
+  color: #027c89;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .button:hover{
   background-color: #039fb0;
@@ -162,10 +162,10 @@
   padding-bottom: 20px;
 }
 .leadership-logo img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
 }
 .leadership-logo p{
   margin: 0;
@@ -173,27 +173,27 @@
 }
 /* bottom menu */
 .row3:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.row3{  
+.row3{
   background-color: #001a33;
   color: white;
 }
 
 .column3 {
-    float: left;
-    width: 25%;
-    padding-top: 10px;
-    padding-bottom: 100px;
-    padding-left: 60px;
-   /* Should be removed. Only for demonstration */
+  float: left;
+  width: 25%;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  padding-left: 60px;
+  /* Should be removed. Only for demonstration */
 }
 
 .column3 ul{
-list-style:none;
+  list-style:none;
 }
 .column3 ul li a{
   font-size: 18px;
@@ -207,7 +207,36 @@ list-style:none;
   padding-left: 40px;
 }
 
-
+.subscribe{
+  font-size: 30px;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  color: #511515;
+  cursor: pointer;
+  text-align: center;
+}
+.subscribe b{
+  font-size: 20px;
+}
+.subscribe-btn{
+  background-color: #990000;
+  -webkit-border-radius: 10px;
+  border-radius: 20px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+}
+.subscribe-btn:hover {
+  background-color: #800000;
+  color: white;
+}
 
 
 
@@ -238,8 +267,8 @@ list-style:none;
     width: 100%;
   }
   .column .banner{
-  height: auto;
-  width: 100%;
+    height: auto;
+    width: 100%;
   }
   .right h1{
     font-size: 20px;
@@ -258,33 +287,35 @@ list-style:none;
     float: none;
     width: 95%;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     padding-bottom: 5px;
   }
   .column-right h1{
-  font-size: 20px;
-}
-.column-right p{
-  font-size: 18px;
-}
-.leadership-logo img {
+    font-size: 20px;
+  }
+  .column-right p{
+    font-size: 18px;
+  }
+  .leadership-logo img {
     width: 40%;
     height: auto;
     padding: 0;
-}
-.button{
-  padding: 7px 20px;
-  font-size: 15px;
-}
-.column-left .med-logo{
-  width: 60%;
-  height: auto;
-  padding-bottom: 10px;
-}
-.row3{
-  display: none;
-}
-
+  }
+  .button{
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+  .column-left .med-logo{
+    width: 60%;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .row3{
+    display: none;
+  }
+  .subscribe{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -314,8 +345,8 @@ list-style:none;
     width: 100%;
   }
   .column .banner{
-  height: auto;
-  width: 100%;
+    height: auto;
+    width: 100%;
   }
   .right h1{
     font-size: 20px;
@@ -334,31 +365,33 @@ list-style:none;
     float: none;
     width: 95%;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     padding-bottom: 5px;
   }
   .column-right h1{
-  font-size: 20px;
-}
-.column-right p{
-  font-size: 18px;
-}
-.leadership-logo img {
+    font-size: 20px;
+  }
+  .column-right p{
+    font-size: 18px;
+  }
+  .leadership-logo img {
     width: 40%;
     height: auto;
     padding: 0;
-}
-.button{
-  padding: 7px 20px;
-  font-size: 15px;
-}
-.column-left .med-logo{
-  width: 60%;
-  height: auto;
-  padding-bottom: 10px;
-}
-.row3{
-  display: none;
-}
-
+  }
+  .button{
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+  .column-left .med-logo{
+    width: 60%;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .row3{
+    display: none;
+  }
+  .subscribe{
+    display: none;
+  }
 }
