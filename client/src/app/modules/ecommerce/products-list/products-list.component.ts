@@ -26,6 +26,13 @@ productList: Array<any>;
 
     })
   }
+
+  enlarge(src) {
+    //alert("src is " + src);
+    document.getElementById('enlarge').setAttribute('src', src);
+    document.getElementById('myModal').style.display='block';
+
+  }
   addToCart(product) {
    // alert(JSON.stringify(product, null, 2));
 if(this.authService.isUserLoggedIn()) {

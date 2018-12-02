@@ -28,7 +28,7 @@
         </div>
 
         <div class="column3">
-          <b>&#8377; {{item.price}}</b>
+          <b>&#8377; </b> {{item.price | number}}
         </div>
 
         <div class="column4" *ngIf="item.type!= 'painting'">
@@ -57,16 +57,16 @@
       <table>
         <tr>
           <td>Price ({{cartItems.length}}  {{cartItems.length == 1 ? 'item' : 'items'}})</td>
-          <td>&#8377;   {{total}}</td>
+          <td>&#8377;   {{total | number}}</td>
         </tr>
         <tr style="border-bottom: 1px dashed #808080;">
           <td>Delivery Charges</td>
-          <td>&#8377;   {{delivery_charges}}</td>
+          <td>&#8377;   {{delivery_charges | number}}</td>
 
         </tr>
         <tr>
           <td>Amount Payable</td>
-          <td>&#8377;   {{amount_payable}}</td>
+          <td>&#8377;   {{amount_payable | number}}</td>
         </tr>
       </table>
 

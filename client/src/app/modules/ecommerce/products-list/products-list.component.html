@@ -10,13 +10,14 @@
 
         <a>
           <div class="product-image-box">
-            <img  class="product-image"   src={{product.img}}>
+            <img  class="product-image"   src={{product.img}} (click)="enlarge(product.img)">
           </div>
             <h3 class="product-name">{{product.name}}</h3>
           <p>Artist: {{product.artist}}</p>
           <p>{{product.size}}, &nbsp; {{product.medium}}</p>
           <p>{{product.description}}</p>
-            <h3 style="cursor: text;"> &#8377; {{product.price}}</h3>
+          <span style="font-weight: bold;">&#8377;  </span>{{product.price | number}} <br> <br>
+            <!--<span style="cursor: text;"> &#8377; {{product.price | number}}</span> <br>-->
             <!--<p>{{product.description}}</p>-->
             <button class="button" (click)="addToCart(product)"><i class="fa fa-shopping-cart fa-lg"></i> &nbsp; &nbsp; Add to cart</button>
         </a>
@@ -26,4 +27,11 @@
   </div>
 
 </div><!--container ends-->
+
+<div id="myModal" class="modal" onclick="document.getElementById('myModal').style.display='none'" >
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'" style="width:auto;cursor: pointer;">&times;</span>
+  <img class="modal-content" id="img01">
+  <img  id="enlarge" src="" alt="Snow" class="productImage" >
+  <!--<div id="caption">Tender Beauty</div>-->
+</div>
 
