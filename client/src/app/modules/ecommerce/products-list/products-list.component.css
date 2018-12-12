@@ -193,6 +193,35 @@ div.column:hover {
   height: 600px;
   margin-bottom: 3%;
 }
+ 
+ /* sold out css */
+.block{
+  display: block;
+  margin-bottom: 5%;
+}
+.thumbnail {
+    position: relative;
+    display: inline-block;
+}
+
+.image{
+  width: auto;
+  height: 300px;
+  opacity: 0.5;
+}
+.text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  text-align: center;
+  color: white;
+  padding: 0 10px 0 10px;
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 3px;
+  line-height: 10px;
+}   
 
 
 @media only screen and (max-width: 600px) {
