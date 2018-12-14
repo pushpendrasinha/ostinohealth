@@ -9,8 +9,11 @@
       <div class="column" *ngFor="let product of productList">
 
         <a>
-          <div class="product-image-box">
+          <div class="product-image-box" [ngStyle]="{'opacity':product.availability === false ? 0.5 : 1 }">
             <img  class="product-image"   src={{product.img}} (click)="enlarge(product.img)">
+            <div class="text" [ngStyle]="{'display':product.availability === false ? 'block' : 'none' }">
+              <h3> Sold Out </h3>
+            </div>
           </div>
             <h3 class="product-name">{{product.name}}</h3>
           <p>Artist: {{product.artist}}</p>
@@ -19,7 +22,7 @@
           <span style="font-weight: bold;">&#8377;  </span>{{product.price | number}} <br> <br>
             <!--<span style="cursor: text;"> &#8377; {{product.price | number}}</span> <br>-->
             <!--<p>{{product.description}}</p>-->
-            <button class="button" (click)="addToCart(product)"><i class="fa fa-shopping-cart fa-lg"></i> &nbsp; &nbsp; Add to cart</button>
+            <button class="button" (click)="addToCart(product)" *ngIf="product.availability == true"><i class="fa fa-shopping-cart fa-lg"></i> &nbsp; &nbsp; Add to cart</button>
         </a>
       </div>
     </div>
@@ -38,11 +41,11 @@
 
 
 <!--sold out template -->
-<div class="block">
+<!--<div class="block">
   <div class="thumbnail">
       <img src="https://s3.ap-south-1.amazonaws.com/ostinohealth/ecommerce/Arts/Tender+Beauty.jpg" class="image">
       <div class="text">
           <h3> Sold Out </h3>
       </div>
 </div>
-</div>
+</div>-->
