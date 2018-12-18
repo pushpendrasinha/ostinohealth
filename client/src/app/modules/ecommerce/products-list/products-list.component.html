@@ -21,7 +21,18 @@
             <h3 class="product-name">{{product.name}}</h3>
           <p>Artist: {{product.artist}}</p>
           <p>{{product.size}}, &nbsp; {{product.medium}}</p>
-          <p>{{product.description}}</p>
+
+         
+          
+          <div >
+          <span  *ngIf="!isCollapsed">{{product.description.substr(0,40)}}...</span>
+          <span  *ngIf="isCollapsed">{{product.description}}</span>
+        </div>
+        <br>
+         <button class="readmore-btn" *ngIf="!isCollapsed" (click)="toggleCollapse()" >Read More</button> 
+          <button class="readmore-btn" *ngIf="isCollapsed" (click)="toggleCollapse()" >Read Less</button>
+         <br> <br>
+
           <span style="font-weight: bold;">&#8377;  </span>{{product.price | number}} <br> <br>
             <!--<span style="cursor: text;"> &#8377; {{product.price | number}}</span> <br>-->
             <!--<p>{{product.description}}</p>-->

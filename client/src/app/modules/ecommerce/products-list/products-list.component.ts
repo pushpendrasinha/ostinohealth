@@ -13,6 +13,10 @@ import {CartService} from "../../../../services/cartservice";
 })
 export class ProductsListComponent implements OnInit {
 productList: Array<any>;
+isCollapsed : boolean = false;
+
+
+
   constructor(private remoteApiService: RemoteApiService,
               private authService: AuthService,
               private alertHandler: AlertHandler,
@@ -59,8 +63,12 @@ this.alertHandler.confirmationAlert(options).then((result) => {
   }
 })
 }
+  }
 
 
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }
