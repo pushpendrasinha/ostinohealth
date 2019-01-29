@@ -16,7 +16,7 @@ import { ProductDescriptionComponent } from './product-description/product-descr
 
 const routes: Routes = [
 
-  {path: 'login', component: LoginComponent },
+ /*  {path: 'login', component: LoginComponent },
   {path: 'signup', component: SignupComponent },
   {path: 'myorders', component: MyordersComponent, canActivate: [AuthService] },
   {path: 'address', component: DeliveryAddressComponent, canActivate: [AuthService] },
@@ -31,7 +31,7 @@ const routes: Routes = [
       {path: 'address', component: DeliveryAddressComponent },
     ]},
   {path: 'selectaddress', component: SelectAddressComponent, canActivate: [AuthService] },
-  {path: 'product-description', component: ProductDescriptionComponent },
+  {path: 'product-description', component: ProductDescriptionComponent }, */
 
 
   ];
